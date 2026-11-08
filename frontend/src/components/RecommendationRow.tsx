@@ -15,10 +15,13 @@ export function RecommendationRow({ title, recs, quantityOf, onSetQuantity, onDi
   return (
     <section className="rec-row">
       <header>
-        <h2>{title}</h2>
+        <div>
+          <div className="eyebrow">✨ Frequently bought together</div>
+          <h2>{title}</h2>
+        </div>
         {onDismiss && (
-          <button className="btn-link" onClick={onDismiss}>
-            Dismiss
+          <button className="btn-ghost" onClick={onDismiss} aria-label="Dismiss suggestions">
+            ✕
           </button>
         )}
       </header>
@@ -27,7 +30,7 @@ export function RecommendationRow({ title, recs, quantityOf, onSetQuantity, onDi
           <ProductCard
             key={r.product.id}
             product={r.product}
-            reason={r.reason}
+            reason={r.source === "bought_together" ? "Bought together" : "Popular"}
             quantity={quantityOf(r.product.id)}
             onSetQuantity={onSetQuantity}
           />

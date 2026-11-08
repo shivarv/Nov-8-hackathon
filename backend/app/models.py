@@ -16,6 +16,10 @@ class Product(Base):
     aisle: Mapped[str] = mapped_column(String(60))
     price_cents: Mapped[int]
     emoji: Mapped[str] = mapped_column(String(16))
+    # Product photo (Open Food Facts, CC BY-SA); None -> the UI shows the emoji.
+    image_url: Mapped[str | None] = mapped_column(String(300))
+    # Purchases across the full Instacart dataset; orders the catalog like a real store.
+    popularity: Mapped[int] = mapped_column(default=0, index=True)
 
 
 class Order(Base):
@@ -24,6 +28,8 @@ class Order(Base):
     __tablename__ = "orders"
 
     id: Mapped[int] = mapped_column(primary_key=True)
+    # Instacart shopper for seeded history; None for orders placed through the app.
+    user_id: Mapped[int | None] = mapped_column(index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     items: Mapped[list["OrderItem"]] = relationship(cascade="all, delete-orphan")
 

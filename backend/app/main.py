@@ -29,8 +29,8 @@ async def lifespan(app: FastAPI):
     # Hackathon-grade schema management; switch to Alembic once the schema settles.
     Base.metadata.create_all(engine)
     with SessionLocal() as db:
-        if seed_if_empty(db, settings.seed_orders):
-            log.info("Seeded catalog and %d synthetic orders", settings.seed_orders)
+        if seeded := seed_if_empty(db, settings.seed_source, settings.seed_orders):
+            log.info("Seeded %s", seeded)
         app.state.recommender = build_recommender(db)
     log.info("Recommender trained on %d baskets", app.state.recommender.n_baskets)
     yield

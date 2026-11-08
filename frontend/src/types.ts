@@ -7,6 +7,7 @@ export interface Product {
   aisle: string;
   price_cents: number;
   emoji: string;
+  image_url: string | null;
 }
 
 export interface CartItem {

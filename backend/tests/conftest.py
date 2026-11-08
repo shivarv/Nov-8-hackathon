@@ -2,6 +2,7 @@ import os
 
 # Must be set before `app` is imported: tests run against an in-memory SQLite DB.
 os.environ["DATABASE_URL"] = "sqlite:///:memory:"
+os.environ["SEED_SOURCE"] = "synthetic"
 os.environ["SEED_ORDERS"] = "1500"
 
 import pytest  # noqa: E402

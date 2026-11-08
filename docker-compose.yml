@@ -21,7 +21,8 @@ services:
     environment:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-grocer}:${POSTGRES_PASSWORD:-grocer}@db:5432/${POSTGRES_DB:-grocer}
       CORS_ORIGINS: '["http://localhost:5173"]'
-      SEED_ORDERS: ${SEED_ORDERS:-3000}
+      SEED_SOURCE: ${SEED_SOURCE:-instacart}
+      SEED_ORDERS: ${SEED_ORDERS:-0}
     ports:
       - "8000:8000"
     volumes:

@@ -69,21 +69,55 @@ export default function App() {
     }
   };
 
+  const sectionTitle = query
+    ? `Results for “${query}”`
+    : department
+      ? department
+      : "Popular right now";
+
   return (
     <div className="layout">
       <header className="topbar">
-        <div className="brand">🥕 Basket</div>
-        <input
-          className="search"
-          type="search"
-          placeholder="Search products…"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+        <div className="brand">
+          <span className="brand-mark" aria-hidden>
+            🥕
+          </span>
+          Basket
+        </div>
+        <label className="search">
+          <span className="search-icon" aria-hidden>
+            🔍
+          </span>
+          <input
+            type="search"
+            placeholder="Search 3,000 products…"
+            aria-label="Search products"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </label>
+        <a className="cart-button" href="#cart" aria-label={`Cart, ${cart?.item_count ?? 0} items`}>
+          🛒 <span>{cart?.item_count ?? 0}</span>
+        </a>
       </header>
 
       <main className="main">
         {error && <p className="notice error">{error}</p>}
+
+        {!query && !department && !lastAdded && (
+          <section className="hero">
+            <div>
+              <h1>Groceries that know what goes together</h1>
+              <p>
+                Suggestions learned from 62,000 real Instacart orders. Add something to your cart
+                and see what shoppers usually buy with it.
+              </p>
+            </div>
+            <div className="hero-art" aria-hidden>
+              🥑🍓🥖
+            </div>
+          </section>
+        )}
 
         <nav className="chips" aria-label="Departments">
           {["", ...departments].map((d) => (
@@ -107,6 +141,7 @@ export default function App() {
           />
         )}
 
+        <h2 className="section-title">{sectionTitle}</h2>
         <section className="grid">
           {products.map((p) => (
             <ProductCard
@@ -118,6 +153,11 @@ export default function App() {
           ))}
           {products.length === 0 && <p className="muted">No products match.</p>}
         </section>
+
+        <footer className="credits">
+          Order data: Instacart Market Basket Analysis (Kaggle). Product photos: Open Food Facts
+          contributors, CC BY-SA 4.0. Prices are estimates.
+        </footer>
       </main>
 
       <CartPanel

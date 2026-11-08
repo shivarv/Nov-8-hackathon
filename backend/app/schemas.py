@@ -12,6 +12,7 @@ class ProductOut(BaseModel):
     aisle: str
     price_cents: int
     emoji: str
+    image_url: str | None = None
 
 
 class CartItemOut(BaseModel):
