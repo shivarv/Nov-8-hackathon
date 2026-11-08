@@ -1,0 +1,20 @@
+=== Taco night for 4 · Friday ===
+    Picked from your past orders and what shoppers like you buy
+[budget] $37.79 of $40.00  [###################.]
+
+[Taco night for 4 · Friday]  8 things for 4  (good)
+    why: One personalized search per ingredient
+  2 x 100% Whole Wheat Medium Soft Taco Flour Tort   $3.29 =   $6.58  new   #2 for you  <tortillas>
+  2 x 80% Lean Ground Beef                           $4.99 =   $9.98  new   Cheapest pick to fit the budget  <ground_beef>
+  1 x Taco Mild Seasoning Mix                        $0.79 =   $0.79  new   #1 for you  <seasoning>
+  1 x Organic Finely Shredded Cheddar Cheese         $3.99 =   $3.99  new   #1 for you  <cheese>
+  1 x Organic Medium Salsa                           $4.49 =   $4.49  new   #1 for you  <salsa>
+  1 x Organic Iceberg Lettuce                        $2.49 =   $2.49  new   #1 for you  <lettuce>
+  2 x Packaged Grape Tomatoes                        $2.99 =   $5.98  new   #3 for you  <tomatoes>
+  1 x Organic Sour Cream                             $3.49 =   $3.49  new   #1 for you  <sour_cream>
+      total                                                   $37.79
+  swap 100% Whole Wheat Medium Soft T -> cheaper: Corn Tortillas $2.49 (Saves $0.80 each)
+  swap Organic Finely Shredded Chedda -> cheaper: Shredded Mexican Blend Cheese $2.99 (Saves $1.00 each)
+[Already at home?] ( ) Cooking oil
+
+(total $37.79 vs budget $40.00: OK)

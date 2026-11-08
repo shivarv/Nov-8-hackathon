@@ -1,0 +1,112 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Taco night for 4 \u00b7 Friday",
+   "subtitle": "Picked from your past orders and what shoppers like you buy"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 4000
+  },
+  {
+   "type": "basket_section",
+   "key": "intent",
+   "title": "Taco night for 4 \u00b7 Friday",
+   "subtitle": "8 things for 4",
+   "reason": "One personalized search per ingredient",
+   "confidence": "good",
+   "items": [
+    {
+     "product_id": 36591,
+     "quantity": 2,
+     "need_key": "tortillas",
+     "note": "#2 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 49236,
+     "quantity": 2,
+     "need_key": "ground_beef",
+     "note": "Cheapest pick to fit the budget",
+     "tag": "new"
+    },
+    {
+     "product_id": 35068,
+     "quantity": 1,
+     "need_key": "seasoning",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 46575,
+     "quantity": 1,
+     "need_key": "cheese",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 13535,
+     "quantity": 1,
+     "need_key": "salsa",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 6873,
+     "quantity": 1,
+     "need_key": "lettuce",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 8048,
+     "quantity": 2,
+     "need_key": "tomatoes",
+     "note": "#3 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 42701,
+     "quantity": 1,
+     "need_key": "sour_cream",
+     "note": "#1 for you",
+     "tag": "new"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 36591,
+   "options": [
+    {
+     "product_id": 19508,
+     "label": "cheaper",
+     "note": "Saves $0.80 each"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 46575,
+   "options": [
+    {
+     "product_id": 12078,
+     "label": "cheaper",
+     "note": "Saves $1.00 each"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "oil",
+     "label": "Cooking oil"
+    }
+   ]
+  }
+ ]
+}

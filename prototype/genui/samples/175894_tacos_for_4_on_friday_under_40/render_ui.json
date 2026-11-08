@@ -1,0 +1,172 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Taco night for 4 \u00b7 Friday",
+   "subtitle": "Classic beef tacos, kept to the basics"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 4000
+  },
+  {
+   "type": "basket_section",
+   "key": "taco_night",
+   "title": "Everything for taco night",
+   "subtitle": "8 items \u00b7 serves 4",
+   "reason": "One personalized search per ingredient, then the lowest-priced good match, since you keep trips small and cheap",
+   "confidence": "sure",
+   "items": [
+    {
+     "product_id": 19816,
+     "quantity": 2,
+     "need_key": "tortillas",
+     "note": "10-count; 2 packs make 20 tortillas",
+     "tag": "new"
+    },
+    {
+     "product_id": 49236,
+     "quantity": 2,
+     "need_key": "ground_beef",
+     "note": "Lowest-priced beef here; 80% stays juicy in tacos",
+     "tag": "new"
+    },
+    {
+     "product_id": 35068,
+     "quantity": 1,
+     "need_key": "seasoning",
+     "note": "Ranked #1 for you and the cheapest mix",
+     "tag": "new"
+    },
+    {
+     "product_id": 12078,
+     "quantity": 1,
+     "need_key": "cheese",
+     "note": "Mexican blend at the lowest price",
+     "tag": "new"
+    },
+    {
+     "product_id": 22093,
+     "quantity": 1,
+     "need_key": "salsa",
+     "note": "Lowest-priced salsa here",
+     "tag": "new"
+    },
+    {
+     "product_id": 28993,
+     "quantity": 1,
+     "need_key": "lettuce",
+     "note": "Plain iceberg, 50 cents under organic",
+     "tag": "new"
+    },
+    {
+     "product_id": 29487,
+     "quantity": 2,
+     "need_key": "tomatoes",
+     "note": "Romas, the cheapest fresh tomato here",
+     "tag": "new"
+    },
+    {
+     "product_id": 27323,
+     "quantity": 1,
+     "need_key": "sour_cream",
+     "note": "A dollar under the organic one",
+     "tag": "new"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 19816,
+   "options": [
+    {
+     "product_id": 19508,
+     "label": "cheaper",
+     "note": "Corn tortillas, 50 cents less a pack"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 49236,
+   "options": [
+    {
+     "product_id": 22888,
+     "label": "healthier",
+     "note": "90% lean, a dollar more a pound"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 12078,
+   "options": [
+    {
+     "product_id": 46575,
+     "label": "organic",
+     "note": "Organic cheddar, a dollar more"
+    }
+   ]
+  },
+  {
+   "type": "recipe_card",
+   "title": "Beef tacos",
+   "servings": 4,
+   "minutes": 25,
+   "steps": [
+    "Brown the beef in a little oil, drain, stir in the seasoning mix and 2/3 cup water.",
+    "Simmer 5 minutes while you shred the lettuce and dice the tomatoes.",
+    "Warm the tortillas in a dry pan.",
+    "Fill with beef and cheese; top with lettuce, tomato, salsa and sour cream."
+   ],
+   "product_ids": [
+    19816,
+    49236,
+    35068,
+    12078,
+    22093,
+    28993,
+    29487,
+    27323
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "oil",
+     "label": "Cooking oil"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "info",
+   "text": "Classic beef tacos. Tap 'Make it vegetarian' to swap the beef for black beans."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Make it vegetarian",
+     "intent": "swap the beef for black beans"
+    },
+    {
+     "label": "Even cheaper",
+     "intent": "cut this taco night to about $25"
+    },
+    {
+     "label": "Add chips & guac",
+     "intent": "add tortilla chips and guacamole fixings, stay under $40"
+    },
+    {
+     "label": "Go organic",
+     "intent": "organic picks where it stays under $40"
+    }
+   ]
+  }
+ ]
+}

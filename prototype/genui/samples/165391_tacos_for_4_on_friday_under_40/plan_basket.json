@@ -1,0 +1,86 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "servings": 4,
+ "budget_cents": 4000,
+ "constraints": [
+  "under $40",
+  "vegetarian-leaning: no meat in 12 regulars over 27 orders",
+  "mostly organic"
+ ],
+ "needs": [
+  {
+   "key": "tortillas",
+   "label": "Corn tortillas (about 24)",
+   "query": "corn tortillas",
+   "units": 2,
+   "role": "core"
+  },
+  {
+   "key": "beans",
+   "label": "Black beans (2 cans)",
+   "query": "black beans",
+   "units": 2,
+   "role": "core"
+  },
+  {
+   "key": "cheese",
+   "label": "Shredded cheese",
+   "query": "shredded cheese",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "salsa",
+   "label": "Salsa",
+   "query": "salsa",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "avocado",
+   "label": "Avocados (3)",
+   "query": "avocado",
+   "units": 3,
+   "role": "core"
+  },
+  {
+   "key": "lettuce",
+   "label": "Lettuce",
+   "query": "romaine lettuce",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "tomatoes",
+   "label": "Tomatoes",
+   "query": "tomatoes",
+   "units": 2,
+   "role": "optional"
+  },
+  {
+   "key": "limes",
+   "label": "Limes",
+   "query": "limes",
+   "units": 2,
+   "role": "optional"
+  },
+  {
+   "key": "sour_cream",
+   "label": "Sour cream",
+   "query": "sour cream",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "spices",
+   "label": "Cumin and chili powder",
+   "query": "cumin",
+   "units": 1,
+   "role": "pantry"
+  }
+ ],
+ "assumptions": [
+  "Bean tacos: none of your regulars are meat. Tap 'Add ground beef' to switch.",
+  "Two packs of corn tortillas, about 6 tacos each."
+ ]
+}

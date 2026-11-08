@@ -1,0 +1,185 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Taco night for 4 \u00b7 Friday",
+   "subtitle": "Bean tacos built around your usual organic picks"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 4000
+  },
+  {
+   "type": "basket_section",
+   "key": "taco_night",
+   "title": "Everything for taco night",
+   "subtitle": "9 items \u00b7 serves 4",
+   "reason": "One personalized search per ingredient: your own avocados first, organic where you usually buy organic",
+   "confidence": "sure",
+   "items": [
+    {
+     "product_id": 36256,
+     "quantity": 3,
+     "need_key": "tortillas",
+     "note": "Top corn pick for you; 3 packs make 24 tortillas",
+     "tag": "new"
+    },
+    {
+     "product_id": 27156,
+     "quantity": 2,
+     "need_key": "beans",
+     "note": "Organic, like most of your basket",
+     "tag": "new"
+    },
+    {
+     "product_id": 46575,
+     "quantity": 1,
+     "need_key": "cheese",
+     "note": "Organic cheddar, ranked #1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 13535,
+     "quantity": 1,
+     "need_key": "salsa",
+     "note": "Organic medium salsa, ranked #1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 47766,
+     "quantity": 3,
+     "need_key": "avocado",
+     "note": "Your usual, bought 18x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 41220,
+     "quantity": 1,
+     "need_key": "lettuce",
+     "note": "Organic romaine, ranked #1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 26369,
+     "quantity": 2,
+     "need_key": "tomatoes",
+     "note": "Fresh romas for dicing, not the canned ones",
+     "tag": "new"
+    },
+    {
+     "product_id": 44750,
+     "quantity": 2,
+     "need_key": "limes",
+     "note": "Organic, 10 cents more than regular",
+     "tag": "new"
+    },
+    {
+     "product_id": 42701,
+     "quantity": 1,
+     "need_key": "sour_cream",
+     "note": "Organic sour cream, ranked #1 for you",
+     "tag": "new"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 27156,
+   "options": [
+    {
+     "product_id": 35042,
+     "label": "cheaper",
+     "note": "Same beans, not organic, 50 cents less a can"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 46575,
+   "options": [
+    {
+     "product_id": 12078,
+     "label": "different_style",
+     "note": "Mexican blend, a dollar less"
+    },
+    {
+     "product_id": 31343,
+     "label": "cheaper",
+     "note": "Mild cheddar, a dollar less"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 26369,
+   "options": [
+    {
+     "product_id": 405,
+     "label": "your_usual",
+     "note": "The canned organic diced tomatoes you've bought 2x"
+    }
+   ]
+  },
+  {
+   "type": "recipe_card",
+   "title": "Black bean tacos",
+   "servings": 4,
+   "minutes": 25,
+   "steps": [
+    "Warm the beans with cumin, chili powder and a splash of water; mash lightly.",
+    "Dice the tomatoes, slice the avocados, shred the romaine, cut the limes into wedges.",
+    "Char the tortillas in a dry pan, about 30 seconds a side.",
+    "Fill with beans and cheese; top with salsa, veg, avocado, sour cream and lime."
+   ],
+   "product_ids": [
+    36256,
+    27156,
+    46575,
+    13535,
+    47766,
+    41220,
+    26369,
+    44750,
+    42701
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "spices",
+     "label": "Cumin and chili powder"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "info",
+   "text": "Bean tacos because none of your regulars are meat. Tap 'Add ground beef' to switch."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Add ground beef",
+     "intent": "make them beef tacos, still under $40"
+    },
+    {
+     "label": "As cheap as possible",
+     "intent": "same taco night, cheapest picks for every item"
+    },
+    {
+     "label": "Crunchy shells",
+     "intent": "use crunchy taco shells instead of soft corn tortillas"
+    },
+    {
+     "label": "Add chips & guac",
+     "intent": "add tortilla chips and guacamole fixings, stay under $40"
+    }
+   ]
+  }
+ ]
+}

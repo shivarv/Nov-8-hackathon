@@ -1,0 +1,126 @@
+{
+ "title": "Healthy lunches \u00b7 Mon to Fri",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Healthy lunches \u00b7 Mon to Fri",
+   "subtitle": "Picked from your past orders and what shoppers like you buy"
+  },
+  {
+   "type": "basket_section",
+   "key": "intent",
+   "title": "Healthy lunches \u00b7 Mon to Fri",
+   "subtitle": "9 things for 5",
+   "reason": "One personalized search per ingredient",
+   "confidence": "good",
+   "items": [
+    {
+     "product_id": 21903,
+     "quantity": 1,
+     "need_key": "greens",
+     "note": "Your usual, bought 11x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 30489,
+     "quantity": 1,
+     "need_key": "hummus",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 24160,
+     "quantity": 1,
+     "need_key": "wraps",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 39485,
+     "quantity": 1,
+     "need_key": "quinoa",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 42768,
+     "quantity": 2,
+     "need_key": "chickpeas",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 30385,
+     "quantity": 1,
+     "need_key": "eggs",
+     "note": "Your usual, bought 18x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 42265,
+     "quantity": 1,
+     "need_key": "carrots",
+     "note": "Your usual, bought 11x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 13292,
+     "quantity": 2,
+     "need_key": "cucumber",
+     "note": "Your usual, bought 1x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 40604,
+     "quantity": 1,
+     "need_key": "feta",
+     "note": "#1 for you",
+     "tag": "new"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 21903,
+   "options": [
+    {
+     "product_id": 18234,
+     "label": "cheaper",
+     "note": "Saves $2.00 each"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 24160,
+   "options": [
+    {
+     "product_id": 10521,
+     "label": "cheaper",
+     "note": "Saves $1.00 each"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 39485,
+   "options": [
+    {
+     "product_id": 29669,
+     "label": "cheaper",
+     "note": "Saves $0.50 each"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "olive_oil",
+     "label": "Olive oil and lemon"
+    }
+   ]
+  }
+ ]
+}

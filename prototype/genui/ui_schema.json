@@ -1,0 +1,188 @@
+{
+  "$id": "genui/ui_spec/v1",
+  "description": "A generated purchase screen. Claude emits it; the server validates it, hydrates every product_id into a full product (name, price, image) and returns it to the React app. Claude never writes a product name or price: only ids from the candidate list the backend gave it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "blocks"],
+  "properties": {
+    "title": { "type": "string", "maxLength": 60 },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "anyOf": [
+          { "$ref": "#/$defs/header" },
+          { "$ref": "#/$defs/basket_section" },
+          { "$ref": "#/$defs/swap_row" },
+          { "$ref": "#/$defs/budget_meter" },
+          { "$ref": "#/$defs/recipe_card" },
+          { "$ref": "#/$defs/pantry_check" },
+          { "$ref": "#/$defs/question_chips" },
+          { "$ref": "#/$defs/note" }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "product_id": {
+      "description": "Replaced at request time by {type: integer, enum: [ids the backend returned for this request]}.",
+      "type": "integer"
+    },
+    "header": {
+      "description": "Top of the generated screen. Renders like AisleSign.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "title", "subtitle"],
+      "properties": {
+        "type": { "const": "header" },
+        "title": { "type": "string", "maxLength": 60 },
+        "subtitle": { "type": "string", "maxLength": 140 }
+      }
+    },
+    "basket_section": {
+      "description": "A shelf of picked products. Maps 1:1 to FeedSection{kind:'mission'} rendered by <Shelf>; each item becomes a FeedItem (note -> reason) rendered by <ProductTile>. confidence 'sure' shows the 'Add all' button.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "key", "title", "subtitle", "reason", "confidence", "items"],
+      "properties": {
+        "type": { "const": "basket_section" },
+        "key": { "type": "string", "maxLength": 40 },
+        "title": { "type": "string", "maxLength": 60 },
+        "subtitle": { "type": "string", "maxLength": 120 },
+        "reason": { "type": "string", "maxLength": 160 },
+        "confidence": { "enum": ["sure", "good", "explore"] },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["product_id", "quantity", "need_key", "note", "tag"],
+            "properties": {
+              "product_id": { "$ref": "#/$defs/product_id" },
+              "quantity": { "type": "integer", "minimum": 1, "maximum": 12 },
+              "need_key": { "type": "string", "maxLength": 40 },
+              "note": { "type": "string", "maxLength": 70 },
+              "tag": { "enum": ["usual", "pairs", "new", "due", "treat"] }
+            }
+          }
+        }
+      }
+    },
+    "swap_row": {
+      "description": "Alternatives for one picked product (cheaper, the shopper's usual, organic...). Tapping one replaces it in the cart.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "for_product_id", "options"],
+      "properties": {
+        "type": { "const": "swap_row" },
+        "for_product_id": { "$ref": "#/$defs/product_id" },
+        "options": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["product_id", "label", "note"],
+            "properties": {
+              "product_id": { "$ref": "#/$defs/product_id" },
+              "label": {
+                "enum": ["cheaper", "your_usual", "organic", "healthier", "bigger_pack", "different_style"]
+              },
+              "note": { "type": "string", "maxLength": 60 }
+            }
+          }
+        }
+      }
+    },
+    "budget_meter": {
+      "description": "Spend vs budget. Claude only places it and states the budget; the server (and the client, live from the cart) computes spent_cents.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "budget_cents"],
+      "properties": {
+        "type": { "const": "budget_meter" },
+        "budget_cents": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "recipe_card": {
+      "description": "A short recipe whose ingredients are products already in a basket_section. 'Add all ingredients' calls addMany(product_ids).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "title", "servings", "minutes", "steps", "product_ids"],
+      "properties": {
+        "type": { "const": "recipe_card" },
+        "title": { "type": "string", "maxLength": 60 },
+        "servings": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "minutes": { "type": "integer", "minimum": 1, "maximum": 240 },
+        "steps": {
+          "type": "array",
+          "maxItems": 6,
+          "items": { "type": "string", "maxLength": 140 }
+        },
+        "product_ids": { "type": "array", "maxItems": 16, "items": { "$ref": "#/$defs/product_id" } }
+      }
+    },
+    "pantry_check": {
+      "description": "Needs Claude assumed are already at home (salt, oil). Toggling one on runs a personalized search for it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "prompt", "needs"],
+      "properties": {
+        "type": { "const": "pantry_check" },
+        "prompt": { "type": "string", "maxLength": 80 },
+        "needs": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["need_key", "label"],
+            "properties": {
+              "need_key": { "type": "string", "maxLength": 40 },
+              "label": { "type": "string", "maxLength": 40 }
+            }
+          }
+        }
+      }
+    },
+    "question_chips": {
+      "description": "Refinements the shopper can tap. Each chip's intent is sent back as a follow-up turn ('make it vegetarian').",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "prompt", "chips"],
+      "properties": {
+        "type": { "const": "question_chips" },
+        "prompt": { "type": "string", "maxLength": 80 },
+        "chips": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "intent"],
+            "properties": {
+              "label": { "type": "string", "maxLength": 28 },
+              "intent": { "type": "string", "maxLength": 140 }
+            }
+          }
+        }
+      }
+    },
+    "note": {
+      "description": "One line of copy: an assumption made, a constraint that could not be met.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "tone", "text"],
+      "properties": {
+        "type": { "const": "note" },
+        "tone": { "enum": ["info", "warn"] },
+        "text": { "type": "string", "maxLength": 160 }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+=== Breakfasts for the week ===
+    Oatmeal with banana, or toast and eggs, for 7 mornings
+[budget] $18.80 of $20.00  [###################.]
+
+[A week of breakfasts]  5 items · 7 breakfasts  (sure)
+    why: Your own milk and bananas, then the lowest-priced good match for the rest to stay under $20
+  1 x Quick Cooking Rolled Oats Irish Oatmeal        $3.49 =   $3.49  new   Rolled oats, ranked #1 for you  <oats>
+  1 x 0% Fat Free Organic Milk                       $6.29 =   $6.29  usual Your usual, bought 3x  <milk>
+  6 x Banana                                         $0.29 =   $1.74  usual Your usual bananas, 29 cents each  <bananas>
+  1 x 100% Whole Wheat Bread                         $3.79 =   $3.79  new   Lowest-priced whole wheat loaf here  <bread>
+  1 x Large Brown Eggs                               $3.49 =   $3.49  new   Lowest-priced eggs here  <eggs>
+      total                                                   $18.80
+  swap 100% Whole Wheat Bread -> organic: Organic Whole Wheat Bread $4.99 (Organic whole wheat, $1.20 more)
+  swap Quick Cooking Rolled Oats Iris -> different_style: Lower Sugar Instant Oatmeal  Varie $3.49 (Instant oatmeal packets, same price)
+
+[recipe] Banana oatmeal or egg toast · serves 7 · 10 min
+  1. Oatmeal: simmer oats in milk 3 minutes, top with a sliced banana and honey.
+  2. Toast: two eggs on whole wheat toast, a banana on the side.
+  3. Alternate the two through the week.
+[Already at home?] ( ) Honey
+  ! Skipped almond butter to stay under $20; you likely still have the maple one from last month.
+[Change it up] <Add almond butter>  <No dairy>  <More protein>  <Under $15>
+
+(total $18.80 vs budget $20.00: OK)

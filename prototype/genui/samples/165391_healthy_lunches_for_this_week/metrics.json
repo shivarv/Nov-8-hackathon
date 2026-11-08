@@ -1,0 +1,40 @@
+{
+ "shopper": 165391,
+ "intent": "healthy lunches for this week",
+ "llm_mode": "replay",
+ "model": "in-session Claude (replay; not timed)",
+ "composition": "claude",
+ "valid": true,
+ "errors": [],
+ "needs": 10,
+ "searched_needs": 9,
+ "candidates": 53,
+ "phases_s": {
+  "context": 0.51,
+  "plan": 0.0,
+  "ground": 2.22,
+  "compose": 0.0
+ },
+ "search_s_per_need": {
+  "greens": 1.54,
+  "hummus": 1.8,
+  "wraps": 1.85,
+  "quinoa": 1.86,
+  "chickpeas": 1.84,
+  "eggs": 1.8,
+  "carrots": 1.8,
+  "cucumber": 1.56,
+  "feta": 0.68
+ },
+ "total_s": 2.73,
+ "calls": {
+  "backend": 11,
+  "behaviorgpt_est": 29,
+  "llm": 0
+ },
+ "llm_calls": [],
+ "prompt_chars": {
+  "plan": 1571,
+  "compose": 7814
+ }
+}

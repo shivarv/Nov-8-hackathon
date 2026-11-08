@@ -1,0 +1,16 @@
+=== Breakfasts for the week ===
+    Picked from your past orders and what shoppers like you buy
+[budget] $19.59 of $20.00  [####################]
+
+[Breakfasts for the week]  6 things for 7  (good)
+    why: One personalized search per ingredient
+  1 x Quick Cooking Rolled Oats Irish Oatmeal        $3.49 =   $3.49  new   #1 for you  <oats>
+  1 x 0% Fat Free Organic Milk                       $6.29 =   $6.29  usual Your usual, bought 3x  <milk>
+  6 x Banana                                         $0.29 =   $1.74  usual Your usual, bought 1x  <bananas>
+  1 x 100% Whole Wheat Bread                         $3.79 =   $3.79  new   Cheapest pick to fit the budget  <bread>
+  1 x Large Brown Eggs                               $3.49 =   $3.49  new   Cheapest pick to fit the budget  <eggs>
+  1 x Honey Almond Butter Single                     $0.79 =   $0.79  new   Cheapest pick to fit the budget  <nut_butter>
+      total                                                   $19.59
+[Already at home?] ( ) Honey
+
+(total $19.59 vs budget $20.00: OK)

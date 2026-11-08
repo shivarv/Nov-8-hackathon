@@ -1,0 +1,988 @@
+{
+ "candidates": {
+  "greens": [
+   {
+    "id": 21903,
+    "name": "Organic Baby Spinach",
+    "price_cents": 449,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 11,
+    "source": "yours",
+    "rank": 1,
+    "product": {
+     "id": 21903,
+     "name": "Organic Baby Spinach",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 449,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 25931,
+    "name": "Organic Baby Spinach Salad",
+    "price_cents": 449,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 25931,
+     "name": "Organic Baby Spinach Salad",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 449,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 18234,
+    "name": "Organic Spinach Bunch",
+    "price_cents": 249,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 18234,
+     "name": "Organic Spinach Bunch",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_from_San_Francisco_farmers_market.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_from_San_Francisco_farmers_market.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 35547,
+    "name": "Organic Baby Kale",
+    "price_cents": 399,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 35547,
+     "name": "Organic Baby Kale",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Fresh_produce_sits_on_a_counter_waiting_to_be_juiced_by_U.S._Air_Force_Senior_Airman_Megan_Stanton%2C_a_medic_with_the_366th_Medical_Operations_Squadron%2C_at_her_home_in_Mountain_Home%2C_Idaho%2C_July_17%2C_2013_130717-F-NW635-243.jpg/500px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 36070,
+    "name": "Super Spinach! Baby Spinach, Baby Bok Choy, Sweet Baby Kale",
+    "price_cents": 399,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 36070,
+     "name": "Super Spinach! Baby Spinach, Baby Bok Choy, Sweet Baby Kale",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_from_San_Francisco_farmers_market.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_from_San_Francisco_farmers_market.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 21174,
+    "name": "I Heart Baby Kale",
+    "price_cents": 349,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 21174,
+     "name": "I Heart Baby Kale",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Kale_greens_in_bunches.jpg/500px-Kale_greens_in_bunches.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "hummus": [
+   {
+    "id": 30489,
+    "name": "Original Hummus",
+    "price_cents": 349,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 30489,
+     "name": "Original Hummus",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 44097,
+    "name": "Organic Original Hummus",
+    "price_cents": 399,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 44097,
+     "name": "Organic Original Hummus",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 13646,
+    "name": "Lemon Hummus",
+    "price_cents": 349,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 13646,
+     "name": "Lemon Hummus",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 46106,
+    "name": "Organic Sriracha Hummus",
+    "price_cents": 399,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 46106,
+     "name": "Organic Sriracha Hummus",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 30777,
+    "name": "Organic Classic Hummus",
+    "price_cents": 399,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 30777,
+     "name": "Organic Classic Hummus",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "wraps": [
+   {
+    "id": 24160,
+    "name": "Organic Whole Wheat Tortillas",
+    "price_cents": 399,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 24160,
+     "name": "Organic Whole Wheat Tortillas",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 399,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Stack_of_corn_and_flour_tortillas_and_a_large_flour_tortilla.jpg/500px-Stack_of_corn_and_flour_tortillas_and_a_large_flour_tortilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 36591,
+    "name": "100% Whole Wheat Medium Soft Taco Flour Tortillas",
+    "price_cents": 329,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 36591,
+     "name": "100% Whole Wheat Medium Soft Taco Flour Tortillas",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 329,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 9786,
+    "name": "Organic Whole Wheat Pita",
+    "price_cents": 349,
+    "aisle": "Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 9786,
+     "name": "Organic Whole Wheat Pita",
+     "department": "Bakery",
+     "aisle": "Bread",
+     "price_cents": 349,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Fresh_made_bread_05.jpg/500px-Fresh_made_bread_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 10521,
+    "name": "Carb Balance Small Fajita Whole Wheat Tortillas",
+    "price_cents": 299,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 10521,
+     "name": "Carb Balance Small Fajita Whole Wheat Tortillas",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 299,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 12499,
+    "name": "Fiber Rich Wheat Tortillas Fajita Size",
+    "price_cents": 299,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 12499,
+     "name": "Fiber Rich Wheat Tortillas Fajita Size",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 299,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "quinoa": [
+   {
+    "id": 3142,
+    "name": "Organic Short Grain Brown Rice",
+    "price_cents": 399,
+    "aisle": "Grains Rice Dried Goods",
+    "times_bought": 1,
+    "source": "yours",
+    "rank": 1,
+    "product": {
+     "id": 3142,
+     "name": "Organic Short Grain Brown Rice",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 399,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Germinated_brown_rice_-_long_grain.jpg/500px-Germinated_brown_rice_-_long_grain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 39485,
+    "name": "Organic Traditional Gluten Freen Quinoa",
+    "price_cents": 449,
+    "aisle": "Grains Rice Dried Goods",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 39485,
+     "name": "Organic Traditional Gluten Freen Quinoa",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 449,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 29669,
+    "name": "Organic Tri-Color Blend Quinoa",
+    "price_cents": 399,
+    "aisle": "Grains Rice Dried Goods",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 29669,
+     "name": "Organic Tri-Color Blend Quinoa",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 399,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 20776,
+    "name": "Organic Quinoa",
+    "price_cents": 449,
+    "aisle": "Grains Rice Dried Goods",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 20776,
+     "name": "Organic Quinoa",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 449,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 49156,
+    "name": "Organic Whole Grain Sprouted Quinoa",
+    "price_cents": 449,
+    "aisle": "Grains Rice Dried Goods",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 49156,
+     "name": "Organic Whole Grain Sprouted Quinoa",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 449,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 45870,
+    "name": "Quinoa, Organic, Whole Grain",
+    "price_cents": 429,
+    "aisle": "Grains Rice Dried Goods",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 45870,
+     "name": "Quinoa, Organic, Whole Grain",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 429,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "chickpeas": [
+   {
+    "id": 42768,
+    "name": "Organic Garbanzo Beans",
+    "price_cents": 179,
+    "aisle": "Canned Meals Beans",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 42768,
+     "name": "Organic Garbanzo Beans",
+     "department": "Canned Goods",
+     "aisle": "Canned Meals Beans",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Chickpeas%F0%9F%AB%98.jpg/500px-Chickpeas%F0%9F%AB%98.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 35750,
+    "name": "Organic Garbanzo Beans No Salt Added",
+    "price_cents": 179,
+    "aisle": "Canned Meals Beans",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 35750,
+     "name": "Organic Garbanzo Beans No Salt Added",
+     "department": "Canned Goods",
+     "aisle": "Canned Meals Beans",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Chickpeas_%282%29.jpg/500px-Chickpeas_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 17634,
+    "name": "Chick Peas",
+    "price_cents": 129,
+    "aisle": "Canned Meals Beans",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 17634,
+     "name": "Chick Peas",
+     "department": "Canned Goods",
+     "aisle": "Canned Meals Beans",
+     "price_cents": 129,
+     "emoji": "\ud83e\udd6b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Chickpeas_%282%29.jpg/500px-Chickpeas_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 32412,
+    "name": "Garbanzo Beans No Salt Added",
+    "price_cents": 129,
+    "aisle": "Latino Foods",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 32412,
+     "name": "Garbanzo Beans No Salt Added",
+     "department": "International",
+     "aisle": "Latino Foods",
+     "price_cents": 129,
+     "emoji": "\ud83c\udf2e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/500px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 45854,
+    "name": "Garbanzos Chick Peas",
+    "price_cents": 129,
+    "aisle": "Canned Meals Beans",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 45854,
+     "name": "Garbanzos Chick Peas",
+     "department": "Canned Goods",
+     "aisle": "Canned Meals Beans",
+     "price_cents": 129,
+     "emoji": "\ud83e\udd6b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Heinz_%22Beanz%22_Baked_Beans_In_a_rich_tomato_sauce.jpg/500px-Heinz_%22Beanz%22_Baked_Beans_In_a_rich_tomato_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "eggs": [
+   {
+    "id": 30385,
+    "name": "Organic Free Range Grade A Large Brown Eggs",
+    "price_cents": 499,
+    "aisle": "Eggs",
+    "times_bought": 18,
+    "source": "yours",
+    "rank": 1,
+    "product": {
+     "id": 30385,
+     "name": "Organic Free Range Grade A Large Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 499,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 35921,
+    "name": "Organic Large Grade A Brown Eggs",
+    "price_cents": 549,
+    "aisle": "Eggs",
+    "times_bought": 1,
+    "source": "yours",
+    "rank": 2,
+    "product": {
+     "id": 35921,
+     "name": "Organic Large Grade A Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 549,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/6-Pack-Chicken-Eggs.jpg/500px-6-Pack-Chicken-Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 16083,
+    "name": "Organic Large Brown Eggs",
+    "price_cents": 549,
+    "aisle": "Eggs",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 16083,
+     "name": "Organic Large Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 549,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 26384,
+    "name": "Large Brown Eggs",
+    "price_cents": 349,
+    "aisle": "Eggs",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 26384,
+     "name": "Large Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 30233,
+    "name": "Organic Large Brown Grade AA Cage Free Eggs",
+    "price_cents": 599,
+    "aisle": "Eggs",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 30233,
+     "name": "Organic Large Brown Grade AA Cage Free Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 599,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/6-Pack-Chicken-Eggs.jpg/500px-6-Pack-Chicken-Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 46654,
+    "name": "Organic Grade A Large Brown Eggs",
+    "price_cents": 549,
+    "aisle": "Eggs",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 46654,
+     "name": "Organic Grade A Large Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 549,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/6-Pack-Chicken-Eggs.jpg/500px-6-Pack-Chicken-Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 36550,
+    "name": "Organic Extra Large Grade AA Brown Eggs",
+    "price_cents": 649,
+    "aisle": "Eggs",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 36550,
+     "name": "Organic Extra Large Grade AA Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 649,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/6-Pack-Chicken-Eggs.jpg/500px-6-Pack-Chicken-Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "carrots": [
+   {
+    "id": 42265,
+    "name": "Organic Baby Carrots",
+    "price_cents": 229,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 11,
+    "source": "yours",
+    "rank": 1,
+    "product": {
+     "id": 42265,
+     "name": "Organic Baby Carrots",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 229,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresh_Carrots_02.jpg/500px-Fresh_Carrots_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 13176,
+    "name": "Bag of Organic Bananas",
+    "price_cents": 249,
+    "aisle": "Fresh Fruits",
+    "times_bought": 5,
+    "source": "yours",
+    "rank": 2,
+    "product": {
+     "id": 13176,
+     "name": "Bag of Organic Bananas",
+     "department": "Produce",
+     "aisle": "Fresh Fruits",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bunch_of_bananas_on_sale.jpg/500px-Bunch_of_bananas_on_sale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 43961,
+    "name": "Organic Peeled Whole Baby Carrots",
+    "price_cents": 249,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 3,
+    "source": "yours",
+    "rank": 3,
+    "product": {
+     "id": 43961,
+     "name": "Organic Peeled Whole Baby Carrots",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresh_Carrots_02.jpg/500px-Fresh_Carrots_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 22849,
+    "name": "Bunny-Luv Fresh Organic Carrots",
+    "price_cents": 299,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 22849,
+     "name": "Bunny-Luv Fresh Organic Carrots",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresh_Carrots_02.jpg/500px-Fresh_Carrots_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 16759,
+    "name": "Organic Carrot Bunch",
+    "price_cents": 249,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 16759,
+     "name": "Organic Carrot Bunch",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Bunch_of_carrots.jpg/500px-Bunch_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 32851,
+    "name": "Organic Carrots Baby Peeled Prepacked",
+    "price_cents": 299,
+    "aisle": "Packaged Vegetables Fruits",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 32851,
+     "name": "Organic Carrots Baby Peeled Prepacked",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 17794,
+    "name": "Carrots",
+    "price_cents": 199,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 17794,
+     "name": "Carrots",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 199,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Bunch_of_carrots.jpg/500px-Bunch_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 28413,
+    "name": "Bunny-Luv Organic Carrots",
+    "price_cents": 299,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 28413,
+     "name": "Bunny-Luv Organic Carrots",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Bunch_of_carrots.jpg/500px-Bunch_of_carrots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "cucumber": [
+   {
+    "id": 13292,
+    "name": "Juice Beverage, Cold Pressed, Kale Apple Ginger Romaine Spinach Cucumber Celery Parsley Lemon",
+    "price_cents": 499,
+    "aisle": "Refrigerated",
+    "times_bought": 1,
+    "source": "yours",
+    "rank": 1,
+    "product": {
+     "id": 13292,
+     "name": "Juice Beverage, Cold Pressed, Kale Apple Ginger Romaine Spinach Cucumber Celery Parsley Lemon",
+     "department": "Beverages",
+     "aisle": "Refrigerated",
+     "price_cents": 499,
+     "emoji": "\ud83e\udd64",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Pineapple_juice_mixed_with_pear-lemon-chia_seeds-2860722.jpg/500px-Pineapple_juice_mixed_with_pear-lemon-chia_seeds-2860722.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 10385,
+    "name": "Organic English Cucumber",
+    "price_cents": 149,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 10385,
+     "name": "Organic English Cucumber",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 149,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg/500px-Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 30391,
+    "name": "Organic Cucumber",
+    "price_cents": 149,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 30391,
+     "name": "Organic Cucumber",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 149,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Fresh_cucumbers_in_bulk.jpg/500px-Fresh_cucumbers_in_bulk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 45,
+    "name": "European Cucumber",
+    "price_cents": 149,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 45,
+     "name": "European Cucumber",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 149,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Fresh_cucumbers_in_bulk.jpg/500px-Fresh_cucumbers_in_bulk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 36695,
+    "name": "Organic Hothouse Cucumbers",
+    "price_cents": 149,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 36695,
+     "name": "Organic Hothouse Cucumbers",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 149,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Fresh_cucumbers_in_bulk.jpg/500px-Fresh_cucumbers_in_bulk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 4562,
+    "name": "English Seedless Cucumber",
+    "price_cents": 149,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 4562,
+     "name": "English Seedless Cucumber",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 149,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg/500px-Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "feta": [
+   {
+    "id": 40604,
+    "name": "Feta Cheese Crumbles",
+    "price_cents": 299,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 40604,
+     "name": "Feta Cheese Crumbles",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Feta_Cheese.jpg/500px-Feta_Cheese.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 20887,
+    "name": "Feta Crumbles Cheese",
+    "price_cents": 349,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 20887,
+     "name": "Feta Crumbles Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 38291,
+    "name": "Traditional Crumbled Feta Cheese",
+    "price_cents": 299,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 38291,
+     "name": "Traditional Crumbled Feta Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 8362,
+    "name": "Feta Cheese",
+    "price_cents": 349,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 8362,
+     "name": "Feta Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 2408,
+    "name": "Feta Crumbled Traditional Cheese",
+    "price_cents": 299,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 2408,
+     "name": "Feta Crumbled Traditional Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ]
+ },
+ "search_seconds": {
+  "greens": 1.54,
+  "hummus": 1.8,
+  "wraps": 1.85,
+  "quinoa": 1.86,
+  "chickpeas": 1.84,
+  "eggs": 1.8,
+  "carrots": 1.8,
+  "cucumber": 1.56,
+  "feta": 0.68
+ },
+ "seconds": 2.22
+}

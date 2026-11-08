@@ -1,0 +1,37 @@
+{
+ "shopper": 175894,
+ "intent": "breakfasts for the week, keep it under $20",
+ "llm_mode": "replay",
+ "model": "in-session Claude (replay; not timed)",
+ "composition": "claude",
+ "valid": true,
+ "errors": [],
+ "needs": 7,
+ "searched_needs": 6,
+ "candidates": 35,
+ "phases_s": {
+  "context": 0.19,
+  "plan": 0.0,
+  "ground": 0.83,
+  "compose": 0.0
+ },
+ "search_s_per_need": {
+  "oats": 0.83,
+  "milk": 0.68,
+  "bananas": 0.69,
+  "bread": 0.83,
+  "eggs": 0.83,
+  "nut_butter": 0.82
+ },
+ "total_s": 1.02,
+ "calls": {
+  "backend": 8,
+  "behaviorgpt_est": 20,
+  "llm": 0
+ },
+ "llm_calls": [],
+ "prompt_chars": {
+  "plan": 1454,
+  "compose": 5661
+ }
+}

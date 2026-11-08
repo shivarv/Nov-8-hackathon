@@ -1,0 +1,86 @@
+{
+ "title": "Healthy lunches \u00b7 Mon to Fri",
+ "servings": 5,
+ "budget_cents": null,
+ "constraints": [
+  "healthy",
+  "mostly organic",
+  "5 weekday lunches for one"
+ ],
+ "needs": [
+  {
+   "key": "greens",
+   "label": "Baby spinach",
+   "query": "baby spinach",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "hummus",
+   "label": "Hummus",
+   "query": "hummus",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "wraps",
+   "label": "Whole wheat wraps",
+   "query": "whole wheat wraps",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "quinoa",
+   "label": "Quinoa",
+   "query": "quinoa",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "chickpeas",
+   "label": "Chickpeas (2 cans)",
+   "query": "chickpeas",
+   "units": 2,
+   "role": "core"
+  },
+  {
+   "key": "eggs",
+   "label": "Eggs (for hard-boiling)",
+   "query": "eggs",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "carrots",
+   "label": "Baby carrots",
+   "query": "baby carrots",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "cucumber",
+   "label": "Cucumbers",
+   "query": "cucumber",
+   "units": 2,
+   "role": "optional"
+  },
+  {
+   "key": "feta",
+   "label": "Feta",
+   "query": "feta cheese",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "olive_oil",
+   "label": "Olive oil and lemon",
+   "query": "olive oil",
+   "units": 1,
+   "role": "pantry"
+  }
+ ],
+ "assumptions": [
+  "Five weekday lunches for one: quinoa bowls and hummus wraps.",
+  "Olive oil assumed at home: you bought it 20 days ago."
+ ]
+}

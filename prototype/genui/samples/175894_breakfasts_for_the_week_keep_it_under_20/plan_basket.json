@@ -1,0 +1,64 @@
+{
+ "title": "Breakfasts for the week",
+ "servings": 7,
+ "budget_cents": 2000,
+ "constraints": [
+  "under $20",
+  "budget-minded"
+ ],
+ "needs": [
+  {
+   "key": "oats",
+   "label": "Rolled oats",
+   "query": "oats",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "milk",
+   "label": "Milk",
+   "query": "milk",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "bananas",
+   "label": "Bananas (6)",
+   "query": "banana",
+   "units": 6,
+   "role": "core"
+  },
+  {
+   "key": "bread",
+   "label": "Whole wheat bread",
+   "query": "whole wheat bread",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "eggs",
+   "label": "Eggs",
+   "query": "eggs",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "nut_butter",
+   "label": "Almond butter",
+   "query": "almond butter",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "honey",
+   "label": "Honey",
+   "query": "honey",
+   "units": 1,
+   "role": "pantry"
+  }
+ ],
+ "assumptions": [
+  "Seven breakfasts for one: oatmeal with banana, or toast and eggs.",
+  "Almond butter is optional: you may still have some from 37 days ago."
+ ]
+}

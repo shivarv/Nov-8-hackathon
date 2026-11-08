@@ -1,0 +1,255 @@
+{
+ "title": "Breakfasts for the week",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Breakfasts for the week",
+   "subtitle": "Oatmeal with banana, or toast and eggs, for 7 mornings"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 2000,
+   "spent_cents": 1880
+  },
+  {
+   "type": "basket_section",
+   "key": "breakfasts",
+   "title": "A week of breakfasts",
+   "subtitle": "5 items \u00b7 7 breakfasts",
+   "reason": "Your own milk and bananas, then the lowest-priced good match for the rest to stay under $20",
+   "confidence": "sure",
+   "items": [
+    {
+     "product": {
+      "id": 46847,
+      "name": "Quick Cooking Rolled Oats Irish Oatmeal",
+      "department": "Breakfast",
+      "aisle": "Hot Cereal Pancake Mixes",
+      "price_cents": 349,
+      "emoji": "\ud83e\udd63",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Oatmeal_porridge_1-minute_with_additional_ingredients.jpg/500px-Oatmeal_porridge_1-minute_with_additional_ingredients.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Rolled oats, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "oats"
+    },
+    {
+     "product": {
+      "id": 49517,
+      "name": "0% Fat Free Organic Milk",
+      "department": "Dairy Eggs",
+      "aisle": "Milk",
+      "price_cents": 629,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/A_carton_of_mik_and_cup_on_a_table_at_home.jpg/500px-A_carton_of_mik_and_cup_on_a_table_at_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "usual",
+     "reason": "Your usual, bought 3x",
+     "confidence": 0.9,
+     "quantity": 1,
+     "need_key": "milk"
+    },
+    {
+     "product": {
+      "id": 24852,
+      "name": "Banana",
+      "department": "Produce",
+      "aisle": "Fresh Fruits",
+      "price_cents": 29,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Fresh_-_yellow_bananas.jpg/500px-Fresh_-_yellow_bananas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "usual",
+     "reason": "Your usual bananas, 29 cents each",
+     "confidence": 0.9,
+     "quantity": 6,
+     "need_key": "bananas"
+    },
+    {
+     "product": {
+      "id": 5077,
+      "name": "100% Whole Wheat Bread",
+      "department": "Bakery",
+      "aisle": "Bread",
+      "price_cents": 379,
+      "emoji": "\ud83c\udf5e",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Fresh_made_bread_05.jpg/500px-Fresh_made_bread_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Lowest-priced whole wheat loaf here",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "bread"
+    },
+    {
+     "product": {
+      "id": 26384,
+      "name": "Large Brown Eggs",
+      "department": "Dairy Eggs",
+      "aisle": "Eggs",
+      "price_cents": 349,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Lowest-priced eggs here",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "eggs"
+    }
+   ],
+   "kind": "mission"
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "organic",
+     "note": "Organic whole wheat, $1.20 more",
+     "product": {
+      "id": 48628,
+      "name": "Organic Whole Wheat Bread",
+      "department": "Bakery",
+      "aisle": "Bread",
+      "price_cents": 499,
+      "emoji": "\ud83c\udf5e",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Fresh_made_bread_06.jpg/500px-Fresh_made_bread_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 5077,
+    "name": "100% Whole Wheat Bread",
+    "department": "Bakery",
+    "aisle": "Bread",
+    "price_cents": 379,
+    "emoji": "\ud83c\udf5e",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Fresh_made_bread_05.jpg/500px-Fresh_made_bread_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "different_style",
+     "note": "Instant oatmeal packets, same price",
+     "product": {
+      "id": 27681,
+      "name": "Lower Sugar Instant Oatmeal  Variety",
+      "department": "Breakfast",
+      "aisle": "Hot Cereal Pancake Mixes",
+      "price_cents": 349,
+      "emoji": "\ud83e\udd63",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Oatmeal_porridge_1-minute_with_additional_ingredients.jpg/500px-Oatmeal_porridge_1-minute_with_additional_ingredients.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 46847,
+    "name": "Quick Cooking Rolled Oats Irish Oatmeal",
+    "department": "Breakfast",
+    "aisle": "Hot Cereal Pancake Mixes",
+    "price_cents": 349,
+    "emoji": "\ud83e\udd63",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Oatmeal_porridge_1-minute_with_additional_ingredients.jpg/500px-Oatmeal_porridge_1-minute_with_additional_ingredients.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "recipe_card",
+   "title": "Banana oatmeal or egg toast",
+   "servings": 7,
+   "minutes": 10,
+   "steps": [
+    "Oatmeal: simmer oats in milk 3 minutes, top with a sliced banana and honey.",
+    "Toast: two eggs on whole wheat toast, a banana on the side.",
+    "Alternate the two through the week."
+   ],
+   "products": [
+    {
+     "id": 46847,
+     "name": "Quick Cooking Rolled Oats Irish Oatmeal",
+     "department": "Breakfast",
+     "aisle": "Hot Cereal Pancake Mixes",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd63",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Oatmeal_porridge_1-minute_with_additional_ingredients.jpg/500px-Oatmeal_porridge_1-minute_with_additional_ingredients.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 49517,
+     "name": "0% Fat Free Organic Milk",
+     "department": "Dairy Eggs",
+     "aisle": "Milk",
+     "price_cents": 629,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/A_carton_of_mik_and_cup_on_a_table_at_home.jpg/500px-A_carton_of_mik_and_cup_on_a_table_at_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 24852,
+     "name": "Banana",
+     "department": "Produce",
+     "aisle": "Fresh Fruits",
+     "price_cents": 29,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Fresh_-_yellow_bananas.jpg/500px-Fresh_-_yellow_bananas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 5077,
+     "name": "100% Whole Wheat Bread",
+     "department": "Bakery",
+     "aisle": "Bread",
+     "price_cents": 379,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Fresh_made_bread_05.jpg/500px-Fresh_made_bread_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 26384,
+     "name": "Large Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "honey",
+     "label": "Honey"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "warn",
+   "text": "Skipped almond butter to stay under $20; you likely still have the maple one from last month."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Add almond butter",
+     "intent": "add almond butter even if it goes a little over $20"
+    },
+    {
+     "label": "No dairy",
+     "intent": "make these breakfasts dairy-free"
+    },
+    {
+     "label": "More protein",
+     "intent": "higher-protein breakfasts, still under $20"
+    },
+    {
+     "label": "Under $15",
+     "intent": "same idea for under $15"
+    }
+   ]
+  }
+ ]
+}

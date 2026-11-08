@@ -1,0 +1,358 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Taco night for 4 \u00b7 Friday",
+   "subtitle": "Classic beef tacos, kept to the basics"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 4000,
+   "spent_cents": 3079
+  },
+  {
+   "type": "basket_section",
+   "key": "taco_night",
+   "title": "Everything for taco night",
+   "subtitle": "8 items \u00b7 serves 4",
+   "reason": "One personalized search per ingredient, then the lowest-priced good match, since you keep trips small and cheap",
+   "confidence": "sure",
+   "items": [
+    {
+     "product": {
+      "id": 19816,
+      "name": "Sonoma Traditional Flour Tortillas 10 Count",
+      "department": "Bakery",
+      "aisle": "Tortillas Flat Bread",
+      "price_cents": 299,
+      "emoji": "\ud83c\udf5e",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "10-count; 2 packs make 20 tortillas",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "tortillas"
+    },
+    {
+     "product": {
+      "id": 49236,
+      "name": "80% Lean Ground Beef",
+      "department": "Meat Seafood",
+      "aisle": "Meat Counter",
+      "price_cents": 499,
+      "emoji": "\ud83e\udd69",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hakket-oksekoed.jpg/500px-Hakket-oksekoed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Lowest-priced beef here; 80% stays juicy in tacos",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "ground_beef"
+    },
+    {
+     "product": {
+      "id": 35068,
+      "name": "Taco Mild Seasoning Mix",
+      "department": "Pantry",
+      "aisle": "Marinades Meat Preparation",
+      "price_cents": 79,
+      "emoji": "\ud83e\uded9",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chicken_marination.jpg/500px-Chicken_marination.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Ranked #1 for you and the cheapest mix",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "seasoning"
+    },
+    {
+     "product": {
+      "id": 12078,
+      "name": "Shredded Mexican Blend Cheese",
+      "department": "Dairy Eggs",
+      "aisle": "Packaged Cheese",
+      "price_cents": 299,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Mexican blend at the lowest price",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "cheese"
+    },
+    {
+     "product": {
+      "id": 22093,
+      "name": "Restaurant Style Medium Salsa",
+      "department": "Pantry",
+      "aisle": "Preserved Dips Spreads",
+      "price_cents": 299,
+      "emoji": "\ud83e\uded9",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+     },
+     "tag": "new",
+     "reason": "Lowest-priced salsa here",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "salsa"
+    },
+    {
+     "product": {
+      "id": 28993,
+      "name": "Iceberg Lettuce",
+      "department": "Produce",
+      "aisle": "Fresh Vegetables",
+      "price_cents": 199,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lettuce_iceberg_variety_from_Salinas_valley_California.jpeg/500px-Lettuce_iceberg_variety_from_Salinas_valley_California.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Plain iceberg, 50 cents under organic",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "lettuce"
+    },
+    {
+     "product": {
+      "id": 29487,
+      "name": "Roma Tomato",
+      "department": "Produce",
+      "aisle": "Fresh Vegetables",
+      "price_cents": 179,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Romas, the cheapest fresh tomato here",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "tomatoes"
+    },
+    {
+     "product": {
+      "id": 27323,
+      "name": "Pure & Natural Sour Cream",
+      "department": "Dairy Eggs",
+      "aisle": "Other Creams Cheeses",
+      "price_cents": 249,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cr%C3%A8me_Sure_-_Sour_Cream.JPG/500px-Cr%C3%A8me_Sure_-_Sour_Cream.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "A dollar under the organic one",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "sour_cream"
+    }
+   ],
+   "kind": "mission"
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "cheaper",
+     "note": "Corn tortillas, 50 cents less a pack",
+     "product": {
+      "id": 19508,
+      "name": "Corn Tortillas",
+      "department": "Bakery",
+      "aisle": "Tortillas Flat Bread",
+      "price_cents": 249,
+      "emoji": "\ud83c\udf5e",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 19816,
+    "name": "Sonoma Traditional Flour Tortillas 10 Count",
+    "department": "Bakery",
+    "aisle": "Tortillas Flat Bread",
+    "price_cents": 299,
+    "emoji": "\ud83c\udf5e",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "healthier",
+     "note": "90% lean, a dollar more a pound",
+     "product": {
+      "id": 22888,
+      "name": "90% Lean Ground Beef",
+      "department": "Meat Seafood",
+      "aisle": "Meat Counter",
+      "price_cents": 599,
+      "emoji": "\ud83e\udd69",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Vacuum_packaged_meat_raw.jpg/500px-Vacuum_packaged_meat_raw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 49236,
+    "name": "80% Lean Ground Beef",
+    "department": "Meat Seafood",
+    "aisle": "Meat Counter",
+    "price_cents": 499,
+    "emoji": "\ud83e\udd69",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hakket-oksekoed.jpg/500px-Hakket-oksekoed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "organic",
+     "note": "Organic cheddar, a dollar more",
+     "product": {
+      "id": 46575,
+      "name": "Organic Finely Shredded Cheddar Cheese",
+      "department": "Dairy Eggs",
+      "aisle": "Packaged Cheese",
+      "price_cents": 399,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 12078,
+    "name": "Shredded Mexican Blend Cheese",
+    "department": "Dairy Eggs",
+    "aisle": "Packaged Cheese",
+    "price_cents": 299,
+    "emoji": "\ud83e\udd5b",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "recipe_card",
+   "title": "Beef tacos",
+   "servings": 4,
+   "minutes": 25,
+   "steps": [
+    "Brown the beef in a little oil, drain, stir in the seasoning mix and 2/3 cup water.",
+    "Simmer 5 minutes while you shred the lettuce and dice the tomatoes.",
+    "Warm the tortillas in a dry pan.",
+    "Fill with beef and cheese; top with lettuce, tomato, salsa and sour cream."
+   ],
+   "products": [
+    {
+     "id": 19816,
+     "name": "Sonoma Traditional Flour Tortillas 10 Count",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 299,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 49236,
+     "name": "80% Lean Ground Beef",
+     "department": "Meat Seafood",
+     "aisle": "Meat Counter",
+     "price_cents": 499,
+     "emoji": "\ud83e\udd69",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hakket-oksekoed.jpg/500px-Hakket-oksekoed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 35068,
+     "name": "Taco Mild Seasoning Mix",
+     "department": "Pantry",
+     "aisle": "Marinades Meat Preparation",
+     "price_cents": 79,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chicken_marination.jpg/500px-Chicken_marination.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+     "id": 12078,
+     "name": "Shredded Mexican Blend Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 22093,
+     "name": "Restaurant Style Medium Salsa",
+     "department": "Pantry",
+     "aisle": "Preserved Dips Spreads",
+     "price_cents": 299,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    },
+    {
+     "id": 28993,
+     "name": "Iceberg Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 199,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lettuce_iceberg_variety_from_Salinas_valley_California.jpeg/500px-Lettuce_iceberg_variety_from_Salinas_valley_California.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 29487,
+     "name": "Roma Tomato",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 27323,
+     "name": "Pure & Natural Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cr%C3%A8me_Sure_-_Sour_Cream.JPG/500px-Cr%C3%A8me_Sure_-_Sour_Cream.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "oil",
+     "label": "Cooking oil"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "info",
+   "text": "Classic beef tacos. Tap 'Make it vegetarian' to swap the beef for black beans."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Make it vegetarian",
+     "intent": "swap the beef for black beans"
+    },
+    {
+     "label": "Even cheaper",
+     "intent": "cut this taco night to about $25"
+    },
+    {
+     "label": "Add chips & guac",
+     "intent": "add tortilla chips and guacamole fixings, stay under $40"
+    },
+    {
+     "label": "Go organic",
+     "intent": "organic picks where it stays under $40"
+    }
+   ]
+  }
+ ]
+}
