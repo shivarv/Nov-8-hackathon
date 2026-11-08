@@ -2,8 +2,10 @@
 
 Reads the 300-shopper sample (prototype/out/shoppers_sample.json, made by
 explore.py) and writes data/demo_shoppers.json with each chosen shopper's past
-orders (items in the order they were added) and a short description computed
-from those orders. The held-out next order is left out.
+orders (items in the order they were added, with weekday, hour and days since the
+previous order) and a short description computed
+from those orders. Their real next order (held out by Instacart) is kept apart as
+`next_order`: the model never sees it, and the app can reveal it to score its picks.
 
 Run from the repo root:
     prototype/.venv/bin/python prototype/build_demo_shoppers.py
@@ -71,6 +73,19 @@ def main() -> None:
         ("Pricier picks", lambda s: s["price_idx"] - s["organic"]),
         ("Steady regular", lambda s: len(s["past"])),
     ]
+    def next_order(uid: str) -> "dict | None":
+        held = [o for o in sample[uid] if o["held_out"]]
+        if not held:
+            return None
+        o = held[0]
+        dsp = o["days_since_prior"]
+        return {
+            "dow": o["dow"],
+            "hour": o["hour"],
+            "days_since_prior": None if dsp is None else int(float(dsp)),
+            "items": [int(p) for p in o["items"]],
+        }
+
     chosen, used = [], set()
     for label, key in personas:
         s = max((s for s in stats if s["id"] not in used), key=key)
@@ -85,7 +100,21 @@ def main() -> None:
                 ),
                 "usual_day": DAYS[s["dow"]],
                 "usual_hour": s["hour"],
-                "orders": [{"dow": o["dow"], "hour": o["hour"], "items": [int(p) for p in o["items"]]} for o in s["past"]],
+                # days_since_prior: days since the previous order (Instacart caps it at 30;
+                # None for a first order). With dow and hour it rebuilds the timeline the
+                # backend sends to BehaviorGPT.
+                "orders": [
+                    {
+                        "dow": o["dow"],
+                        "hour": o["hour"],
+                        "days_since_prior": (
+                            None if o["days_since_prior"] is None else int(float(o["days_since_prior"]))
+                        ),
+                        "items": [int(p) for p in o["items"]],
+                    }
+                    for o in s["past"]
+                ],
+                "next_order": next_order(s["id"]),
             }
         )
         print(f"{label:<22} shopper {s['id']:>6}: {chosen[-1]['blurb']}")

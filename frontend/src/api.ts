@@ -1,4 +1,14 @@
-import type { Cart, CheckoutResult, Feed, Product, Recommendation, Shopper } from "./types";
+import type {
+  Cart,
+  CheckoutResult,
+  Feed,
+  Plan,
+  Product,
+  Recommendation,
+  Replay,
+  SearchResult,
+  Shopper,
+} from "./types";
 
 export class ApiError extends Error {
   constructor(
@@ -37,8 +47,10 @@ export const api = {
       method: "PUT",
       body: JSON.stringify({ quantity }),
     }),
-  checkout: (cartId: string) =>
-    request<CheckoutResult>(`/carts/${cartId}/checkout`, { method: "POST" }),
+  checkout: (cartId: string, shopperId: number) =>
+    request<CheckoutResult>(`/carts/${cartId}/checkout?shopper_id=${shopperId}`, {
+      method: "POST",
+    }),
 
   cartRecommendations: (cartId: string, k = 8) =>
     request<Recommendation[]>(`/recommendations/cart/${cartId}?k=${k}`),
@@ -48,6 +60,20 @@ export const api = {
   shoppers: () => request<Shopper[]>("/shoppers"),
   feed: (shopperId: number, cartId: string, init?: RequestInit) =>
     request<Feed>(`/feed?shopper_id=${shopperId}&cart_id=${cartId}`, init),
+  plan: (shopperId: number, text: string, cartId: string | null, init?: RequestInit) =>
+    request<Plan>("/plan", {
+      method: "POST",
+      body: JSON.stringify({ shopper_id: shopperId, cart_id: cartId, request: text }),
+      ...init,
+    }),
+  replay: (shopperId: number) => request<Replay>(`/shoppers/${shopperId}/replay`),
+  nextVisit: (shopperId: number) =>
+    request<{ days_ahead: number }>(`/shoppers/${shopperId}/next-visit`, { method: "POST" }),
+  search: (shopperId: number, query: string, cartId: string | null, init?: RequestInit) => {
+    const qs = new URLSearchParams({ shopper_id: String(shopperId), q: query });
+    if (cartId) qs.set("cart_id", cartId);
+    return request<SearchResult>(`/search?${qs}`, init);
+  },
 };
 
 export const formatPrice = (cents: number) => `$${(cents / 100).toFixed(2)}`;

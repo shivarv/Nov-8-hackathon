@@ -79,17 +79,34 @@ export function useCart(shopperId: number | null) {
     [cart],
   );
 
+  /** Set several quantities one after another (a planned basket), then publish once. */
+  const setMany = useCallback(
+    async (entries: [productId: number, quantity: number][]) => {
+      if (!cart) return;
+      let next = cart;
+      try {
+        for (const [id, quantity] of entries) {
+          next = await api.setQuantity(cart.id, id, quantity);
+        }
+        setCart(next);
+      } catch (e) {
+        setError(String(e));
+      }
+    },
+    [cart],
+  );
+
   const checkout = useCallback(async () => {
-    if (!cart) return null;
-    const result = await api.checkout(cart.id);
+    if (!cart || shopperId == null) return null;
+    const result = await api.checkout(cart.id, shopperId);
     setCart(await api.getCart(cart.id));
     return result;
-  }, [cart]);
+  }, [cart, shopperId]);
 
   const quantityOf = useCallback(
     (productId: number) => cart?.items.find((i) => i.product.id === productId)?.quantity ?? 0,
     [cart],
   );
 
-  return { cart, error, setQuantity, addMany, checkout, quantityOf };
+  return { cart, error, setQuantity, addMany, setMany, checkout, quantityOf };
 }

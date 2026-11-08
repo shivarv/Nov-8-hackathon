@@ -34,7 +34,10 @@ export interface Shopper {
   label: string;
   blurb: string;
   usual_day: string;
+  usual_hour: number;
+  usual_gap_days: number;
   n_orders: number;
+  days_ahead: number;
 }
 
 export type Confidence = "sure" | "good" | "explore";
@@ -62,11 +65,64 @@ export interface Feed {
   shopper: Shopper;
   sections: FeedSection[];
   model: "behaviorgpt" | "fallback";
-  /** Shopper's own items BehaviorGPT is surest about for this basket (empty without it). */
-  ready_to_add: FeedItem[];
+  /** Days since their last order on the shopper's timeline. */
+  days_since_last_order: number | null;
+  /** How far the demo has moved the shopper's clock forward ("next visit"). */
+  days_ahead: number;
 }
 
 export interface CheckoutResult {
   order_id: number;
   item_count: number;
+}
+
+export interface SearchResult {
+  query: string;
+  model: "behaviorgpt" | "fallback";
+  /** The shopper's own past items for this query, best first. */
+  yours: FeedItem[];
+  /** The whole catalog for this query, personalized by history and cart. */
+  results: FeedItem[];
+  /** Not about the query: what fits their past orders and the cart. */
+  for_you: FeedItem[];
+  for_you_title: string;
+  /** The same query for an anonymous shopper. */
+  generic: FeedItem[];
+}
+
+export interface ReplayScore {
+  name: string;
+  description: string;
+  hits: number;
+  k: number;
+}
+
+/** The shopper's real next order (never shown to the model) and how each strategy scores. */
+export interface Replay {
+  items: number[];
+  n: number;
+  days_since_prior: number | null;
+  scoreboard: ReplayScore[];
+  on_home_page: number;
+}
+
+export interface PlanPick {
+  need_key: string;
+  label: string;
+  quantity: number;
+  /** The product; its reason is Claude's note for the shopper. */
+  item: FeedItem;
+}
+
+/** A basket built for a request: Claude planned it, BehaviorGPT found the products. */
+export interface Plan {
+  request: string;
+  title: string;
+  summary: string;
+  tip: string;
+  budget_cents: number | null;
+  total_cents: number;
+  picks: PlanPick[];
+  alternatives: Record<string, Product[]>;
+  by: "claude" | "rules";
 }

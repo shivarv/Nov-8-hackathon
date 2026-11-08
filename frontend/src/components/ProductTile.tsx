@@ -1,6 +1,7 @@
-import type { CSSProperties } from "react";
+import { type CSSProperties, useContext } from "react";
 import { formatPrice } from "../api";
 import type { FeedItem } from "../types";
+import { RevealContext } from "../reveal";
 import { ProductImage } from "./ProductImage";
 
 interface Props {
@@ -19,15 +20,17 @@ export function ProductTile({ item, quantity, onSetQuantity }: Props) {
   const { product, tag, reason, confidence } = item;
   const inBasket = quantity > 0;
   const sticker = STICKER[tag];
+  const boughtNext = useContext(RevealContext)?.has(product.id) ?? false;
 
   return (
     <article
-      className={`tile tile--${tag}${inBasket ? " is-in-basket" : ""}`}
+      className={`tile tile--${tag}${inBasket ? " is-in-basket" : ""}${boughtNext ? " is-bought-next" : ""}`}
       style={{ "--fit": confidence } as CSSProperties}
     >
       <div className="tile-photo">
         <ProductImage product={product} size="card" />
         {sticker && <span className="tile-sticker">{sticker}</span>}
+        {boughtNext && <span className="tile-real">Bought next</span>}
         {inBasket && (
           <span className="tile-check" aria-hidden>
             ✓

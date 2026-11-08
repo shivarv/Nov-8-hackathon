@@ -9,16 +9,16 @@ interface Props {
 }
 
 /**
- * Under the receipt: the shopper's own items BehaviorGPT is surest belong in this
- * basket, each one tap away. Hidden when the model has nothing it's sure about.
+ * In the basket, before checkout: "Forgot something?", the items BehaviorGPT ranks
+ * highest for going with this basket, each one tap away. Hidden when there are none.
  */
 export function ReadyToAdd({ items, loading, onAdd }: Props) {
   if (items.length === 0) return null;
   return (
-    <section className={`ready${loading ? " is-busy" : ""}`} aria-label="Ready to add">
+    <section className={`ready${loading ? " is-busy" : ""}`} aria-label="Forgot something?">
       <header className="ready-head">
-        <h2>Ready to add</h2>
-        <p>Your items that BehaviorGPT ranks in its top 20 of the whole store for this basket</p>
+        <h2>Forgot something?</h2>
+        <p>What BehaviorGPT ranks highest for going with this basket</p>
       </header>
       <ul className="ready-list">
         {items.map(({ product, reason }) => (

@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
 
+from app import shoppers
 from app.deps import DbSession, Recommender
 from app.models import Cart, CartItem, Order, OrderItem, Product
 from app.schemas import CartItemOut, CartOut, CheckoutOut, ProductOut, SetQuantityIn
@@ -61,8 +62,12 @@ def set_item_quantity(cart_id: str, product_id: int, body: SetQuantityIn, db: Db
 
 
 @router.post("/{cart_id}/checkout", response_model=CheckoutOut)
-def checkout(cart_id: str, db: DbSession, recommender: Recommender):
-    """Turn the cart into an order and feed it to the recommender immediately."""
+def checkout(cart_id: str, db: DbSession, recommender: Recommender, shopper_id: int | None = None):
+    """Turn the cart into an order and feed it to the recommender immediately.
+
+    With `shopper_id`, the order also joins that demo shopper's history, so their
+    next feed (and BehaviorGPT's next calls) see it.
+    """
     cart = _get_cart(db, cart_id)
     if not cart.items:
         raise HTTPException(400, "Cart is empty")
@@ -77,4 +82,6 @@ def checkout(cart_id: str, db: DbSession, recommender: Recommender):
     db.commit()
 
     recommender.add_basket(product_ids)
+    if shopper_id is not None and (shopper := shoppers.get(shopper_id)) is not None:
+        shopper.add_order(product_ids, shopper.now())
     return CheckoutOut(order_id=order.id, item_count=item_count)

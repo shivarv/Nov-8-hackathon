@@ -1,15 +1,26 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { formatPrice } from "../api";
-import type { Cart, FeedItem } from "../types";
+import { DELIVERY_FEE_CENTS, FREE_DELIVERY_CENTS, upcomingSlots, usualSlot } from "../delivery";
+import type { Cart, FeedItem, Shopper } from "../types";
 import { ProductImage } from "./ProductImage";
 import { ReadyToAdd } from "./ReadyToAdd";
 
 interface Props {
   cart: Cart | null;
-  ready: FeedItem[];
+  shopper: Shopper;
+  /** Not in the basket yet but goes with it (the top of the pairs shelf). */
+  forgot: FeedItem[];
   loading: boolean;
   onSetQuantity: (productId: number, quantity: number) => void;
   onCheckout: () => Promise<{ item_count: number } | null>;
+  /** Jump to the shopper's next trip (their usual gap later). */
+  onNextVisit: () => Promise<void>;
+}
+
+interface Placed {
+  count: number;
+  total: string;
+  slot: string;
 }
 
 // Static icons hoisted out of render.
@@ -28,19 +39,35 @@ const CHEVRON_ICON = (
 
 /**
  * The basket lives in the top bar as a pill showing the running total.
- * Closed by default; opening it drops down the full list, checkout and the
- * model's "ready to add" picks.
+ * Closed by default; opening it drops down the full list, a "forgot something?"
+ * nudge from what goes with the basket, and checkout.
  */
-export function Basket({ cart, ready, loading, onSetQuantity, onCheckout }: Props) {
+export function Basket({
+  cart,
+  shopper,
+  forgot,
+  loading,
+  onSetQuantity,
+  onCheckout,
+  onNextVisit,
+}: Props) {
   const [open, setOpen] = useState(false);
-  const [placed, setPlaced] = useState<string | null>(null);
+  const [placed, setPlaced] = useState<Placed | null>(null);
+  const slots = useMemo(() => upcomingSlots(), []);
+  const [slotKey, setSlotKey] = useState(
+    () => usualSlot(slots, shopper.usual_day, shopper.usual_hour).key,
+  );
   const rootRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const panelId = useId();
 
   const items = cart?.items ?? [];
   const count = cart?.item_count ?? 0;
-  const total = formatPrice(cart?.subtotal_cents ?? 0);
+  const subtotalCents = cart?.subtotal_cents ?? 0;
+  const freeDelivery = subtotalCents >= FREE_DELIVERY_CENTS;
+  const feeCents = count === 0 || freeDelivery ? 0 : DELIVERY_FEE_CENTS;
+  const total = formatPrice(subtotalCents);
+  const slot = slots.find((s) => s.key === slotKey) ?? slots[0];
 
   // Close on outside click or Escape, only while open.
   useEffect(() => {
@@ -64,7 +91,13 @@ export function Basket({ cart, ready, loading, onSetQuantity, onCheckout }: Prop
 
   async function checkout() {
     const result = await onCheckout();
-    if (result) setPlaced(`Order placed · ${result.item_count} items · ${total}`);
+    if (result) {
+      setPlaced({
+        count: result.item_count,
+        total: formatPrice(subtotalCents + feeCents),
+        slot: `${slot.day}, ${slot.label}`,
+      });
+    }
   }
 
   function toggle() {
@@ -94,7 +127,7 @@ export function Basket({ cart, ready, loading, onSetQuantity, onCheckout }: Prop
           ) : null}
         </span>
         <span className="basket-total">{total}</span>
-        {ready.length > 0 && !open ? <span className="basket-ready-dot" aria-hidden /> : null}
+        {forgot.length > 0 && !open ? <span className="basket-ready-dot" aria-hidden /> : null}
         <span className="basket-chevron">{CHEVRON_ICON}</span>
       </button>
 
@@ -115,7 +148,17 @@ export function Basket({ cart, ready, loading, onSetQuantity, onCheckout }: Prop
           </header>
 
           <div className="basket-body">
-            {placed ? <p className="basket-placed">{placed}</p> : null}
+            {placed ? (
+              <div className="basket-placed">
+                <strong>Order placed</strong>
+                <span>
+                  {placed.count} items · {placed.total} · arriving {placed.slot}
+                </span>
+                <button className="basket-next" onClick={() => void onNextVisit()}>
+                  Skip to your next trip (+{shopper.usual_gap_days} days) →
+                </button>
+              </div>
+            ) : null}
 
             {items.length === 0 ? (
               <p className="basket-empty">
@@ -160,13 +203,47 @@ export function Basket({ cart, ready, loading, onSetQuantity, onCheckout }: Prop
               </ul>
             )}
 
-            <ReadyToAdd items={ready} loading={loading} onAdd={(id) => onSetQuantity(id, 1)} />
+            {count > 0 ? (
+              <ReadyToAdd items={forgot} loading={loading} onAdd={(id) => onSetQuantity(id, 1)} />
+            ) : null}
           </div>
 
           <footer className="basket-foot">
-            <div className="basket-subtotal">
+            {count > 0 ? (
+              <div className="free-delivery">
+                <span className="free-delivery-bar" aria-hidden>
+                  <span
+                    style={{ width: `${Math.min(100, (100 * subtotalCents) / FREE_DELIVERY_CENTS)}%` }}
+                  />
+                </span>
+                <span>
+                  {freeDelivery
+                    ? "Free delivery unlocked"
+                    : `Add ${formatPrice(FREE_DELIVERY_CENTS - subtotalCents)} for free delivery`}
+                </span>
+              </div>
+            ) : null}
+            <label className="slot">
+              <span>Delivery</span>
+              <select value={slot.key} onChange={(e) => setSlotKey(e.target.value)}>
+                {slots.map((s) => (
+                  <option key={s.key} value={s.key}>
+                    {s.day}, {s.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="basket-row">
               <span>Subtotal</span>
-              <strong>{total}</strong>
+              <span>{total}</span>
+            </div>
+            <div className="basket-row">
+              <span>Delivery</span>
+              <span>{count === 0 ? "—" : feeCents ? formatPrice(feeCents) : "Free"}</span>
+            </div>
+            <div className="basket-subtotal">
+              <span>Total</span>
+              <strong>{formatPrice(subtotalCents + feeCents)}</strong>
             </div>
             <button className="checkout" disabled={count === 0} onClick={checkout}>
               Check out

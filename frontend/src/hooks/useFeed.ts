@@ -44,8 +44,11 @@ function keepAddedInPlace(prev: Feed | null, next: Feed, inCart: Set<number>): F
   return { ...next, sections };
 }
 
-/** The shopper's feed, refetched whenever the cart's contents change. */
-export function useFeed(shopperId: number | null, cart: Cart | null) {
+/**
+ * The shopper's feed, refetched whenever the cart's contents change, or when `visit`
+ * changes (an order placed, or the clock moved to their next trip).
+ */
+export function useFeed(shopperId: number | null, cart: Cart | null, visit = 0) {
   const [feed, setFeed] = useState<Feed | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +82,7 @@ export function useFeed(shopperId: number | null, cart: Cart | null) {
         if (!controller.signal.aborted) setLoading(false);
       });
     return () => controller.abort();
-  }, [shopperId, cartId, contents]);
+  }, [shopperId, cartId, contents, visit]);
 
   return { feed, loading, error };
 }

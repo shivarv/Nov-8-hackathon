@@ -34,7 +34,7 @@ export function Shelf({ section, quantityOf, onSetQuantity, onAddAll, onAddFrom 
                 onAddAll(notYet.map((i) => i.product.id));
               }}
             >
-              Add all {notYet.length}
+              {section.kind === "regulars" ? "Reorder all" : "Add all"} {notYet.length}
             </button>
           ) : undefined
         }

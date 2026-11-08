@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
 import type { FeedSection } from "../types";
 
+// Where the shelf's picks come from: mostly their own orders, or mostly new to them.
 const CONFIDENCE_LABEL = {
-  sure: "Sure bet",
-  good: "Good fit",
-  explore: "Worth a look",
+  sure: "From your orders",
+  good: "Picked for you",
+  explore: "To discover",
 } as const;
 
 /** Where in the store this section is, shown on the sign's left plate. */
