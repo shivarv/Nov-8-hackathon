@@ -1,5 +1,6 @@
 import { formatPrice } from "../api";
 import type { Cart, Recommendation } from "../types";
+import { ProductImage } from "./ProductImage";
 import { QuantityControl } from "./QuantityControl";
 
 interface Props {
@@ -26,9 +27,7 @@ export function CartPanel({ cart, recs, onSetQuantity, onCheckout, message }: Pr
         <ul className="cart-items">
           {items.map(({ product, quantity }) => (
             <li key={product.id}>
-              <span className="cart-emoji" aria-hidden>
-                {product.emoji}
-              </span>
+              <ProductImage product={product} size="thumb" />
               <div className="cart-item-info">
                 <div>{product.name}</div>
                 <div className="muted">{formatPrice(product.price_cents * quantity)}</div>
@@ -49,9 +48,7 @@ export function CartPanel({ cart, recs, onSetQuantity, onCheckout, message }: Pr
           <ul>
             {recs.map((r) => (
               <li key={r.product.id}>
-                <span className="cart-emoji" aria-hidden>
-                  {r.product.emoji}
-                </span>
+                <ProductImage product={r.product} size="thumb" />
                 <div className="cart-item-info">
                   <div>{r.product.name}</div>
                   <div className="muted small">{r.reason}</div>

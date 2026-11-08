@@ -1,0 +1,76 @@
+{
+ "title": "Breakfasts for the week",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Breakfasts for the week",
+   "subtitle": "Picked from your past orders and what shoppers like you buy"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 2000
+  },
+  {
+   "type": "basket_section",
+   "key": "intent",
+   "title": "Breakfasts for the week",
+   "subtitle": "6 things for 7",
+   "reason": "One personalized search per ingredient",
+   "confidence": "good",
+   "items": [
+    {
+     "product_id": 46847,
+     "quantity": 1,
+     "need_key": "oats",
+     "note": "#1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 49517,
+     "quantity": 1,
+     "need_key": "milk",
+     "note": "Your usual, bought 3x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 24852,
+     "quantity": 6,
+     "need_key": "bananas",
+     "note": "Your usual, bought 1x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 5077,
+     "quantity": 1,
+     "need_key": "bread",
+     "note": "Cheapest pick to fit the budget",
+     "tag": "new"
+    },
+    {
+     "product_id": 26384,
+     "quantity": 1,
+     "need_key": "eggs",
+     "note": "Cheapest pick to fit the budget",
+     "tag": "new"
+    },
+    {
+     "product_id": 32611,
+     "quantity": 1,
+     "need_key": "nut_butter",
+     "note": "Cheapest pick to fit the budget",
+     "tag": "new"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "honey",
+     "label": "Honey"
+    }
+   ]
+  }
+ ]
+}

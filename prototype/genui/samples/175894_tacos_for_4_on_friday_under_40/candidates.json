@@ -1,0 +1,751 @@
+{
+ "candidates": {
+  "tortillas": [
+   {
+    "id": 17725,
+    "name": "Organic Wraps Traditional - 6 CT",
+    "price_cents": 349,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 17725,
+     "name": "Organic Wraps Traditional - 6 CT",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 349,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 36591,
+    "name": "100% Whole Wheat Medium Soft Taco Flour Tortillas",
+    "price_cents": 329,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 36591,
+     "name": "100% Whole Wheat Medium Soft Taco Flour Tortillas",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 329,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 19508,
+    "name": "Corn Tortillas",
+    "price_cents": 249,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 19508,
+     "name": "Corn Tortillas",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 249,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 39429,
+    "name": "Organic Large Flour Tortillas 6 Count",
+    "price_cents": 349,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 39429,
+     "name": "Organic Large Flour Tortillas 6 Count",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 349,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 19816,
+    "name": "Sonoma Traditional Flour Tortillas 10 Count",
+    "price_cents": 299,
+    "aisle": "Tortillas Flat Bread",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 19816,
+     "name": "Sonoma Traditional Flour Tortillas 10 Count",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 299,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "ground_beef": [
+   {
+    "id": 28437,
+    "name": "Organic 85% Ground Beef",
+    "price_cents": 799,
+    "aisle": "Meat Counter",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 28437,
+     "name": "Organic 85% Ground Beef",
+     "department": "Meat Seafood",
+     "aisle": "Meat Counter",
+     "price_cents": 799,
+     "emoji": "\ud83e\udd69",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hakket-oksekoed.jpg/500px-Hakket-oksekoed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 22888,
+    "name": "90% Lean Ground Beef",
+    "price_cents": 599,
+    "aisle": "Meat Counter",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 22888,
+     "name": "90% Lean Ground Beef",
+     "department": "Meat Seafood",
+     "aisle": "Meat Counter",
+     "price_cents": 599,
+     "emoji": "\ud83e\udd69",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Vacuum_packaged_meat_raw.jpg/500px-Vacuum_packaged_meat_raw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 13198,
+    "name": "85% Lean Ground Beef",
+    "price_cents": 549,
+    "aisle": "Meat Counter",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 13198,
+     "name": "85% Lean Ground Beef",
+     "department": "Meat Seafood",
+     "aisle": "Meat Counter",
+     "price_cents": 549,
+     "emoji": "\ud83e\udd69",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%9D%A1%E9%80%9A_Shijo_Dori_food_supermarket_display_for_sale_beef_meat_June_2026_N13P_01.jpg/500px-JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%9D%A1%E9%80%9A_Shijo_Dori_food_supermarket_display_for_sale_beef_meat_June_2026_N13P_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 49236,
+    "name": "80% Lean Ground Beef",
+    "price_cents": 499,
+    "aisle": "Meat Counter",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 49236,
+     "name": "80% Lean Ground Beef",
+     "department": "Meat Seafood",
+     "aisle": "Meat Counter",
+     "price_cents": 499,
+     "emoji": "\ud83e\udd69",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hakket-oksekoed.jpg/500px-Hakket-oksekoed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 10603,
+    "name": "93% Ground Beef",
+    "price_cents": 649,
+    "aisle": "Meat Counter",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 10603,
+     "name": "93% Ground Beef",
+     "department": "Meat Seafood",
+     "aisle": "Meat Counter",
+     "price_cents": 649,
+     "emoji": "\ud83e\udd69",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%9D%A1%E9%80%9A_Shijo_Dori_food_supermarket_display_for_sale_beef_meat_June_2026_N13P_01.jpg/500px-JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%9D%A1%E9%80%9A_Shijo_Dori_food_supermarket_display_for_sale_beef_meat_June_2026_N13P_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "seasoning": [
+   {
+    "id": 35068,
+    "name": "Taco Mild Seasoning Mix",
+    "price_cents": 79,
+    "aisle": "Marinades Meat Preparation",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 35068,
+     "name": "Taco Mild Seasoning Mix",
+     "department": "Pantry",
+     "aisle": "Marinades Meat Preparation",
+     "price_cents": 79,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chicken_marination.jpg/500px-Chicken_marination.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 40136,
+    "name": "Original Taco Seasoning Mix",
+    "price_cents": 99,
+    "aisle": "Spices Seasonings",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 40136,
+     "name": "Original Taco Seasoning Mix",
+     "department": "Pantry",
+     "aisle": "Spices Seasonings",
+     "price_cents": 99,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Achiote_paste_ingredients.jpg/500px-Achiote_paste_ingredients.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 47226,
+    "name": "Taco Seasoning Mix Original",
+    "price_cents": 99,
+    "aisle": "Spices Seasonings",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 47226,
+     "name": "Taco Seasoning Mix Original",
+     "department": "Pantry",
+     "aisle": "Spices Seasonings",
+     "price_cents": 99,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Achiote_paste_ingredients.jpg/500px-Achiote_paste_ingredients.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 38470,
+    "name": "Mild Taco Seasoning Mix",
+    "price_cents": 129,
+    "aisle": "Marinades Meat Preparation",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 38470,
+     "name": "Mild Taco Seasoning Mix",
+     "department": "Pantry",
+     "aisle": "Marinades Meat Preparation",
+     "price_cents": 129,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chicken_marination.jpg/500px-Chicken_marination.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 35923,
+    "name": "Taco 25% Less Sodium Seasoning Mix",
+    "price_cents": 99,
+    "aisle": "Marinades Meat Preparation",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 35923,
+     "name": "Taco 25% Less Sodium Seasoning Mix",
+     "department": "Pantry",
+     "aisle": "Marinades Meat Preparation",
+     "price_cents": 99,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chicken_marination.jpg/500px-Chicken_marination.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   }
+  ],
+  "cheese": [
+   {
+    "id": 46575,
+    "name": "Organic Finely Shredded Cheddar Cheese",
+    "price_cents": 399,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 46575,
+     "name": "Organic Finely Shredded Cheddar Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 41178,
+    "name": "Natural Finely Shredded Triple Cheddar Cheese",
+    "price_cents": 349,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 41178,
+     "name": "Natural Finely Shredded Triple Cheddar Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 29921,
+    "name": "Cheese Finely Shredded Mexican Four Cheese Blend",
+    "price_cents": 329,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 29921,
+     "name": "Cheese Finely Shredded Mexican Four Cheese Blend",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 329,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 12078,
+    "name": "Shredded Mexican Blend Cheese",
+    "price_cents": 299,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 12078,
+     "name": "Shredded Mexican Blend Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 27429,
+    "name": "4 Cheese Mexican Fine Cut Shredded Cheese",
+    "price_cents": 299,
+    "aisle": "Packaged Cheese",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 27429,
+     "name": "4 Cheese Mexican Fine Cut Shredded Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Parmesan_cheese_knife_on_block_of_cheese.jpg/500px-Parmesan_cheese_knife_on_block_of_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "salsa": [
+   {
+    "id": 13535,
+    "name": "Organic Medium Salsa",
+    "price_cents": 449,
+    "aisle": "Preserved Dips Spreads",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 13535,
+     "name": "Organic Medium Salsa",
+     "department": "Pantry",
+     "aisle": "Preserved Dips Spreads",
+     "price_cents": 449,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    }
+   },
+   {
+    "id": 41433,
+    "name": "Fresh Roasted Tomate & Chile Asado Medium Salsa",
+    "price_cents": 399,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 41433,
+     "name": "Fresh Roasted Tomate & Chile Asado Medium Salsa",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 27817,
+    "name": "Fresh Medium Salsa",
+    "price_cents": 399,
+    "aisle": "Fresh Dips Tapenades",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 27817,
+     "name": "Fresh Medium Salsa",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 40408,
+    "name": "SALSA        FRNTR CHPTL SALSA",
+    "price_cents": 449,
+    "aisle": "Preserved Dips Spreads",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 40408,
+     "name": "SALSA        FRNTR CHPTL SALSA",
+     "department": "Pantry",
+     "aisle": "Preserved Dips Spreads",
+     "price_cents": 449,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    }
+   },
+   {
+    "id": 22093,
+    "name": "Restaurant Style Medium Salsa",
+    "price_cents": 299,
+    "aisle": "Preserved Dips Spreads",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 22093,
+     "name": "Restaurant Style Medium Salsa",
+     "department": "Pantry",
+     "aisle": "Preserved Dips Spreads",
+     "price_cents": 299,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    }
+   }
+  ],
+  "lettuce": [
+   {
+    "id": 6873,
+    "name": "Organic Iceberg Lettuce",
+    "price_cents": 249,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 6873,
+     "name": "Organic Iceberg Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/K7228-59_%288453557599%29.jpg/500px-K7228-59_%288453557599%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 41220,
+    "name": "Organic Romaine Lettuce",
+    "price_cents": 249,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 41220,
+     "name": "Organic Romaine Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Lettuce_in_a_stack.jpg/500px-Lettuce_in_a_stack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 28993,
+    "name": "Iceberg Lettuce",
+    "price_cents": 199,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 28993,
+     "name": "Iceberg Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 199,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lettuce_iceberg_variety_from_Salinas_valley_California.jpeg/500px-Lettuce_iceberg_variety_from_Salinas_valley_California.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 17795,
+    "name": "Organic Green Leaf Lettuce",
+    "price_cents": 249,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 17795,
+     "name": "Organic Green Leaf Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Stack_of_romaine_lettuce_heads.jpg/500px-Stack_of_romaine_lettuce_heads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 26497,
+    "name": "Romaine Lettuce",
+    "price_cents": 199,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 26497,
+     "name": "Romaine Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 199,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Lettuce_in_a_stack.jpg/500px-Lettuce_in_a_stack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "tomatoes": [
+   {
+    "id": 26369,
+    "name": "Organic Roma Tomato",
+    "price_cents": 249,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 26369,
+     "name": "Organic Roma Tomato",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 47042,
+    "name": "Organic Red On the Vine Tomato",
+    "price_cents": 349,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 47042,
+     "name": "Organic Red On the Vine Tomato",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 8048,
+    "name": "Packaged Grape Tomatoes",
+    "price_cents": 299,
+    "aisle": "Packaged Produce",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 8048,
+     "name": "Packaged Grape Tomatoes",
+     "department": "Produce",
+     "aisle": "Packaged Produce",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/G_is_for_Grape_Red_Tomatoes_in_an_old_Green_Glass_Bowl.jpg/500px-G_is_for_Grape_Red_Tomatoes_in_an_old_Green_Glass_Bowl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 29487,
+    "name": "Roma Tomato",
+    "price_cents": 179,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 29487,
+     "name": "Roma Tomato",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 43772,
+    "name": "Cherubs Heavenly Salad Tomatoes",
+    "price_cents": 399,
+    "aisle": "Fresh Vegetables",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 43772,
+     "name": "Cherubs Heavenly Salad Tomatoes",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ],
+  "sour_cream": [
+   {
+    "id": 42701,
+    "name": "Organic Sour Cream",
+    "price_cents": 349,
+    "aisle": "Other Creams Cheeses",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 1,
+    "product": {
+     "id": 42701,
+     "name": "Organic Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cr%C3%A8me_Sure_-_Sour_Cream.JPG/500px-Cr%C3%A8me_Sure_-_Sour_Cream.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 27323,
+    "name": "Pure & Natural Sour Cream",
+    "price_cents": 249,
+    "aisle": "Other Creams Cheeses",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 2,
+    "product": {
+     "id": 27323,
+     "name": "Pure & Natural Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cr%C3%A8me_Sure_-_Sour_Cream.JPG/500px-Cr%C3%A8me_Sure_-_Sour_Cream.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 45842,
+    "name": "Natural Sour Cream",
+    "price_cents": 249,
+    "aisle": "Other Creams Cheeses",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 3,
+    "product": {
+     "id": 45842,
+     "name": "Natural Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Philly_cream_cheese.jpg/500px-Philly_cream_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 17803,
+    "name": "Organic Cultured Sour Cream",
+    "price_cents": 349,
+    "aisle": "Other Creams Cheeses",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 4,
+    "product": {
+     "id": 17803,
+     "name": "Organic Cultured Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Philly_cream_cheese.jpg/500px-Philly_cream_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   },
+   {
+    "id": 29295,
+    "name": "Organic Lowfat Sour Cream",
+    "price_cents": 329,
+    "aisle": "Other Creams Cheeses",
+    "times_bought": 0,
+    "source": "ranked",
+    "rank": 5,
+    "product": {
+     "id": 29295,
+     "name": "Organic Lowfat Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 329,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Philly_cream_cheese.jpg/500px-Philly_cream_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   }
+  ]
+ },
+ "search_seconds": {
+  "tortillas": 1.41,
+  "ground_beef": 1.48,
+  "seasoning": 1.44,
+  "cheese": 1.45,
+  "salsa": 1.2,
+  "lettuce": 1.47,
+  "tomatoes": 1.48,
+  "sour_cream": 1.45
+ },
+ "seconds": 1.48
+}

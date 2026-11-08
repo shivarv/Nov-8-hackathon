@@ -1,0 +1,77 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "servings": 4,
+ "budget_cents": 4000,
+ "constraints": [
+  "under $40",
+  "budget-minded: small, cheap trips"
+ ],
+ "needs": [
+  {
+   "key": "tortillas",
+   "label": "Tortillas (about 20)",
+   "query": "flour tortillas",
+   "units": 2,
+   "role": "core"
+  },
+  {
+   "key": "ground_beef",
+   "label": "Ground beef (2 lb)",
+   "query": "ground beef",
+   "units": 2,
+   "role": "core"
+  },
+  {
+   "key": "seasoning",
+   "label": "Taco seasoning",
+   "query": "taco seasoning",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "cheese",
+   "label": "Shredded cheese",
+   "query": "shredded cheese",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "salsa",
+   "label": "Salsa",
+   "query": "salsa",
+   "units": 1,
+   "role": "core"
+  },
+  {
+   "key": "lettuce",
+   "label": "Lettuce",
+   "query": "iceberg lettuce",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "tomatoes",
+   "label": "Tomatoes",
+   "query": "tomatoes",
+   "units": 2,
+   "role": "optional"
+  },
+  {
+   "key": "sour_cream",
+   "label": "Sour cream",
+   "query": "sour cream",
+   "units": 1,
+   "role": "optional"
+  },
+  {
+   "key": "oil",
+   "label": "Cooking oil",
+   "query": "vegetable oil",
+   "units": 1,
+   "role": "pantry"
+  }
+ ],
+ "assumptions": [
+  "Classic beef tacos; tap 'Make it vegetarian' to swap the beef for beans."
+ ]
+}

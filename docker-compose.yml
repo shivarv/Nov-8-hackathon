@@ -22,10 +22,23 @@ services:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-grocer}:${POSTGRES_PASSWORD:-grocer}@db:5432/${POSTGRES_DB:-grocer}
       CORS_ORIGINS: '["http://localhost:5173"]'
       SEED_ORDERS: ${SEED_ORDERS:-3000}
+      # Instacart dataset (used automatically when archive/ is present; see data/README.md)
+      DATA_SOURCE: ${DATA_SOURCE:-auto}
+      INSTACART_DIR: /instacart
+      PRICES_CSV: /data/product_prices.csv
+      PRODUCT_IMAGES_CSV: /data/product_images.csv
+      AISLE_IMAGES_CSV: /data/aisle_images.csv
+      DEMO_SHOPPERS_JSON: /data/demo_shoppers.json
+      INSTACART_ORDERS: ${INSTACART_ORDERS:-20000}
+      # BehaviorGPT; leave empty to use the bought-together model only
+      UNBOXAI_API_KEY: ${UNBOXAI_API_KEY:-}
+      UNBOXAI_CATALOG_ID: ${UNBOXAI_CATALOG_ID:-}
     ports:
       - "8000:8000"
     volumes:
       - ./backend:/app
+      - ./archive:/instacart:ro
+      - ./data:/data:ro
     depends_on:
       db:
         condition: service_healthy

@@ -1,0 +1,22 @@
+=== Taco night for 4 · Friday ===
+    Picked from your past orders and what shoppers like you buy
+[budget] $33.15 of $40.00  [#################...]
+
+[Taco night for 4 · Friday]  9 things for 4  (good)
+    why: One personalized search per ingredient
+  2 x Yellow Soft Corn Tortillas 8 Count             $2.49 =   $4.98  new   #1 for you  <tortillas>
+  2 x Organic Black Beans                            $1.79 =   $3.58  new   #1 for you  <beans>
+  1 x Organic Finely Shredded Cheddar Cheese         $3.99 =   $3.99  new   #1 for you  <cheese>
+  1 x Organic Medium Salsa                           $4.49 =   $4.49  new   #1 for you  <salsa>
+  3 x Organic Avocado                                $1.79 =   $5.37  usual Your usual, bought 18x  <avocado>
+  1 x Organic Romaine Lettuce                        $2.49 =   $2.49  new   #1 for you  <lettuce>
+  2 x 100% Organic Diced Tomatoes                    $1.99 =   $3.98  usual Your usual, bought 2x  <tomatoes>
+  2 x Limes                                          $0.39 =   $0.78  new   #1 for you  <limes>
+  1 x Organic Sour Cream                             $3.49 =   $3.49  new   #1 for you  <sour_cream>
+      total                                                   $33.15
+  swap Organic Black Beans -> cheaper: Black Beans $1.29 (Saves $0.50 each)
+  swap Organic Finely Shredded Chedda -> cheaper: Shredded Mild Cheddar Cheese $2.99 (Saves $1.00 each)
+  swap Organic Medium Salsa -> cheaper: Salsa, Verde, Roasted $3.99 (Saves $0.50 each)
+[Already at home?] ( ) Cumin and chili powder
+
+(total $33.15 vs budget $40.00: OK)

@@ -1,0 +1,29 @@
+=== Taco night for 4 · Friday ===
+    Classic beef tacos, kept to the basics
+[budget] $30.79 of $40.00  [###############.....]
+
+[Everything for taco night]  8 items · serves 4  (sure)
+    why: One personalized search per ingredient, then the lowest-priced good match, since you keep trips small and cheap
+  2 x Sonoma Traditional Flour Tortillas 10 Count    $2.99 =   $5.98  new   10-count; 2 packs make 20 tortillas  <tortillas>
+  2 x 80% Lean Ground Beef                           $4.99 =   $9.98  new   Lowest-priced beef here; 80% stays juicy in tacos  <ground_beef>
+  1 x Taco Mild Seasoning Mix                        $0.79 =   $0.79  new   Ranked #1 for you and the cheapest mix  <seasoning>
+  1 x Shredded Mexican Blend Cheese                  $2.99 =   $2.99  new   Mexican blend at the lowest price  <cheese>
+  1 x Restaurant Style Medium Salsa                  $2.99 =   $2.99  new   Lowest-priced salsa here  <salsa>
+  1 x Iceberg Lettuce                                $1.99 =   $1.99  new   Plain iceberg, 50 cents under organic  <lettuce>
+  2 x Roma Tomato                                    $1.79 =   $3.58  new   Romas, the cheapest fresh tomato here  <tomatoes>
+  1 x Pure & Natural Sour Cream                      $2.49 =   $2.49  new   A dollar under the organic one  <sour_cream>
+      total                                                   $30.79
+  swap Sonoma Traditional Flour Torti -> cheaper: Corn Tortillas $2.49 (Corn tortillas, 50 cents less a pack)
+  swap 80% Lean Ground Beef -> healthier: 90% Lean Ground Beef $5.99 (90% lean, a dollar more a pound)
+  swap Shredded Mexican Blend Cheese -> organic: Organic Finely Shredded Cheddar Ch $3.99 (Organic cheddar, a dollar more)
+
+[recipe] Beef tacos · serves 4 · 25 min
+  1. Brown the beef in a little oil, drain, stir in the seasoning mix and 2/3 cup water.
+  2. Simmer 5 minutes while you shred the lettuce and dice the tomatoes.
+  3. Warm the tortillas in a dry pan.
+  4. Fill with beef and cheese; top with lettuce, tomato, salsa and sour cream.
+[Already at home?] ( ) Cooking oil
+  i Classic beef tacos. Tap 'Make it vegetarian' to swap the beef for black beans.
+[Change it up] <Make it vegetarian>  <Even cheaper>  <Add chips & guac>  <Go organic>
+
+(total $30.79 vs budget $40.00: OK)

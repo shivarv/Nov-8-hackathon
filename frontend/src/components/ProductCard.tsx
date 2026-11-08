@@ -1,5 +1,6 @@
 import { formatPrice } from "../api";
 import type { Product } from "../types";
+import { ProductImage } from "./ProductImage";
 import { QuantityControl } from "./QuantityControl";
 
 interface Props {
@@ -12,9 +13,7 @@ interface Props {
 export function ProductCard({ product, quantity, onSetQuantity, reason }: Props) {
   return (
     <article className="product-card">
-      <div className="product-emoji" aria-hidden>
-        {product.emoji}
-      </div>
+      <ProductImage product={product} size="card" />
       <div className="product-price">{formatPrice(product.price_cents)}</div>
       <h3 className="product-name">{product.name}</h3>
       <div className="product-aisle">{reason ?? product.aisle}</div>

@@ -1,0 +1,396 @@
+{
+ "title": "Taco night for 4 \u00b7 Friday",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Taco night for 4 \u00b7 Friday",
+   "subtitle": "Bean tacos built around your usual organic picks"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 4000,
+   "spent_cents": 3684
+  },
+  {
+   "type": "basket_section",
+   "key": "taco_night",
+   "title": "Everything for taco night",
+   "subtitle": "9 items \u00b7 serves 4",
+   "reason": "One personalized search per ingredient: your own avocados first, organic where you usually buy organic",
+   "confidence": "sure",
+   "items": [
+    {
+     "product": {
+      "id": 36256,
+      "name": "Yellow Soft Corn Tortillas 8 Count",
+      "department": "Bakery",
+      "aisle": "Tortillas Flat Bread",
+      "price_cents": 249,
+      "emoji": "\ud83c\udf5e",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Top corn pick for you; 3 packs make 24 tortillas",
+     "confidence": 0.6,
+     "quantity": 3,
+     "need_key": "tortillas"
+    },
+    {
+     "product": {
+      "id": 27156,
+      "name": "Organic Black Beans",
+      "department": "Canned Goods",
+      "aisle": "Canned Meals Beans",
+      "price_cents": 179,
+      "emoji": "\ud83e\udd6b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2022Preserved_black_beans_Tahure_25.jpg/500px-2022Preserved_black_beans_Tahure_25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic, like most of your basket",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "beans"
+    },
+    {
+     "product": {
+      "id": 46575,
+      "name": "Organic Finely Shredded Cheddar Cheese",
+      "department": "Dairy Eggs",
+      "aisle": "Packaged Cheese",
+      "price_cents": 399,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic cheddar, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "cheese"
+    },
+    {
+     "product": {
+      "id": 13535,
+      "name": "Organic Medium Salsa",
+      "department": "Pantry",
+      "aisle": "Preserved Dips Spreads",
+      "price_cents": 449,
+      "emoji": "\ud83e\uded9",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+     },
+     "tag": "new",
+     "reason": "Organic medium salsa, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "salsa"
+    },
+    {
+     "product": {
+      "id": 47766,
+      "name": "Organic Avocado",
+      "department": "Produce",
+      "aisle": "Fresh Fruits",
+      "price_cents": 179,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Avocado_Bowl_Green.jpg/500px-Avocado_Bowl_Green.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "usual",
+     "reason": "Your usual, bought 18x",
+     "confidence": 0.9,
+     "quantity": 3,
+     "need_key": "avocado"
+    },
+    {
+     "product": {
+      "id": 41220,
+      "name": "Organic Romaine Lettuce",
+      "department": "Produce",
+      "aisle": "Fresh Vegetables",
+      "price_cents": 249,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Lettuce_in_a_stack.jpg/500px-Lettuce_in_a_stack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic romaine, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "lettuce"
+    },
+    {
+     "product": {
+      "id": 26369,
+      "name": "Organic Roma Tomato",
+      "department": "Produce",
+      "aisle": "Fresh Vegetables",
+      "price_cents": 249,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Fresh romas for dicing, not the canned ones",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "tomatoes"
+    },
+    {
+     "product": {
+      "id": 44750,
+      "name": "Organic Lime",
+      "department": "Produce",
+      "aisle": "Fresh Fruits",
+      "price_cents": 49,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Fresh_Limes_on_Display_at_the_Market_Stall.jpg/500px-Fresh_Limes_on_Display_at_the_Market_Stall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic, 10 cents more than regular",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "limes"
+    },
+    {
+     "product": {
+      "id": 42701,
+      "name": "Organic Sour Cream",
+      "department": "Dairy Eggs",
+      "aisle": "Other Creams Cheeses",
+      "price_cents": 349,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cr%C3%A8me_Sure_-_Sour_Cream.JPG/500px-Cr%C3%A8me_Sure_-_Sour_Cream.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic sour cream, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "sour_cream"
+    }
+   ],
+   "kind": "mission"
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "cheaper",
+     "note": "Same beans, not organic, 50 cents less a can",
+     "product": {
+      "id": 35042,
+      "name": "Black Beans",
+      "department": "Canned Goods",
+      "aisle": "Canned Meals Beans",
+      "price_cents": 129,
+      "emoji": "\ud83e\udd6b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2022Preserved_black_beans_Tahure_25.jpg/500px-2022Preserved_black_beans_Tahure_25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 27156,
+    "name": "Organic Black Beans",
+    "department": "Canned Goods",
+    "aisle": "Canned Meals Beans",
+    "price_cents": 179,
+    "emoji": "\ud83e\udd6b",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2022Preserved_black_beans_Tahure_25.jpg/500px-2022Preserved_black_beans_Tahure_25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "different_style",
+     "note": "Mexican blend, a dollar less",
+     "product": {
+      "id": 12078,
+      "name": "Shredded Mexican Blend Cheese",
+      "department": "Dairy Eggs",
+      "aisle": "Packaged Cheese",
+      "price_cents": 299,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    },
+    {
+     "label": "cheaper",
+     "note": "Mild cheddar, a dollar less",
+     "product": {
+      "id": 31343,
+      "name": "Shredded Mild Cheddar Cheese",
+      "department": "Dairy Eggs",
+      "aisle": "Packaged Cheese",
+      "price_cents": 299,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Isle_of_Mull_cheddar_cheese.jpg/500px-Isle_of_Mull_cheddar_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 46575,
+    "name": "Organic Finely Shredded Cheddar Cheese",
+    "department": "Dairy Eggs",
+    "aisle": "Packaged Cheese",
+    "price_cents": 399,
+    "emoji": "\ud83e\udd5b",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "your_usual",
+     "note": "The canned organic diced tomatoes you've bought 2x",
+     "product": {
+      "id": 405,
+      "name": "100% Organic Diced Tomatoes",
+      "department": "Canned Goods",
+      "aisle": "Canned Jarred Vegetables",
+      "price_cents": 199,
+      "emoji": "\ud83e\udd6b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Canned_corn.jpg/500px-Canned_corn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 26369,
+    "name": "Organic Roma Tomato",
+    "department": "Produce",
+    "aisle": "Fresh Vegetables",
+    "price_cents": 249,
+    "emoji": "\ud83e\udd6c",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "recipe_card",
+   "title": "Black bean tacos",
+   "servings": 4,
+   "minutes": 25,
+   "steps": [
+    "Warm the beans with cumin, chili powder and a splash of water; mash lightly.",
+    "Dice the tomatoes, slice the avocados, shred the romaine, cut the limes into wedges.",
+    "Char the tortillas in a dry pan, about 30 seconds a side.",
+    "Fill with beans and cheese; top with salsa, veg, avocado, sour cream and lime."
+   ],
+   "products": [
+    {
+     "id": 36256,
+     "name": "Yellow Soft Corn Tortillas 8 Count",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 249,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Flour_Tortillas_001.jpg/500px-Flour_Tortillas_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 27156,
+     "name": "Organic Black Beans",
+     "department": "Canned Goods",
+     "aisle": "Canned Meals Beans",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2022Preserved_black_beans_Tahure_25.jpg/500px-2022Preserved_black_beans_Tahure_25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 46575,
+     "name": "Organic Finely Shredded Cheddar Cheese",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Block_of_Muenster_cheese.jpg/500px-Block_of_Muenster_cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 13535,
+     "name": "Organic Medium Salsa",
+     "department": "Pantry",
+     "aisle": "Preserved Dips Spreads",
+     "price_cents": 449,
+     "emoji": "\ud83e\uded9",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Razla-talljar-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+    },
+    {
+     "id": 47766,
+     "name": "Organic Avocado",
+     "department": "Produce",
+     "aisle": "Fresh Fruits",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Avocado_Bowl_Green.jpg/500px-Avocado_Bowl_Green.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 41220,
+     "name": "Organic Romaine Lettuce",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Lettuce_in_a_stack.jpg/500px-Lettuce_in_a_stack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 26369,
+     "name": "Organic Roma Tomato",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 249,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Fresh_tomatoes_0.jpg/500px-Fresh_tomatoes_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 44750,
+     "name": "Organic Lime",
+     "department": "Produce",
+     "aisle": "Fresh Fruits",
+     "price_cents": 49,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Fresh_Limes_on_Display_at_the_Market_Stall.jpg/500px-Fresh_Limes_on_Display_at_the_Market_Stall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 42701,
+     "name": "Organic Sour Cream",
+     "department": "Dairy Eggs",
+     "aisle": "Other Creams Cheeses",
+     "price_cents": 349,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cr%C3%A8me_Sure_-_Sour_Cream.JPG/500px-Cr%C3%A8me_Sure_-_Sour_Cream.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "spices",
+     "label": "Cumin and chili powder"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "info",
+   "text": "Bean tacos because none of your regulars are meat. Tap 'Add ground beef' to switch."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Add ground beef",
+     "intent": "make them beef tacos, still under $40"
+    },
+    {
+     "label": "As cheap as possible",
+     "intent": "same taco night, cheapest picks for every item"
+    },
+    {
+     "label": "Crunchy shells",
+     "intent": "use crunchy taco shells instead of soft corn tortillas"
+    },
+    {
+     "label": "Add chips & guac",
+     "intent": "add tortilla chips and guacamole fixings, stay under $40"
+    }
+   ]
+  }
+ ]
+}

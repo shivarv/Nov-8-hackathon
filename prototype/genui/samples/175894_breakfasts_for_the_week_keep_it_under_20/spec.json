@@ -1,0 +1,136 @@
+{
+ "title": "Breakfasts for the week",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Breakfasts for the week",
+   "subtitle": "Oatmeal with banana, or toast and eggs, for 7 mornings"
+  },
+  {
+   "type": "budget_meter",
+   "budget_cents": 2000
+  },
+  {
+   "type": "basket_section",
+   "key": "breakfasts",
+   "title": "A week of breakfasts",
+   "subtitle": "5 items \u00b7 7 breakfasts",
+   "reason": "Your own milk and bananas, then the lowest-priced good match for the rest to stay under $20",
+   "confidence": "sure",
+   "items": [
+    {
+     "product_id": 46847,
+     "quantity": 1,
+     "need_key": "oats",
+     "note": "Rolled oats, ranked #1 for you",
+     "tag": "new"
+    },
+    {
+     "product_id": 49517,
+     "quantity": 1,
+     "need_key": "milk",
+     "note": "Your usual, bought 3x",
+     "tag": "usual"
+    },
+    {
+     "product_id": 24852,
+     "quantity": 6,
+     "need_key": "bananas",
+     "note": "Your usual bananas, 29 cents each",
+     "tag": "usual"
+    },
+    {
+     "product_id": 5077,
+     "quantity": 1,
+     "need_key": "bread",
+     "note": "Lowest-priced whole wheat loaf here",
+     "tag": "new"
+    },
+    {
+     "product_id": 26384,
+     "quantity": 1,
+     "need_key": "eggs",
+     "note": "Lowest-priced eggs here",
+     "tag": "new"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 5077,
+   "options": [
+    {
+     "product_id": 48628,
+     "label": "organic",
+     "note": "Organic whole wheat, $1.20 more"
+    }
+   ]
+  },
+  {
+   "type": "swap_row",
+   "for_product_id": 46847,
+   "options": [
+    {
+     "product_id": 27681,
+     "label": "different_style",
+     "note": "Instant oatmeal packets, same price"
+    }
+   ]
+  },
+  {
+   "type": "recipe_card",
+   "title": "Banana oatmeal or egg toast",
+   "servings": 7,
+   "minutes": 10,
+   "steps": [
+    "Oatmeal: simmer oats in milk 3 minutes, top with a sliced banana and honey.",
+    "Toast: two eggs on whole wheat toast, a banana on the side.",
+    "Alternate the two through the week."
+   ],
+   "product_ids": [
+    46847,
+    49517,
+    24852,
+    5077,
+    26384
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "honey",
+     "label": "Honey"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "warn",
+   "text": "Skipped almond butter to stay under $20; you likely still have the maple one from last month."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Add almond butter",
+     "intent": "add almond butter even if it goes a little over $20"
+    },
+    {
+     "label": "No dairy",
+     "intent": "make these breakfasts dairy-free"
+    },
+    {
+     "label": "More protein",
+     "intent": "higher-protein breakfasts, still under $20"
+    },
+    {
+     "label": "Under $15",
+     "intent": "same idea for under $15"
+    }
+   ]
+  }
+ ]
+}

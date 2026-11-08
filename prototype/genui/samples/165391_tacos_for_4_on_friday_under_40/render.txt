@@ -1,0 +1,30 @@
+=== Taco night for 4 · Friday ===
+    Bean tacos built around your usual organic picks
+[budget] $36.84 of $40.00  [##################..]
+
+[Everything for taco night]  9 items · serves 4  (sure)
+    why: One personalized search per ingredient: your own avocados first, organic where you usually buy organic
+  3 x Yellow Soft Corn Tortillas 8 Count             $2.49 =   $7.47  new   Top corn pick for you; 3 packs make 24 tortillas  <tortillas>
+  2 x Organic Black Beans                            $1.79 =   $3.58  new   Organic, like most of your basket  <beans>
+  1 x Organic Finely Shredded Cheddar Cheese         $3.99 =   $3.99  new   Organic cheddar, ranked #1 for you  <cheese>
+  1 x Organic Medium Salsa                           $4.49 =   $4.49  new   Organic medium salsa, ranked #1 for you  <salsa>
+  3 x Organic Avocado                                $1.79 =   $5.37  usual Your usual, bought 18x  <avocado>
+  1 x Organic Romaine Lettuce                        $2.49 =   $2.49  new   Organic romaine, ranked #1 for you  <lettuce>
+  2 x Organic Roma Tomato                            $2.49 =   $4.98  new   Fresh romas for dicing, not the canned ones  <tomatoes>
+  2 x Organic Lime                                   $0.49 =   $0.98  new   Organic, 10 cents more than regular  <limes>
+  1 x Organic Sour Cream                             $3.49 =   $3.49  new   Organic sour cream, ranked #1 for you  <sour_cream>
+      total                                                   $36.84
+  swap Organic Black Beans -> cheaper: Black Beans $1.29 (Same beans, not organic, 50 cents less a can)
+  swap Organic Finely Shredded Chedda -> different_style: Shredded Mexican Blend Cheese $2.99 (Mexican blend, a dollar less) | cheaper: Shredded Mild Cheddar Cheese $2.99 (Mild cheddar, a dollar less)
+  swap Organic Roma Tomato -> your_usual: 100% Organic Diced Tomatoes $1.99 (The canned organic diced tomatoes you've bought 2x)
+
+[recipe] Black bean tacos · serves 4 · 25 min
+  1. Warm the beans with cumin, chili powder and a splash of water; mash lightly.
+  2. Dice the tomatoes, slice the avocados, shred the romaine, cut the limes into wedges.
+  3. Char the tortillas in a dry pan, about 30 seconds a side.
+  4. Fill with beans and cheese; top with salsa, veg, avocado, sour cream and lime.
+[Already at home?] ( ) Cumin and chili powder
+  i Bean tacos because none of your regulars are meat. Tap 'Add ground beef' to switch.
+[Change it up] <Add ground beef>  <As cheap as possible>  <Crunchy shells>  <Add chips & guac>
+
+(total $36.84 vs budget $40.00: OK)

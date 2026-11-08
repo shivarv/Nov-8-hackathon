@@ -1,0 +1,404 @@
+{
+ "title": "Healthy lunches \u00b7 Mon to Fri",
+ "blocks": [
+  {
+   "type": "header",
+   "title": "Healthy lunches \u00b7 Mon to Fri",
+   "subtitle": "Quinoa bowls and hummus wraps from your usual organic staples"
+  },
+  {
+   "type": "basket_section",
+   "key": "lunches",
+   "title": "Lunches for the week",
+   "subtitle": "9 items \u00b7 5 lunches for one",
+   "reason": "Your own spinach, eggs and carrots first (all due), then the best-ranked match for you for everything else",
+   "confidence": "sure",
+   "items": [
+    {
+     "product": {
+      "id": 21903,
+      "name": "Organic Baby Spinach",
+      "department": "Produce",
+      "aisle": "Packaged Vegetables Fruits",
+      "price_cents": 449,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "due",
+     "reason": "Your usual, bought 11x, and you're due",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "greens"
+    },
+    {
+     "product": {
+      "id": 44097,
+      "name": "Organic Original Hummus",
+      "department": "Deli",
+      "aisle": "Fresh Dips Tapenades",
+      "price_cents": 399,
+      "emoji": "\ud83e\udd6a",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic original, like the tub you buy every ~2 weeks",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "hummus"
+    },
+    {
+     "product": {
+      "id": 24160,
+      "name": "Organic Whole Wheat Tortillas",
+      "department": "Bakery",
+      "aisle": "Tortillas Flat Bread",
+      "price_cents": 399,
+      "emoji": "\ud83c\udf5e",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Stack_of_corn_and_flour_tortillas_and_a_large_flour_tortilla.jpg/500px-Stack_of_corn_and_flour_tortillas_and_a_large_flour_tortilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic whole wheat, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "wraps"
+    },
+    {
+     "product": {
+      "id": 39485,
+      "name": "Organic Traditional Gluten Freen Quinoa",
+      "department": "Dry Goods Pasta",
+      "aisle": "Grains Rice Dried Goods",
+      "price_cents": 449,
+      "emoji": "\ud83c\udf5d",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic quinoa, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "quinoa"
+    },
+    {
+     "product": {
+      "id": 42768,
+      "name": "Organic Garbanzo Beans",
+      "department": "Canned Goods",
+      "aisle": "Canned Meals Beans",
+      "price_cents": 179,
+      "emoji": "\ud83e\udd6b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Chickpeas%F0%9F%AB%98.jpg/500px-Chickpeas%F0%9F%AB%98.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic garbanzos, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "chickpeas"
+    },
+    {
+     "product": {
+      "id": 30385,
+      "name": "Organic Free Range Grade A Large Brown Eggs",
+      "department": "Dairy Eggs",
+      "aisle": "Eggs",
+      "price_cents": 499,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "usual",
+     "reason": "Your usual, bought 18x",
+     "confidence": 0.9,
+     "quantity": 1,
+     "need_key": "eggs"
+    },
+    {
+     "product": {
+      "id": 42265,
+      "name": "Organic Baby Carrots",
+      "department": "Produce",
+      "aisle": "Packaged Vegetables Fruits",
+      "price_cents": 229,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresh_Carrots_02.jpg/500px-Fresh_Carrots_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "due",
+     "reason": "Your usual, bought 11x, and you're due",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "carrots"
+    },
+    {
+     "product": {
+      "id": 10385,
+      "name": "Organic English Cucumber",
+      "department": "Produce",
+      "aisle": "Fresh Vegetables",
+      "price_cents": 149,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg/500px-Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Organic English cucumbers for the bowls",
+     "confidence": 0.6,
+     "quantity": 2,
+     "need_key": "cucumber"
+    },
+    {
+     "product": {
+      "id": 40604,
+      "name": "Feta Cheese Crumbles",
+      "department": "Dairy Eggs",
+      "aisle": "Packaged Cheese",
+      "price_cents": 299,
+      "emoji": "\ud83e\udd5b",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Feta_Cheese.jpg/500px-Feta_Cheese.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+     },
+     "tag": "new",
+     "reason": "Feta crumbles, ranked #1 for you",
+     "confidence": 0.6,
+     "quantity": 1,
+     "need_key": "feta"
+    }
+   ],
+   "kind": "mission"
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "cheaper",
+     "note": "Tri-color quinoa, 50 cents less",
+     "product": {
+      "id": 29669,
+      "name": "Organic Tri-Color Blend Quinoa",
+      "department": "Dry Goods Pasta",
+      "aisle": "Grains Rice Dried Goods",
+      "price_cents": 399,
+      "emoji": "\ud83c\udf5d",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    },
+    {
+     "label": "different_style",
+     "note": "The organic brown rice you've bought before",
+     "product": {
+      "id": 3142,
+      "name": "Organic Short Grain Brown Rice",
+      "department": "Dry Goods Pasta",
+      "aisle": "Grains Rice Dried Goods",
+      "price_cents": 399,
+      "emoji": "\ud83c\udf5d",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Germinated_brown_rice_-_long_grain.jpg/500px-Germinated_brown_rice_-_long_grain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 39485,
+    "name": "Organic Traditional Gluten Freen Quinoa",
+    "department": "Dry Goods Pasta",
+    "aisle": "Grains Rice Dried Goods",
+    "price_cents": 449,
+    "emoji": "\ud83c\udf5d",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "cheaper",
+     "note": "Not organic, 50 cents less",
+     "product": {
+      "id": 30489,
+      "name": "Original Hummus",
+      "department": "Deli",
+      "aisle": "Fresh Dips Tapenades",
+      "price_cents": 349,
+      "emoji": "\ud83e\udd6a",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    },
+    {
+     "label": "different_style",
+     "note": "Lemon hummus for the wraps",
+     "product": {
+      "id": 13646,
+      "name": "Lemon Hummus",
+      "department": "Deli",
+      "aisle": "Fresh Dips Tapenades",
+      "price_cents": 349,
+      "emoji": "\ud83e\udd6a",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 44097,
+    "name": "Organic Original Hummus",
+    "department": "Deli",
+    "aisle": "Fresh Dips Tapenades",
+    "price_cents": 399,
+    "emoji": "\ud83e\udd6a",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "swap_row",
+   "options": [
+    {
+     "label": "cheaper",
+     "note": "A bunch instead of a bag, $2 less",
+     "product": {
+      "id": 18234,
+      "name": "Organic Spinach Bunch",
+      "department": "Produce",
+      "aisle": "Fresh Vegetables",
+      "price_cents": 249,
+      "emoji": "\ud83e\udd6c",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_from_San_Francisco_farmers_market.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_from_San_Francisco_farmers_market.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+     }
+    }
+   ],
+   "for_product": {
+    "id": 21903,
+    "name": "Organic Baby Spinach",
+    "department": "Produce",
+    "aisle": "Packaged Vegetables Fruits",
+    "price_cents": 449,
+    "emoji": "\ud83e\udd6c",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   }
+  },
+  {
+   "type": "recipe_card",
+   "title": "Quinoa bowls and hummus wraps",
+   "servings": 5,
+   "minutes": 40,
+   "steps": [
+    "Sunday: cook the quinoa and hard-boil 6 eggs; rinse the chickpeas.",
+    "Bowls (Mon, Wed, Fri): quinoa, spinach, chickpeas, cucumber, feta, olive oil and lemon.",
+    "Wraps (Tue, Thu): hummus, spinach, carrots and a sliced egg, rolled tight.",
+    "Keep dressing apart until lunch so the greens stay crisp."
+   ],
+   "products": [
+    {
+     "id": 21903,
+     "name": "Organic Baby Spinach",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 449,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg/500px-Liat_Portal_for_Foodie_Disorder_-_Fresh_spinach_leaves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 44097,
+     "name": "Organic Original Hummus",
+     "department": "Deli",
+     "aisle": "Fresh Dips Tapenades",
+     "price_cents": 399,
+     "emoji": "\ud83e\udd6a",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sabra_hummus_container.jpg/500px-Sabra_hummus_container.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 24160,
+     "name": "Organic Whole Wheat Tortillas",
+     "department": "Bakery",
+     "aisle": "Tortillas Flat Bread",
+     "price_cents": 399,
+     "emoji": "\ud83c\udf5e",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Stack_of_corn_and_flour_tortillas_and_a_large_flour_tortilla.jpg/500px-Stack_of_corn_and_flour_tortillas_and_a_large_flour_tortilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 39485,
+     "name": "Organic Traditional Gluten Freen Quinoa",
+     "department": "Dry Goods Pasta",
+     "aisle": "Grains Rice Dried Goods",
+     "price_cents": 449,
+     "emoji": "\ud83c\udf5d",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Basmati_Rice_Bag_%2849906485468%29.jpg/500px-Basmati_Rice_Bag_%2849906485468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 42768,
+     "name": "Organic Garbanzo Beans",
+     "department": "Canned Goods",
+     "aisle": "Canned Meals Beans",
+     "price_cents": 179,
+     "emoji": "\ud83e\udd6b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Chickpeas%F0%9F%AB%98.jpg/500px-Chickpeas%F0%9F%AB%98.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 30385,
+     "name": "Organic Free Range Grade A Large Brown Eggs",
+     "department": "Dairy Eggs",
+     "aisle": "Eggs",
+     "price_cents": 499,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/500px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 42265,
+     "name": "Organic Baby Carrots",
+     "department": "Produce",
+     "aisle": "Packaged Vegetables Fruits",
+     "price_cents": 229,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresh_Carrots_02.jpg/500px-Fresh_Carrots_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 10385,
+     "name": "Organic English Cucumber",
+     "department": "Produce",
+     "aisle": "Fresh Vegetables",
+     "price_cents": 149,
+     "emoji": "\ud83e\udd6c",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg/500px-Moscow%2C_Perekryostok_Novokuznetskaya_shop%2C_Nov_2025_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+     "id": 40604,
+     "name": "Feta Cheese Crumbles",
+     "department": "Dairy Eggs",
+     "aisle": "Packaged Cheese",
+     "price_cents": 299,
+     "emoji": "\ud83e\udd5b",
+     "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Feta_Cheese.jpg/500px-Feta_Cheese.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+   ]
+  },
+  {
+   "type": "pantry_check",
+   "prompt": "Already at home?",
+   "needs": [
+    {
+     "need_key": "olive_oil",
+     "label": "Olive oil and lemon"
+    }
+   ]
+  },
+  {
+   "type": "note",
+   "tone": "info",
+   "text": "No meat in your orders, so the protein is eggs, chickpeas and feta."
+  },
+  {
+   "type": "question_chips",
+   "prompt": "Change it up",
+   "chips": [
+    {
+     "label": "Add tofu",
+     "intent": "add tofu as extra protein for the bowls"
+    },
+    {
+     "label": "Make it vegan",
+     "intent": "make these lunches vegan"
+    },
+    {
+     "label": "Lower carb",
+     "intent": "swap the wraps and quinoa for more greens and protein"
+    },
+    {
+     "label": "Lunches for two",
+     "intent": "double it for two people"
+    }
+   ]
+  }
+ ]
+}

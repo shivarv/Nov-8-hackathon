@@ -1,0 +1,39 @@
+{
+ "shopper": 175894,
+ "intent": "tacos for 4 on friday, under $40",
+ "llm_mode": "replay",
+ "model": "in-session Claude (replay; not timed)",
+ "composition": "claude",
+ "valid": true,
+ "errors": [],
+ "needs": 9,
+ "searched_needs": 8,
+ "candidates": 40,
+ "phases_s": {
+  "context": 0.19,
+  "plan": 0.0,
+  "ground": 1.48,
+  "compose": 0.0
+ },
+ "search_s_per_need": {
+  "tortillas": 1.41,
+  "ground_beef": 1.48,
+  "seasoning": 1.44,
+  "cheese": 1.45,
+  "salsa": 1.2,
+  "lettuce": 1.47,
+  "tomatoes": 1.48,
+  "sour_cream": 1.45
+ },
+ "total_s": 1.67,
+ "calls": {
+  "backend": 10,
+  "behaviorgpt_est": 26,
+  "llm": 0
+ },
+ "llm_calls": [],
+ "prompt_chars": {
+  "plan": 1444,
+  "compose": 6510
+ }
+}
