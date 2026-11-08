@@ -1,0 +1,23 @@
+# env
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.db
+
+# node
+node_modules/
+dist/
+
+# os / editor
+.DS_Store
+.vscode/
+.idea/
+
+# claude
+.claude/settings.local.json
+*.tsbuildinfo
