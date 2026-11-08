@@ -35,7 +35,7 @@ from typing import Literal
 class Recommendation:
     product_id: int
     score: float
-    source: Literal["bought_together", "popular"]
+    source: Literal["behaviorgpt", "bought_together", "popular"]
     because_product_id: int | None = None
 
 
