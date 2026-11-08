@@ -3,6 +3,9 @@
 Inputs (prototype/image_sources/):
   product_wiki.csv  product_id|kind|wiki_title   for the 2,000 most-bought products
   aisle_wiki.csv    aisle|wiki_title             for all 134 aisles
+  commons_picks.csv title|image_url|credit_url|alt_image_url|alt_credit_url
+                    grocery-style photos picked by eye (fetch_commons_candidates.py,
+                    then apply_commons_picks.py), if present
   plus prototype/out/off_images.csv from fetch_off_images.py, if it has run.
 
 Outputs (data/), read by the backend:
@@ -10,7 +13,9 @@ Outputs (data/), read by the backend:
   aisle_images.csv    aisle,image_url,credit_url
 
 A product gets, in order: its Open Food Facts photo (exact product), else the
-main photo of its Wikipedia article (the kind of food). The app shows the aisle
+picked Commons photo of its kind of food (alternating with the second pick, so
+products of the same kind don't all share one photo), else the main photo of its
+Wikipedia article. The app shows the aisle
 photo for every other product. Wikipedia photos are requested with
 pilicense=free, so only freely licensed images are used.
 
@@ -156,7 +161,14 @@ def main() -> None:
             and same_product(names[r["product_id"]], r["off_name"])
         }
 
-    counts = {"openfoodfacts": 0, "wikipedia": 0, "none": 0}
+    picks: dict[str, list[tuple[str, str]]] = {}
+    picks_src = SRC / "commons_picks.csv"
+    if picks_src.exists():
+        for title, url, credit, alt_url, alt_credit in read_pipe(picks_src):
+            picks[title] = [(url, credit)] + ([(alt_url, alt_credit)] if alt_url else [])
+    seen_title: dict[str, int] = {}
+
+    counts = {"openfoodfacts": 0, "commons": 0, "wikipedia": 0, "none": 0}
     with open(DATA / "product_images.csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["product_id", "image_url", "source", "credit_url"])
@@ -164,6 +176,12 @@ def main() -> None:
             if pid in off:
                 w.writerow([pid, off[pid]["image_url"], "openfoodfacts", off[pid]["credit_url"]])
                 counts["openfoodfacts"] += 1
+            elif title in picks:
+                n = seen_title.get(title, 0)
+                seen_title[title] = n + 1
+                url, credit = picks[title][n % len(picks[title])]
+                w.writerow([pid, url, "commons", credit])
+                counts["commons"] += 1
             elif title in images:
                 url, credit = images[title]
                 w.writerow([pid, url, "wikipedia", credit])
@@ -176,7 +194,9 @@ def main() -> None:
         w = csv.writer(f)
         w.writerow(["aisle", "image_url", "credit_url"])
         for aisle, title in aisles:
-            if title in images:
+            if title in picks:
+                w.writerow([aisle, *picks[title][0]])
+            elif title in images:
                 w.writerow([aisle, *images[title]])
             else:
                 missing_aisles.append(f"{aisle} ({title})")
