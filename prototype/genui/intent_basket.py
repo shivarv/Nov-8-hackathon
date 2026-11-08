@@ -14,6 +14,10 @@
   6. hydrate   ids -> full products (FeedItem shape) and print a readable rendering
 
 LLM modes:
+  --llm cli      (default) Claude through the local Claude Code CLI (`claude -p`), on
+                 the developer's own Claude subscription: no API key. The tool's input
+                 schema is passed as --json-schema, so the answer is schema-valid JSON.
+                 For local prototyping only.
   --llm api      Anthropic Messages API over httpx (the SDK is not installed here).
                  Needs ANTHROPIC_API_KEY in the repo-root .env.
   --llm replay   No API call. Reads <out>/plan_basket.json and <out>/render_ui.json if
@@ -29,7 +33,7 @@ it is what the app would show if Claude is slow or down.
 Usage:
   prototype/.venv/bin/python prototype/genui/intent_basket.py \
       --shopper 165391 --intent "tacos for 4 on friday, under 40 dollars" [--budget 40] \
-      [--llm api|replay|none] [--model claude-sonnet-5-5] [--out DIR]
+      [--llm cli|api|replay|none] [--model claude-sonnet-5-5] [--out DIR]
 """
 
 from __future__ import annotations
@@ -39,7 +43,10 @@ import copy
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -55,6 +62,8 @@ ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 YOURS_PER_NEED = 3  # the shopper's own items for a need
 RESULTS_PER_NEED = 5  # BehaviorGPT's personalized ranking of the catalog for it
 MAX_NEEDS = 10
+LIVE = ("cli", "api")  # modes that call a model (vs replaying stored answers)
+CLI_TIMEOUT_S = 180
 
 
 # --- 0. bookkeeping ----------------------------------------------------------------------
@@ -229,6 +238,8 @@ class LLM:
     def call(self, tool: dict, system: str, messages: list[dict], name: str | None = None) -> dict:
         name = name or tool["name"]
         stored = self.out / f"{name}.json"
+        if self.mode == "cli":
+            return self._cli(tool, system, messages, name, stored)
         if self.mode != "api":
             prompt = self.out / f"{name}.prompt.md"
             prompt.write_text(
@@ -240,6 +251,51 @@ class LLM:
                 return json.loads(stored.read_text())
             raise NeedsModel(str(prompt))
         return self._api(tool, system, messages, name, stored)
+
+    def _cli(self, tool, system, messages, name, stored) -> dict:
+        """One headless `claude -p` turn on the local Claude subscription (no API key).
+
+        The conversation is sent as one prompt; the tool's input schema goes in as
+        --json-schema, so `structured_output` is the tool input the API would return.
+        """
+        exe = shutil.which("claude")
+        if exe is None:
+            sys.exit("the `claude` CLI is not on PATH: install Claude Code, or use --llm replay")
+        transcript = "\n\n".join(f"[{m['role']}]\n{_text(m['content'])}" for m in messages)
+        prompt = (
+            f"{transcript}\n\nAnswer by calling `{tool['name']}`: {tool['description']} "
+            "Reply with only the JSON object for its input."
+        )
+        # Outside the repo (no project CLAUDE.md) and outside any parent Claude Code
+        # session (its env vars would make this a nested session).
+        env = {k: v for k, v in os.environ.items() if not k.startswith(("CLAUDECODE", "CLAUDE_CODE_"))}
+        cmd = [
+            exe, "-p", "--model", self.model, "--output-format", "json",
+            "--json-schema", json.dumps(tool["input_schema"]), "--tools", "",
+            "--no-session-persistence", "--system-prompt", system, prompt,
+        ]
+        t = time.perf_counter()
+        self.meter.calls["llm"] += 1
+        with tempfile.TemporaryDirectory() as cwd:
+            done = subprocess.run(cmd, cwd=cwd, env=env, capture_output=True, text=True, timeout=CLI_TIMEOUT_S)
+        if done.returncode != 0:
+            sys.exit(f"claude -p failed for {name}: {done.stderr.strip()[:300]}")
+        out = json.loads(done.stdout)
+        if out.get("is_error") or not isinstance(out.get("structured_output"), dict):
+            sys.exit(f"claude -p gave no structured answer for {name}: {str(out)[:300]}")
+        usage = out.get("usage", {})
+        self.meter.llm.append(
+            {
+                "call": name,
+                "model": self.model,
+                "via": "claude -p (subscription)",
+                "seconds": round(time.perf_counter() - t, 2),
+                "input_tokens": usage.get("input_tokens"),
+                "output_tokens": usage.get("output_tokens"),
+            }
+        )
+        stored.write_text(json.dumps(out["structured_output"], indent=1))
+        return out["structured_output"]
 
     def _api(self, tool, system, messages, name, stored, strict=True) -> dict:
         body = {
@@ -657,7 +713,7 @@ def run(shopper_id: int, intent: str, budget_arg: float | None, mode: str, model
 
     t = time.perf_counter()
     ctx_file = out / "context.json"
-    if mode != "api" and ctx_file.exists():  # replay: same prompt as the first run
+    if mode not in LIVE and ctx_file.exists():  # replay: same prompt as the first run
         ctx = json.loads(ctx_file.read_text())
         meter.phases["context"] = ctx.pop("_seconds")
         meter.calls["backend"] += 2
@@ -703,7 +759,7 @@ def run(shopper_id: int, intent: str, budget_arg: float | None, mode: str, model
             raise NeedsModel("--llm none")
         spec = llm.call(render_tool(allowed), COMPOSE_SYSTEM, [{"role": "user", "content": compose_user}])
         errors = validate(spec, plan, cands, budget)
-        if errors and mode == "api":  # one repair turn, with the exact errors
+        if errors and mode in LIVE:  # one repair turn, with the exact errors
             print("  compose errors, asking for a repair:", errors)
             spec = llm.call(
                 render_tool(allowed),
@@ -733,7 +789,7 @@ def run(shopper_id: int, intent: str, budget_arg: float | None, mode: str, model
         "shopper": shopper_id,
         "intent": intent,
         "llm_mode": mode,
-        "model": model if mode == "api" else "in-session Claude (replay; not timed)",
+        "model": model if mode in LIVE else "in-session Claude (replay; not timed)",
         "composition": source,
         "valid": not final_errors,
         "errors": final_errors,
@@ -759,7 +815,7 @@ def main() -> None:
     ap.add_argument("--shopper", type=int, required=True)
     ap.add_argument("--intent", required=True)
     ap.add_argument("--budget", type=float, help="dollars; overrides one read from the intent")
-    ap.add_argument("--llm", choices=["api", "replay", "none"], default="api")
+    ap.add_argument("--llm", choices=["cli", "api", "replay", "none"], default="cli")
     ap.add_argument("--model", default="claude-sonnet-5-5")
     ap.add_argument("--out", type=Path)
     a = ap.parse_args()
