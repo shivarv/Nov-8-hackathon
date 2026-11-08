@@ -323,3 +323,10 @@ button {
     padding: 16px;
   }
 }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #008a45;
+}
