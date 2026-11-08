@@ -1,4 +1,4 @@
-import type { Cart, CheckoutResult, Product, Recommendation } from "./types";
+import type { Cart, CheckoutResult, Feed, Product, Recommendation, Shopper } from "./types";
 
 export class ApiError extends Error {
   constructor(
@@ -44,6 +44,10 @@ export const api = {
     request<Recommendation[]>(`/recommendations/cart/${cartId}?k=${k}`),
   productRecommendations: (productId: number, k = 6) =>
     request<Recommendation[]>(`/recommendations/product/${productId}?k=${k}`),
+
+  shoppers: () => request<Shopper[]>("/shoppers"),
+  feed: (shopperId: number, cartId: string, init?: RequestInit) =>
+    request<Feed>(`/feed?shopper_id=${shopperId}&cart_id=${cartId}`, init),
 };
 
 export const formatPrice = (cents: number) => `$${(cents / 100).toFixed(2)}`;

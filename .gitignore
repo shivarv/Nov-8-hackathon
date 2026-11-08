@@ -24,3 +24,7 @@ dist/
 
 # Instacart dataset (680 MB of CSVs, download separately into archive/)
 archive/
+
+# BehaviorGPT prototype: generated files and the per-key catalog id
+prototype/out/
+prototype/catalog_id.txt

@@ -15,7 +15,11 @@ def list_products(
     department: str | None = None,
     limit: int = Query(100, ge=1, le=500),
 ):
-    stmt = select(Product).order_by(Product.department, Product.name).limit(limit)
+    stmt = (
+        select(Product)
+        .order_by(Product.popularity.desc(), Product.department, Product.name)
+        .limit(limit)
+    )
     if q:
         stmt = stmt.where(Product.name.ilike(f"%{q}%"))
     if department:
