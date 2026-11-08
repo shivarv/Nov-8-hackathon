@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "./api";
-import { Receipt } from "./components/Receipt";
+import { Basket } from "./components/Basket";
 import { Shelf } from "./components/Shelf";
 import { ShopperPicker } from "./components/ShopperPicker";
 import { useCart } from "./hooks/useCart";
@@ -12,7 +12,7 @@ const isPairs = (s: FeedSection) => s.kind === "pairs" || s.kind === "mission";
 /**
  * Put the "goes with your basket" section right under the shelf the shopper just
  * added from, so suggestions open where they are looking. Without an anchor (first
- * load, an add from the receipt) the server's order is kept.
+ * load, an add from the basket) the server's order is kept.
  */
 function placePairs(sections: FeedSection[], anchor: string | null): FeedSection[] {
   const pairs = sections.find(isPairs);
@@ -96,44 +96,40 @@ export default function App() {
                 : "Arranged from past baskets"}
           </span>
         )}
-      </header>
-
-      <div className="layout">
-        <main className="walk" aria-busy={loading}>
-          <p className="walk-intro">
-            Your store for today, in the order you usually shop. Scroll to walk the aisles.
-          </p>
-
-          {error && <p className="notice">Something went wrong: {error}</p>}
-
-          {!feed &&
-            !error &&
-            Array.from({ length: 3 }, (_, i) => <div key={i} className="stop is-placeholder" />)}
-
-          {feed &&
-            placePairs(feed.sections, pairsAnchor).map((section) => (
-              <Shelf
-                key={section.key}
-                section={section}
-                quantityOf={quantityOf}
-                onSetQuantity={setQuantity}
-                onAddAll={addMany}
-                onAddFrom={addFrom}
-              />
-            ))}
-
-          {feed && <p className="walk-end">That's the whole store. Your basket is on the receipt.</p>}
-        </main>
-
-        <Receipt
+        <Basket
           cart={cart}
-          shopper={shopper}
           ready={feed?.ready_to_add ?? []}
           loading={loading}
           onSetQuantity={setQuantity}
           onCheckout={checkout}
         />
-      </div>
+      </header>
+
+      <main className="walk" aria-busy={loading}>
+        <p className="walk-intro">
+          Your store for today, in the order you usually shop. Scroll to walk the aisles.
+        </p>
+
+        {error && <p className="notice">Something went wrong: {error}</p>}
+
+        {!feed &&
+          !error &&
+          Array.from({ length: 3 }, (_, i) => <div key={i} className="stop is-placeholder" />)}
+
+        {feed &&
+          placePairs(feed.sections, pairsAnchor).map((section) => (
+            <Shelf
+              key={section.key}
+              section={section}
+              quantityOf={quantityOf}
+              onSetQuantity={setQuantity}
+              onAddAll={addMany}
+              onAddFrom={addFrom}
+            />
+          ))}
+
+        {feed && <p className="walk-end">That's the whole store. Your basket is up top.</p>}
+      </main>
     </div>
   );
 }

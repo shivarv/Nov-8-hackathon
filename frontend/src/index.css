@@ -12,6 +12,13 @@
   --rail: #b9c5be;
   --radius: 14px;
 
+  /* Gradients: one family, used for every filled surface. */
+  --grad-green: linear-gradient(135deg, #1c8a66 0%, var(--sign) 50%, #0a4232 100%);
+  --grad-ink: linear-gradient(180deg, #24443a 0%, var(--ink) 100%);
+  --grad-tag: linear-gradient(180deg, #ffe783 0%, var(--tag) 55%, #f6c62a 100%);
+  --grad-tomato: linear-gradient(160deg, #f4705a 0%, var(--tomato) 55%, #c2341f 100%);
+  --grad-photo: radial-gradient(circle at 50% 35%, #ffffff 0%, #eef3f0 100%);
+
   --face: "Archivo", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
 
@@ -28,7 +35,12 @@
 
 body {
   margin: 0;
-  background: var(--floor);
+  min-height: 100vh;
+  background:
+    radial-gradient(1100px 520px at 100% -8%, #d3eee0 0%, transparent 60%),
+    radial-gradient(900px 480px at -12% 18%, #eef2d8 0%, transparent 58%),
+    linear-gradient(180deg, #edf3ef 0%, var(--floor) 40%, #e2eae5 100%);
+  background-attachment: fixed;
 }
 
 button {
@@ -108,8 +120,12 @@ button:disabled {
   padding: 22px 22px 18px;
   background: var(--paper);
   border: 2px solid transparent;
-  border-top: 8px solid var(--sign);
+  border-top: 0;
   border-radius: var(--radius);
+  background:
+    var(--grad-green) top / 100% 8px no-repeat,
+    linear-gradient(180deg, #ffffff 60%, #f4f9f6);
+  box-shadow: 0 10px 24px -18px rgb(16 38 31 / 0.5);
   transition:
     transform 160ms ease,
     border-color 160ms ease;
@@ -154,10 +170,15 @@ button:disabled {
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 14px 0;
-  background: color-mix(in srgb, var(--floor) 88%, transparent);
-  backdrop-filter: blur(8px);
+  gap: 14px;
+  padding: 12px 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #edf3ef 96%, transparent) 0%,
+    color-mix(in srgb, #edf3ef 78%, transparent) 100%
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgb(16 38 31 / 0.07);
 }
 
 .logo {
@@ -166,17 +187,23 @@ button:disabled {
   font-size: 1.9rem;
   text-transform: uppercase;
   letter-spacing: 0.01em;
+  background: var(--grad-green);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .who {
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 6px 14px;
-  background: var(--paper);
+  background: linear-gradient(180deg, #ffffff, #f3f8f5);
   border: 0;
   border-radius: 999px;
   line-height: 1.15;
+  box-shadow: 0 0 0 1px rgb(16 38 31 / 0.07);
 }
 
 .who-label {
@@ -191,7 +218,6 @@ button:disabled {
 }
 
 .model-badge {
-  margin-left: auto;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -211,13 +237,6 @@ button:disabled {
 .model-badge.is-busy::before {
   background: var(--tomato);
   animation: pulse 900ms ease-in-out infinite;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 36px;
-  align-items: start;
 }
 
 .walk {
@@ -282,14 +301,17 @@ button:disabled {
 }
 
 .sign--sure {
-  background: var(--sign);
+  background: linear-gradient(110deg, #0a4232 0%, var(--sign) 40%, #1c8a66 100%);
   color: var(--sign-ink);
+  box-shadow: 0 14px 26px -18px rgb(15 90 68 / 0.8);
 }
 
 .sign--good {
-  background: var(--paper);
+  background: linear-gradient(110deg, #ffffff 55%, #e9f5ee 100%);
   color: var(--ink);
-  box-shadow: inset 0 0 0 2px var(--sign);
+  box-shadow:
+    inset 0 0 0 2px var(--sign),
+    0 12px 22px -20px rgb(15 90 68 / 0.6);
 }
 
 .sign--explore {
@@ -314,17 +336,17 @@ button:disabled {
 }
 
 .sign--good .sign-plate {
-  background: var(--sign);
+  background: var(--grad-green);
   color: var(--sign-ink);
 }
 
 .sign--explore .sign-plate {
-  background: var(--floor-deep);
+  background: linear-gradient(160deg, #e6ede9, var(--floor-deep));
 }
 
 .sign--mission .sign-plate,
 .sign--pairs .sign-plate {
-  background: var(--tomato);
+  background: var(--grad-tomato);
   color: #fff;
 }
 
@@ -402,8 +424,9 @@ button:disabled {
   padding: 7px 14px;
   border: 0;
   border-radius: 999px;
-  background: var(--tag);
+  background: var(--grad-tag);
   color: var(--ink);
+  box-shadow: 0 4px 10px -6px rgb(120 90 0 / 0.6);
   font-stretch: 75%;
   font-weight: 800;
   font-size: 0.9rem;
@@ -436,8 +459,8 @@ button:disabled {
 .shelf-edge {
   height: 10px;
   margin-top: -6px;
-  border-radius: 3px;
-  background: linear-gradient(#c9d3cd, #a7b5ad);
+  border-radius: 5px;
+  background: linear-gradient(180deg, #d6dfda 0%, #b4c2ba 60%, #9fafa6 100%);
   box-shadow: 0 8px 10px -8px rgb(16 38 31 / 0.45);
 }
 
@@ -450,10 +473,12 @@ button:disabled {
   flex-direction: column;
   gap: 6px;
   padding: 10px;
-  background: var(--paper);
-  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 65%, #f6faf8 100%);
+  border-radius: 14px;
   scroll-snap-align: start;
-  box-shadow: 0 1px 0 rgb(16 38 31 / 0.06);
+  box-shadow:
+    0 0 0 1px rgb(16 38 31 / 0.05),
+    0 6px 16px -12px rgb(16 38 31 / 0.35);
   transition:
     transform 160ms ease,
     box-shadow 160ms ease;
@@ -461,7 +486,9 @@ button:disabled {
 
 .tile:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 18px -12px rgb(16 38 31 / 0.4);
+  box-shadow:
+    0 0 0 1px rgb(16 38 31 / 0.06),
+    0 14px 24px -14px rgb(16 38 31 / 0.45);
 }
 
 .stop--explore .tile {
@@ -470,15 +497,18 @@ button:disabled {
 }
 
 .tile.is-in-basket {
-  box-shadow: inset 0 0 0 2px var(--sign);
+  background: linear-gradient(180deg, #ffffff 55%, #e6f4ec 100%);
+  box-shadow:
+    inset 0 0 0 2px var(--sign),
+    0 8px 18px -12px rgb(15 90 68 / 0.55);
 }
 
 .tile-photo {
   position: relative;
   aspect-ratio: 1;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  background: #f6f8f7;
+  background: var(--grad-photo);
 }
 
 .product-photo {
@@ -501,7 +531,7 @@ button:disabled {
   left: 8px;
   padding: 3px 8px;
   border-radius: 999px;
-  background: var(--tomato);
+  background: var(--grad-tomato);
   color: #fff;
   font-stretch: 75%;
   font-weight: 800;
@@ -511,7 +541,7 @@ button:disabled {
 }
 
 .tile--due .tile-sticker {
-  background: var(--tag);
+  background: var(--grad-tag);
   color: var(--ink);
 }
 
@@ -524,8 +554,9 @@ button:disabled {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: var(--sign);
+  background: var(--grad-green);
   color: #fff;
+  box-shadow: 0 0 0 2px #fff;
   font-weight: 800;
   animation: pop 260ms ease-out both;
 }
@@ -540,8 +571,8 @@ button:disabled {
 .tile-price {
   display: inline-block;
   padding: 3px 9px 2px;
-  background: var(--tag);
-  border-radius: 3px;
+  background: var(--grad-tag);
+  border-radius: 4px;
   font-family: var(--mono);
   font-weight: 600;
   font-size: 0.95rem;
@@ -596,18 +627,18 @@ button:disabled {
   height: 36px;
   border: 0;
   border-radius: 999px;
-  background: var(--ink);
+  background: var(--grad-ink);
   color: #fff;
   font-stretch: 75%;
   font-weight: 800;
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  transition: background 140ms ease;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12);
 }
 
 .tile-add:hover {
-  background: var(--sign);
+  background: var(--grad-green);
 }
 
 .tile-stepper {
@@ -619,7 +650,8 @@ button:disabled {
   gap: 6px;
   padding: 0 3px;
   border-radius: 999px;
-  background: var(--floor);
+  background: linear-gradient(180deg, #e3f1e9, #d4eadf);
+  color: var(--sign);
   font-size: 0.78rem;
   font-weight: 600;
 }
@@ -633,137 +665,336 @@ button:disabled {
   font-weight: 800;
 }
 
-/* ---------- Receipt ---------- */
+/* ---------- Basket: a pill in the top bar that drops open into the full list ---------- */
 
-/* Receipt and "ready to add" share the sidebar: the receipt scrolls inside,
-   so the ready panel under it always stays on screen. */
-.receipt-wrap {
-  position: sticky;
-  top: 76px;
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 92px);
+.basket {
+  position: relative;
+  flex: none;
 }
 
-.receipt-bar {
-  display: none;
-}
-
-.receipt {
-  --zig: 14px;
-  padding: 20px 18px calc(28px + var(--zig));
-  background: var(--paper);
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  box-shadow: 0 14px 24px -18px rgb(16 38 31 / 0.5);
-  /* torn zig-zag bottom edge */
-  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / var(--zig)
-    100%;
-  flex: 0 1 auto;
-  min-height: 160px;
-  overflow-y: auto;
-}
-
-.receipt-head {
-  display: flex;
-  flex-direction: column;
+.basket-toggle {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 2px;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-  border-bottom: 1px dashed var(--rail);
+  gap: 12px;
+  height: 48px;
+  padding: 0 7px 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--grad-green);
+  color: var(--sign-ink);
+  box-shadow:
+    0 10px 22px -12px rgb(15 90 68 / 0.8),
+    inset 0 1px 0 rgb(255 255 255 / 0.2);
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.basket-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 26px -12px rgb(15 90 68 / 0.9),
+    inset 0 1px 0 rgb(255 255 255 / 0.2);
+}
+
+.basket-icon {
+  position: relative;
+  display: grid;
+}
+
+.basket-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.basket-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--grad-tag);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  box-shadow: 0 0 0 2px var(--sign);
+  animation: pop 260ms ease-out both;
+}
+
+.basket-total {
+  min-width: 4.5ch;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The model has picks waiting inside. */
+.basket-ready-dot {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--tag);
+  box-shadow: 0 0 0 2px var(--sign);
+}
+
+.basket-chevron {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.14);
+  transition: transform 200ms ease;
+}
+
+.basket-chevron svg {
+  width: 16px;
+  height: 16px;
+}
+
+.basket.is-open .basket-chevron {
+  transform: rotate(180deg);
+}
+
+.basket-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 30;
+  width: 400px;
+  max-height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow:
+    0 30px 60px -22px rgb(16 38 31 / 0.5),
+    0 0 0 1px rgb(16 38 31 / 0.06);
+  overflow: hidden;
+  transform-origin: top right;
+  animation: drop 180ms ease-out both;
+}
+
+.basket-head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px 14px;
+  background: linear-gradient(180deg, #eef6f1, var(--paper));
+  border-bottom: 1px solid var(--floor);
+}
+
+.basket-head h2 {
+  margin: 0;
+  font-stretch: 68%;
+  font-weight: 800;
+  font-size: 1.45rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.basket-head p {
+  margin: 4px 0 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.basket-close {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--floor);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.basket-close:hover {
+  background: var(--floor-deep);
+}
+
+.basket-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.basket-empty {
+  margin: 0;
+  padding: 28px 24px;
   text-align: center;
-}
-
-.receipt-head strong {
-  font-family: var(--face);
-  font-stretch: 62%;
-  font-weight: 900;
-  font-size: 1.6rem;
-  letter-spacing: 0.04em;
-}
-
-.receipt-empty,
-.receipt-foot {
   color: var(--ink-soft);
   line-height: 1.5;
 }
 
-.receipt-foot {
-  margin: 10px 0 0;
-  font-size: 0.7rem;
-  text-align: center;
+.basket-placed {
+  margin: 14px 18px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e3f5ec, #cfeee0);
+  color: var(--sign);
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
-.receipt-placed {
-  padding: 8px;
-  background: var(--floor);
-  text-align: center;
-}
-
-.receipt-lines {
+.basket-lines {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 4px 18px;
 }
 
-.receipt-line {
+.basket-line {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: end;
-  column-gap: 6px;
-  padding: 6px 0;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  row-gap: 6px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--floor);
   animation: print 240ms ease-out both;
 }
 
-.receipt-name {
-  max-width: 170px;
+.basket-line:last-child {
+  border-bottom: 0;
+}
+
+.basket-line .cart-photo,
+.basket-line .cart-emoji {
+  grid-row: 1 / 3;
+}
+
+.cart-photo,
+.cart-emoji {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: var(--grad-photo);
+}
+
+.cart-photo {
+  display: block;
+  object-fit: cover;
+}
+
+.cart-emoji {
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+
+.basket-line-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.basket-line-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.25;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.receipt-dots {
-  border-bottom: 1px dotted var(--rail);
-  margin-bottom: 4px;
-}
-
-.receipt-qty {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.basket-line-unit {
+  font-family: var(--mono);
+  font-size: 0.7rem;
   color: var(--ink-soft);
-  font-size: 0.72rem;
 }
 
-.receipt-qty button {
-  width: 22px;
-  height: 22px;
+.basket-line-total {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.basket-stepper {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 999px;
+  background: var(--floor);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.basket-stepper span {
+  min-width: 24px;
+  text-align: center;
+}
+
+.basket-stepper button {
+  width: 26px;
+  height: 26px;
   padding: 0;
-  border: 1px solid var(--rail);
+  border: 0;
   border-radius: 50%;
   background: var(--paper);
+  font-weight: 800;
   line-height: 1;
+  box-shadow: 0 1px 2px rgb(16 38 31 / 0.14);
 }
 
-.receipt-total {
+.basket-stepper button:hover {
+  background: var(--sign);
+  color: #fff;
+}
+
+.basket-foot {
+  flex: none;
+  padding: 14px 18px 16px;
+  border-top: 1px solid var(--floor);
+  background: linear-gradient(180deg, var(--paper), #f1f7f3);
+}
+
+.basket-subtotal {
   display: flex;
   justify-content: space-between;
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--rail);
+  align-items: baseline;
   font-weight: 600;
-  font-size: 0.95rem;
+}
+
+.basket-subtotal strong {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+}
+
+.basket-note {
+  margin: 8px 0 0;
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--ink-soft);
 }
 
 .checkout {
   width: 100%;
-  margin-top: 14px;
-  height: 44px;
+  margin-top: 12px;
+  height: 48px;
   border: 0;
   border-radius: 999px;
-  background: var(--sign);
+  background: var(--grad-green);
   color: var(--sign-ink);
   font-family: var(--face);
   font-stretch: 75%;
@@ -771,17 +1002,24 @@ button:disabled {
   font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow:
+    0 12px 22px -14px rgb(15 90 68 / 0.9),
+    inset 0 1px 0 rgb(255 255 255 / 0.2);
+  transition: filter 140ms ease;
 }
 
-/* ---------- Ready to add: the model's surest picks, under the receipt ---------- */
+.checkout:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+/* ---------- Ready to add: the model's surest picks, inside the basket ---------- */
 
 .ready {
-  flex: none;
-  margin-top: 18px;
-  padding: 16px 14px 10px;
-  border-radius: var(--radius);
-  background: var(--sign);
-  color: var(--sign-ink);
+  margin: 4px 12px 14px;
+  padding: 14px 14px 6px;
+  border-radius: 14px;
+  background: linear-gradient(140deg, #fff6d2 0%, #f3f7e6 45%, #e3f3ea 100%);
+  box-shadow: inset 0 0 0 1px rgb(16 38 31 / 0.06);
   transition: opacity 200ms ease;
 }
 
@@ -793,15 +1031,17 @@ button:disabled {
   margin: 0;
   font-stretch: 68%;
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   line-height: 1;
   text-transform: uppercase;
+  color: var(--sign);
 }
 
 .ready-head p {
-  margin: 6px 0 10px;
-  font-size: 0.78rem;
-  opacity: 0.8;
+  margin: 5px 0 8px;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
 }
 
 .ready-list {
@@ -818,7 +1058,7 @@ button:disabled {
   row-gap: 4px;
   align-items: center;
   padding: 10px 0;
-  border-top: 1px solid rgb(255 255 255 / 0.14);
+  border-top: 1px solid rgb(16 38 31 / 0.08);
   animation: print 240ms ease-out both;
 }
 
@@ -827,6 +1067,7 @@ button:disabled {
   grid-row: 1 / 3;
   width: 42px;
   height: 42px;
+  font-size: 1.3rem;
 }
 
 .ready-info {
@@ -838,7 +1079,7 @@ button:disabled {
 
 .ready-name {
   font-weight: 600;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   line-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -849,7 +1090,7 @@ button:disabled {
 .ready-reason {
   font-family: var(--mono);
   font-size: 0.66rem;
-  color: var(--tag);
+  color: #8a5a00;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -867,31 +1108,39 @@ button:disabled {
   padding: 5px 14px;
   border: 0;
   border-radius: 999px;
-  background: var(--tag);
-  color: var(--ink);
+  background: var(--grad-ink);
+  color: #fff;
   font-stretch: 75%;
   font-weight: 800;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
 .ready-add:hover {
-  background: #fff;
+  background: var(--grad-green);
 }
 
-/* ---------- Phone: the receipt becomes a bar that opens into a sheet ---------- */
+/* ---------- Phone: the basket panel spans the width under the bar ---------- */
 
 @media (max-width: 900px) {
-  .layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .walk {
-    padding-bottom: 96px;
-  }
-
   .model-badge {
     display: none;
+  }
+
+  .who-meta {
+    display: none;
+  }
+
+  /* Anchor the panel to the top bar so it can use the full width. */
+  .basket {
+    position: static;
+  }
+
+  .basket-panel {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-height: calc(100dvh - 90px);
   }
 
   .sign {
@@ -905,64 +1154,11 @@ button:disabled {
     align-items: center;
     padding-top: 0;
   }
+}
 
-  .receipt-wrap {
-    position: fixed;
-    inset: auto 0 0 0;
-    z-index: 20;
-    top: auto;
-    max-height: none;
-  }
-
-  .receipt-bar {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
-    align-items: center;
-    width: 100%;
-    padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
-    border: 0;
-    background: var(--ink);
-    color: #fff;
-    font-family: var(--mono);
-    text-align: left;
-  }
-
-  .receipt-bar-total {
-    font-weight: 600;
-  }
-
-  .receipt-bar-hint {
-    font-family: var(--face);
-    font-stretch: 75%;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-
-  .receipt {
+@media (max-width: 420px) {
+  .logo {
     display: none;
-    max-height: 45vh;
-  }
-
-  .receipt-wrap.is-open .receipt {
-    display: block;
-  }
-
-  .ready {
-    display: none;
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .receipt-wrap.is-open .ready {
-    display: block;
-    max-height: 35vh;
-    overflow-y: auto;
-  }
-
-  .receipt-wrap.is-open {
-    display: flex;
-    flex-direction: column-reverse;
   }
 }
 
@@ -972,6 +1168,13 @@ button:disabled {
   from {
     opacity: 0;
     transform: translateY(10px);
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
   }
 }
 
