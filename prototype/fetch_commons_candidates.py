@@ -148,7 +148,12 @@ def thumb(c: dict) -> Image.Image | None:
         except Exception:
             return None
         img.save(path, quality=80)
-    return Image.open(path)
+    try:
+        img = Image.open(path)
+        img.load()
+        return img
+    except Exception:  # a half-written file from an interrupted run
+        return None
 
 
 def font(size: int) -> ImageFont.ImageFont:
