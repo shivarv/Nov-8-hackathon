@@ -41,6 +41,29 @@ UNDERSTOOD = 1.35  # best anonymous search score below this: the model didn't ge
 CLOSE = 0.965  # results within 3.5% of the best one are on topic
 
 
+ORGANIC_SHOPPER = 0.6  # share of their purchases (in that aisle) that makes organic come first
+MIN_AISLE_BUYS = 3  # fewer purchases than this in an aisle: use their overall share
+
+
+def _is_organic(name: str) -> bool:
+    return "organic" in name.lower()
+
+
+def _organic_shares(shopper: Shopper, products: dict[int, Product]) -> dict[str, float]:
+    """Organic share of what they bought, per aisle (where they bought enough there),
+    and overall under the key "" (weighted by how often they bought each item)."""
+    total: dict[str, int] = {}
+    organic: dict[str, int] = {}
+    for pid, n in shopper.times_bought.items():
+        p = products.get(pid)
+        if p is None:
+            continue
+        for key in (p.aisle, ""):
+            total[key] = total.get(key, 0) + n
+            organic[key] = organic.get(key, 0) + (n if _is_organic(p.name) else 0)
+    return {k: organic[k] / t for k, t in total.items() if k == "" or t >= MIN_AISLE_BUYS}
+
+
 def _words(q: str) -> list[str]:
     return [w for w in re.findall(r"[a-z0-9]+", q.lower()) if len(w) > 1]
 
@@ -159,6 +182,20 @@ def search(
         reverse=True,
     )[:YOURS]
 
+    # An organic shopper gets the organic version first: if most of what they buy in a
+    # product's aisle is organic, organic matches go above conventional ones (the
+    # model's order is kept within each group). BehaviorGPT does lean that way, but for
+    # a product they've never bought ("kiwi") only by a fraction of a percent.
+    leans = _organic_shares(shopper, products)
+    organic_first: dict[int, float] = {}
+    for pid, _ in results_raw:
+        p = products.get(pid)
+        if p is not None and _is_organic(p.name):
+            share = leans.get(p.aisle, leans.get("", 0.0))
+            if share >= ORGANIC_SHOPPER:
+                organic_first[pid] = share
+    results_raw = sorted(results_raw, key=lambda r: r[0] not in organic_first)
+
     taken = set(yours_ids)
     results: list[FeedItemOut] = []
     for rank, (pid, _) in enumerate(results_raw, 1):
@@ -167,12 +204,17 @@ def search(
         if pid in taken or not shown(pid):
             continue
         taken.add(pid)
+        reason = bought(pid) or (
+            f"Organic · {organic_first[pid]:.0%} of your {products[pid].aisle.lower()} is organic"
+            if pid in organic_first
+            else f"#{rank} for you"
+        )
         # "pairs" draws no sticker: a search result isn't news, only the shopper's own are marked
         results.append(
             item(
                 pid,
                 "usual" if shopper.times_bought[pid] else "pairs",
-                bought(pid) or f"#{rank} for you",
+                reason,
                 1 - rank / 100,
             )
         )

@@ -155,6 +155,18 @@ class Shopper:
 
 
 _shoppers: dict[int, Shopper] = {}
+# New shoppers who started in the app (app/newusers.py): looked up like the demo
+# shoppers, but not listed on the picker. Their ids start above every Instacart id.
+PROFILE_ID_BASE = 10_000_000
+_new: dict[int, Shopper] = {}
+
+
+def is_new(shopper_id: int) -> bool:
+    return shopper_id > PROFILE_ID_BASE
+
+
+def register(shopper: Shopper) -> None:
+    _new[shopper.id] = shopper
 
 
 def load(path: str) -> int:
@@ -189,4 +201,4 @@ def all_shoppers() -> list[Shopper]:
 
 
 def get(shopper_id: int) -> Shopper | None:
-    return _shoppers.get(shopper_id)
+    return _shoppers.get(shopper_id) or _new.get(shopper_id)

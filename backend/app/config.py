@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=(".env", "../.env"), extra="ignore")
 
     database_url: str = "sqlite:///./dev.db"
+    # Built frontend to serve from the backend (deployment); unset locally, where Vite runs.
+    frontend_dist: str | None = None
     cors_origins: list[str] = ["http://localhost:5173"]
 
     # Where the catalog and order history come from when the DB is empty.
@@ -15,6 +17,9 @@ class Settings(BaseSettings):
     data_source: Literal["auto", "instacart", "synthetic"] = "auto"
     # Synthetic order history generated when the DB is empty (cold-start data for the recommender).
     seed_orders: int = 3000
+    # Pre-built seed (scripts/build_seed.py): the Instacart catalog and order sample in
+    # one ~1 MB file. Used first when present; deployments ship only this.
+    seed_file: str = "../data/seed.json.xz"
     # Instacart dataset: raw CSVs (archive/) and our estimated prices (data/).
     instacart_dir: str = "../archive"
     prices_csv: str = "../data/product_prices.csv"

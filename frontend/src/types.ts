@@ -38,11 +38,22 @@ export interface Shopper {
   usual_gap_days: number;
   n_orders: number;
   days_ahead: number;
+  /** A new shopper who started in the app (not an Instacart shopper). */
+  is_new: boolean;
+  /** New shopper: their entry (label, blurb) has been generated from their behaviour. */
+  has_entry: boolean;
 }
 
 export type Confidence = "sure" | "good" | "explore";
-export type ItemTag = "usual" | "pairs" | "new" | "due" | "treat";
-export type SectionKind = "regulars" | "pairs" | "mission" | "aisle" | "due" | "treat";
+export type ItemTag = "usual" | "pairs" | "new" | "due" | "treat" | "foryou";
+export type SectionKind =
+  | "regulars"
+  | "pairs"
+  | "mission"
+  | "aisle"
+  | "due"
+  | "treat"
+  | "foryou";
 
 export interface FeedItem {
   product: Product;
@@ -125,4 +136,53 @@ export interface Plan {
   picks: PlanPick[];
   alternatives: Record<string, Product[]>;
   by: "claude" | "rules";
+}
+
+// --- new shoppers (backend/app/foryou.py) ---------------------------------------------
+
+export interface Signal {
+  product_id: number;
+  kind: "view" | "open";
+  dwell_ms: number;
+}
+
+export type Trait = "organic" | "budget" | "premium";
+
+export interface PatternTag {
+  key: Trait;
+  label: string;
+  strength: "strong" | "leaning";
+  why: string;
+}
+
+/** How a new shopper shops. Leanings run from -1 to 1 (0 = like a typical shopper). */
+export interface Pattern {
+  /** "behaviorgpt": BehaviorGPT refereed the tags. */
+  method: "behaviorgpt" | "signals";
+  leanings: Record<Trait, number>;
+  model_leanings: Partial<Record<Trait, number>>;
+  tags: PatternTag[];
+  top_departments: string[];
+  products_seen: number;
+  seconds_looking: number;
+  clicks: number;
+  adds: number;
+  purchases: number;
+  enough: boolean;
+}
+
+/** The user entry generated for a new shopper once there is enough data. */
+export interface Entry {
+  label: string;
+  blurb: string;
+  generated_at: string;
+  just_generated: boolean;
+}
+
+export interface ForYou {
+  shopper: Shopper;
+  pattern: Pattern;
+  entry: Entry | null;
+  sections: FeedSection[];
+  model: "behaviorgpt" | "fallback";
 }

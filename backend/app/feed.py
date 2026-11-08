@@ -30,9 +30,10 @@ from datetime import datetime
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app import images
+from app import images, shoppers
 from app.behaviorgpt import BehaviorGPTRecommender
 from app.models import Product
+from app.newusers import LABEL as NEW_LABEL
 from app.recommender import CoOccurrenceRecommender
 from app.schemas import FeedItemOut, FeedOut, FeedSectionOut, ProductOut, ShopperOut
 from app.shoppers import Shopper
@@ -130,6 +131,8 @@ def shopper_out(shopper: Shopper) -> ShopperOut:
         usual_gap_days=shopper.usual_gap_days,
         n_orders=shopper.n_orders,
         days_ahead=shopper.days_ahead,
+        is_new=shoppers.is_new(shopper.id),
+        has_entry=shoppers.is_new(shopper.id) and shopper.label != NEW_LABEL,
     )
 
 

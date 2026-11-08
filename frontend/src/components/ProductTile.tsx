@@ -2,6 +2,7 @@ import { type CSSProperties, useContext } from "react";
 import { formatPrice } from "../api";
 import type { FeedItem } from "../types";
 import { RevealContext } from "../reveal";
+import { TrackingContext } from "../tracking";
 import { ProductImage } from "./ProductImage";
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
 const STICKER: Partial<Record<FeedItem["tag"], string>> = {
   new: "New to you",
   due: "Due",
+  foryou: "For you",
 };
 
 /** One product on the shelf: photo, shelf-edge price tag, why it's here, one-tap add. */
@@ -21,13 +23,26 @@ export function ProductTile({ item, quantity, onSetQuantity }: Props) {
   const inBasket = quantity > 0;
   const sticker = STICKER[tag];
   const boughtNext = useContext(RevealContext)?.has(product.id) ?? false;
+  // New shoppers: time on screen is recorded, and the photo / name open a closer look.
+  const tracking = useContext(TrackingContext);
+  const open = tracking ? () => tracking.open(item) : undefined;
 
   return (
     <article
+      ref={tracking?.track(product.id)}
       className={`tile tile--${tag}${inBasket ? " is-in-basket" : ""}${boughtNext ? " is-bought-next" : ""}`}
       style={{ "--fit": confidence } as CSSProperties}
     >
-      <div className="tile-photo">
+      <div
+        className={`tile-photo${open ? " is-openable" : ""}`}
+        {...(open && {
+          role: "button",
+          tabIndex: 0,
+          "aria-label": `Look closer at ${product.name}`,
+          onClick: open,
+          onKeyDown: (e: React.KeyboardEvent) => e.key === "Enter" && open(),
+        })}
+      >
         <ProductImage product={product} size="card" />
         {sticker && <span className="tile-sticker">{sticker}</span>}
         {boughtNext && <span className="tile-real">Bought next</span>}
@@ -42,7 +57,9 @@ export function ProductTile({ item, quantity, onSetQuantity }: Props) {
         <span className="tile-price">{formatPrice(product.price_cents)}</span>
       </div>
 
-      <h3 className="tile-name">{product.name}</h3>
+      <h3 className={`tile-name${open ? " is-openable" : ""}`} onClick={open}>
+        {product.name}
+      </h3>
       <p className="tile-reason">
         <span className="tile-fit" aria-hidden />
         {reason}

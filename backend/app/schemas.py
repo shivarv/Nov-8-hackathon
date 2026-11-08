@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -45,6 +46,10 @@ class ShopperOut(BaseModel):
     usual_gap_days: int = 7
     n_orders: int
     days_ahead: int = 0
+    # A new shopper who started in the app (app/newusers.py), not an Instacart shopper.
+    is_new: bool = False
+    # New shopper: True once their entry (label, blurb) has been generated from behaviour.
+    has_entry: bool = False
 
 
 Confidence = Literal["sure", "good", "explore"]
@@ -54,14 +59,14 @@ class FeedItemOut(BaseModel):
     product: ProductOut
     # usual: they buy it often · pairs: goes with the basket · new: never bought it ·
     # due: a regular they haven't bought lately · treat: small extra for the checkout
-    tag: Literal["usual", "pairs", "new", "due", "treat"]
+    tag: Literal["usual", "pairs", "new", "due", "treat", "foryou"]
     reason: str
     confidence: float = Field(ge=0, le=1)
 
 
 class FeedSectionOut(BaseModel):
     key: str
-    kind: Literal["regulars", "pairs", "mission", "aisle", "due", "treat"]
+    kind: Literal["regulars", "pairs", "mission", "aisle", "due", "treat", "foryou"]
     title: str
     subtitle: str
     confidence: Confidence
@@ -150,3 +155,53 @@ class PlanOut(BaseModel):
     # Per need, the other candidates (for swapping a pick).
     alternatives: dict[str, list[ProductOut]] = {}
     by: Literal["claude", "rules"]
+
+
+# --- new shoppers: what they do, their pattern, their For you tab (app/foryou.py) ------
+
+
+class SignalIn(BaseModel):
+    product_id: int
+    kind: Literal["view", "open"]  # adds, removes and purchases are recorded by the cart
+    dwell_ms: int = Field(ge=0, le=600_000)
+
+
+class PatternTagOut(BaseModel):
+    key: Literal["organic", "budget", "premium"]
+    label: str  # "Organic seeker"
+    strength: Literal["strong", "leaning"]
+    why: str
+
+
+class PatternOut(BaseModel):
+    """How a new shopper shops. Leanings run from -1 to 1 (0 = like a typical shopper)."""
+
+    method: Literal["behaviorgpt", "signals"]  # "behaviorgpt": it refereed the tags
+    leanings: dict[str, float]  # organic / budget / premium, from their attention
+    # BehaviorGPT's lean per trait vs typical shoppers (empty without it)
+    model_leanings: dict[str, float] = {}
+    tags: list[PatternTagOut]
+    top_departments: list[str]  # where their attention goes, most first
+    products_seen: int
+    seconds_looking: float
+    clicks: int  # products opened for a closer look
+    adds: int
+    purchases: int
+    enough: bool  # enough behaviour to decide anything
+
+
+class EntryOut(BaseModel):
+    """The user entry generated for a new shopper once there is enough data."""
+
+    label: str
+    blurb: str
+    generated_at: datetime
+    just_generated: bool = False
+
+
+class ForYouOut(BaseModel):
+    shopper: ShopperOut
+    pattern: PatternOut
+    entry: EntryOut | None = None
+    sections: list[FeedSectionOut]
+    model: Literal["behaviorgpt", "fallback"]

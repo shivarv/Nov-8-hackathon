@@ -7,7 +7,17 @@ from sqlalchemy.pool import StaticPool
 from app.config import settings
 
 
+def _sqlalchemy_url(url: str) -> str:
+    """Hosts (Render, Heroku) hand out postgres:// or postgresql:// URLs; SQLAlchemy
+    needs the driver named (psycopg 3 is the one installed)."""
+    for prefix in ("postgres://", "postgresql://"):
+        if url.startswith(prefix):
+            return "postgresql+psycopg://" + url[len(prefix) :]
+    return url
+
+
 def _make_engine(url: str):
+    url = _sqlalchemy_url(url)
     if url.startswith("sqlite"):
         kwargs: dict = {"connect_args": {"check_same_thread": False}}
         if ":memory:" in url:

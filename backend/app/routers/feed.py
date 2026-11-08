@@ -1,16 +1,20 @@
 from fastapi import APIRouter, HTTPException, Query
+from sqlalchemy import select
 
-from app import feed, planner, replay, search, shoppers
+from app import feed, foryou, newusers, planner, replay, search, shoppers
 from app.deps import BehaviorGPT, DbSession, Recommender
-from app.models import Cart
+from app.models import Cart, Product
 from app.schemas import (
     FeedOut,
+    ForYouOut,
     NextVisitOut,
+    PatternOut,
     PlanIn,
     PlanOut,
     ReplayOut,
     SearchOut,
     ShopperOut,
+    SignalIn,
 )
 
 router = APIRouter(tags=["feed"])
@@ -20,6 +24,50 @@ router = APIRouter(tags=["feed"])
 def list_shoppers():
     """Real Instacart shoppers to shop as (data/demo_shoppers.json)."""
     return [feed.shopper_out(s) for s in shoppers.all_shoppers()]
+
+
+@router.post("/shoppers/new", response_model=ShopperOut, status_code=201)
+def new_shopper(db: DbSession):
+    """Start as a new shopper with no history; what they do is stored (app/newusers.py)."""
+    return feed.shopper_out(newusers.create(db))
+
+
+@router.get("/shoppers/{shopper_id}", response_model=ShopperOut)
+def get_shopper(shopper_id: int):
+    """One shopper: a demo shopper, or a new shopper (to continue as them)."""
+    return feed.shopper_out(_shopper(shopper_id))
+
+
+@router.post("/shoppers/{shopper_id}/signals", response_model=PatternOut)
+def record_signals(shopper_id: int, signals: list[SignalIn], db: DbSession):
+    """What a new shopper looked at and clicked open, and for how long (batched by the
+    page). Returns their pattern as it stands now."""
+    _shopper(shopper_id)  # 404 if unknown
+    if not shoppers.is_new(shopper_id):
+        raise HTTPException(400, "Only new shoppers' browsing is recorded")
+    for s in signals[:500]:
+        newusers.record(db, shopper_id, s.kind, s.product_id, s.dwell_ms)
+    db.commit()
+    b = foryou.Behaviour(newusers.signals(db, shopper_id))
+    ids = set(b.shown)
+    products = {p.id: p for p in db.scalars(select(Product).where(Product.id.in_(ids)))}
+    # Signals only here (fast, called every few seconds); the For you tab asks BehaviorGPT.
+    return foryou._pattern(db, b, products, foryou.medians(db), None, None)
+
+
+@router.get("/shoppers/{shopper_id}/for-you", response_model=ForYouOut)
+def for_you(
+    shopper_id: int,
+    db: DbSession,
+    bgpt: BehaviorGPT,
+    cart_id: str | None = None,
+):
+    """A new shopper's For you tab: BehaviorGPT's picks from their browsing and orders,
+    their pattern, and the user entry generated once there is enough data."""
+    shopper = _shopper(shopper_id)
+    if not shoppers.is_new(shopper_id):
+        raise HTTPException(400, "For you is built for new shoppers")
+    return foryou.build(db, shopper, _cart_items(db, cart_id), bgpt)
 
 
 @router.get("/shoppers/{shopper_id}/replay", response_model=ReplayOut)
