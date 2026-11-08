@@ -21,3 +21,6 @@ dist/
 # claude
 .claude/settings.local.json
 *.tsbuildinfo
+
+# Instacart dataset (680 MB of CSVs, download separately into archive/)
+archive/
