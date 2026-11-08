@@ -1,0 +1,13 @@
+# Keep the build context small: the raw dataset, local environments and databases stay out.
+archive/
+**/node_modules/
+**/dist/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/*.db
+.env
+.git/
+prototype/
+scripts/

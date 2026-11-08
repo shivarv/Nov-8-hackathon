@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 
-from sqlalchemy import DateTime, ForeignKey, String, func
+from sqlalchemy import DateTime, ForeignKey, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app import images
@@ -44,6 +44,43 @@ class OrderItem(Base):
     order_id: Mapped[int] = mapped_column(ForeignKey("orders.id"), primary_key=True)
     product_id: Mapped[int] = mapped_column(ForeignKey("products.id"), primary_key=True)
     quantity: Mapped[int] = mapped_column(default=1)
+
+
+class ShopperProfile(Base):
+    """A new shopper who started in the app with no history (app/newusers.py).
+
+    Their shopper id is PROFILE_ID_BASE + id; their orders are Orders with that user_id.
+    Once there is enough behaviour, app/foryou.py generates their entry (label, blurb
+    and the pattern behind it) and stores it here.
+    """
+
+    __tablename__ = "new_shoppers"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    label: Mapped[str | None] = mapped_column(String(80))
+    blurb: Mapped[str | None] = mapped_column(String(300))
+    entry_json: Mapped[str | None] = mapped_column(Text)  # the PatternOut it came from
+    entry_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class ShopperSignal(Base):
+    """One thing a new shopper did with a product (app/foryou.py reads them).
+
+    view      the tile was on screen while the tab was active; dwell_ms is how long
+    open      they clicked it for a closer look; dwell_ms is how long it stayed open
+    add       put it in the basket          remove    took it out again
+    purchase  it was in an order they placed
+    """
+
+    __tablename__ = "new_shopper_signals"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    profile_id: Mapped[int] = mapped_column(ForeignKey("new_shoppers.id"), index=True)
+    product_id: Mapped[int]
+    kind: Mapped[str] = mapped_column(String(8))
+    dwell_ms: Mapped[int] = mapped_column(default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
 
 class Cart(Base):

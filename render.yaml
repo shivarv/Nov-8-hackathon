@@ -1,0 +1,35 @@
+# Render blueprint: https://render.com/docs/blueprint-spec
+# New > Blueprint on render.com, pick this repo and branch, then fill in the two
+# secrets it asks for (UNBOXAI_API_KEY, UNBOXAI_CATALOG_ID).
+services:
+  - type: web
+    name: better-basket
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    # Peaks around 210 MB (tested capped at 512 MB), so every plan fits. "free" works
+    # but sleeps after 15 idle minutes and wakes slowly; "starter" stays up.
+    plan: starter
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: better-basket-db
+          property: connectionString
+      # The catalog and orders come from data/seed.json.xz (scripts/build_seed.py).
+      - key: DATA_SOURCE
+        value: instacart
+      # BehaviorGPT (Unbox AI): set in the Render dashboard, never committed.
+      # Without them the app runs on the bought-together model.
+      - key: UNBOXAI_API_KEY
+        sync: false
+      - key: UNBOXAI_CATALOG_ID
+        sync: false
+
+databases:
+  - name: better-basket-db
+    # New shoppers, their browsing and orders live here, so they survive deploys.
+    # ("free" also works, but Render deletes free databases after 30 days.)
+    plan: basic-256mb
+    databaseName: better_basket

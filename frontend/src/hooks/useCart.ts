@@ -53,12 +53,12 @@ export function useCart(shopperId: number | null) {
     async (productId: number, quantity: number) => {
       if (!cart) return;
       try {
-        setCart(await api.setQuantity(cart.id, productId, quantity));
+        setCart(await api.setQuantity(cart.id, productId, quantity, shopperId ?? undefined));
       } catch (e) {
         setError(String(e));
       }
     },
-    [cart],
+    [cart, shopperId],
   );
 
   /** Add several products one after another (e.g. "Add all"), then publish the final cart once. */
@@ -69,14 +69,14 @@ export function useCart(shopperId: number | null) {
       try {
         for (const id of productIds) {
           if (next.items.some((i) => i.product.id === id)) continue;
-          next = await api.setQuantity(cart.id, id, 1);
+          next = await api.setQuantity(cart.id, id, 1, shopperId ?? undefined);
         }
         setCart(next);
       } catch (e) {
         setError(String(e));
       }
     },
-    [cart],
+    [cart, shopperId],
   );
 
   /** Set several quantities one after another (a planned basket), then publish once. */
@@ -86,14 +86,14 @@ export function useCart(shopperId: number | null) {
       let next = cart;
       try {
         for (const [id, quantity] of entries) {
-          next = await api.setQuantity(cart.id, id, quantity);
+          next = await api.setQuantity(cart.id, id, quantity, shopperId ?? undefined);
         }
         setCart(next);
       } catch (e) {
         setError(String(e));
       }
     },
-    [cart],
+    [cart, shopperId],
   );
 
   const checkout = useCallback(async () => {

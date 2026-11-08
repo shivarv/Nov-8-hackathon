@@ -22,6 +22,8 @@ function plate(section: FeedSection): { top: string; big: string } {
       return { top: "Before checkout", big: "↻" };
     case "treat":
       return { top: "Checkout", big: "$" };
+    case "foryou":
+      return { top: "For you", big: "♥" };
   }
 }
 

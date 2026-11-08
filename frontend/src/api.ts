@@ -2,12 +2,15 @@ import type {
   Cart,
   CheckoutResult,
   Feed,
+  ForYou,
+  Pattern,
   Plan,
   Product,
   Recommendation,
   Replay,
   SearchResult,
   Shopper,
+  Signal,
 } from "./types";
 
 export class ApiError extends Error {
@@ -42,8 +45,9 @@ export const api = {
 
   createCart: () => request<Cart>("/carts", { method: "POST" }),
   getCart: (id: string) => request<Cart>(`/carts/${id}`),
-  setQuantity: (cartId: string, productId: number, quantity: number) =>
-    request<Cart>(`/carts/${cartId}/items/${productId}`, {
+  /** `shopperId`: a new shopper's adds and removes are recorded as signals. */
+  setQuantity: (cartId: string, productId: number, quantity: number, shopperId?: number) =>
+    request<Cart>(`/carts/${cartId}/items/${productId}${shopperId ? `?shopper_id=${shopperId}` : ""}`, {
       method: "PUT",
       body: JSON.stringify({ quantity }),
     }),
@@ -58,6 +62,23 @@ export const api = {
     request<Recommendation[]>(`/recommendations/product/${productId}?k=${k}`),
 
   shoppers: () => request<Shopper[]>("/shoppers"),
+  /** Start as a new shopper with no history. */
+  newShopper: () => request<Shopper>("/shoppers/new", { method: "POST" }),
+  shopper: (shopperId: number) => request<Shopper>(`/shoppers/${shopperId}`),
+  /** What a new shopper looked at / clicked open; returns their pattern now. */
+  recordSignals: (shopperId: number, signals: Signal[]) =>
+    request<Pattern>(`/shoppers/${shopperId}/signals`, {
+      method: "POST",
+      body: JSON.stringify(signals),
+    }),
+  /** The same when the page is closing (fire and forget). */
+  beaconSignals: (shopperId: number, signals: Signal[]) =>
+    navigator.sendBeacon?.(
+      `/api/shoppers/${shopperId}/signals`,
+      new Blob([JSON.stringify(signals)], { type: "application/json" }),
+    ),
+  forYou: (shopperId: number, cartId: string | null, init?: RequestInit) =>
+    request<ForYou>(`/shoppers/${shopperId}/for-you${cartId ? `?cart_id=${cartId}` : ""}`, init),
   feed: (shopperId: number, cartId: string, init?: RequestInit) =>
     request<Feed>(`/feed?shopper_id=${shopperId}&cart_id=${cartId}`, init),
   plan: (shopperId: number, text: string, cartId: string | null, init?: RequestInit) =>

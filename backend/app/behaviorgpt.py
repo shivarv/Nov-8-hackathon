@@ -136,6 +136,35 @@ class BehaviorGPTRecommender:
         sessions, stamps = self._history(shopper, cart, now, last_orders)
         return self._rank(sessions, stamps, now, predict, limit, offset, only)
 
+    def rank_for_browser(
+        self,
+        shopper: Shopper,
+        browsed: list[tuple[int, datetime]],
+        predict: Predict,
+        limit: int = 100,
+        offset: int = 0,
+        only: list[int] | None = None,
+    ) -> list[tuple[int, float]]:
+        """Rank the catalog for a new shopper from how they browse.
+
+        Their placed orders come first (as for any shopper), then one open session of
+        Views: the products they looked at for a while, clicked open or added since,
+        in order, each at the real moment it happened.
+        """
+        now = datetime.now(TZ)
+        sessions, stamps = self._history(shopper, [], now, LAST_ORDERS)
+        if browsed:
+            # Real times, kept strictly before `now` and in order.
+            times: list[datetime] = []
+            for _, at in browsed:
+                at = min(at.astimezone(TZ), now - timedelta(seconds=1))
+                times.append(max(at, times[-1] + timedelta(milliseconds=1)) if times else at)
+            sessions.append([View(item=str(p)) for p, _ in browsed])
+            stamps.append(times)
+        if not sessions:
+            return []
+        return self._rank(sessions, stamps, now, predict, limit, offset, only)
+
     def search(
         self,
         shopper: Shopper | None,

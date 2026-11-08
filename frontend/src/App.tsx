@@ -1,16 +1,21 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "./api";
 import { Basket } from "./components/Basket";
+import { ForYouView } from "./components/ForYouView";
+import { ProductPeek } from "./components/ProductPeek";
 import { ReplayPanel } from "./components/ReplayPanel";
 import { SearchBox } from "./components/SearchBox";
 import { SearchView } from "./components/SearchView";
 import { Shelf } from "./components/Shelf";
 import { ShopperPicker } from "./components/ShopperPicker";
 import { useCart } from "./hooks/useCart";
+import { useBrowsingTracker } from "./hooks/useBrowsingTracker";
 import { useFeed } from "./hooks/useFeed";
+import { useForYou } from "./hooks/useForYou";
 import { useReplay } from "./hooks/useReplay";
 import { RevealContext } from "./reveal";
-import type { Feed, FeedSection, Shopper } from "./types";
+import { TrackingContext } from "./tracking";
+import type { Feed, FeedItem, FeedSection, Pattern, Shopper } from "./types";
 
 /**
  * Searches worth offering: what the shopper's regulars are ("Organic Large Brown Eggs"
@@ -82,11 +87,36 @@ export default function App() {
     [feed, quantityOf],
   );
 
+  // New shoppers: what they look at, click and buy is recorded and builds their For you tab.
+  const newId = shopper?.is_new ? shopper.id : null;
+  const [tab, setTab] = useState<"store" | "foryou">("store");
+  const [livePattern, setLivePattern] = useState<Pattern | null>(null);
+  const tracker = useBrowsingTracker(newId, setLivePattern);
+  const [peek, setPeek] = useState<FeedItem | null>(null);
+  // Refresh For you after checkout / next visit, and when their pattern changes.
+  const patternKey = livePattern
+    ? `${livePattern.enough}|${livePattern.tags.map((t) => t.key + t.strength).join(",")}`
+    : "";
+  const { forYou, loading: forYouLoading, error: forYouError } = useForYou(
+    newId,
+    cart,
+    tab === "foryou",
+    `${visit}|${patternKey}`,
+  );
+  const tracking = useMemo(
+    () => (newId == null ? null : { track: tracker.track, open: setPeek }),
+    [newId, tracker.track],
+  );
+
   useEffect(() => storeShopper(shopper), [shopper]);
   useEffect(() => {
     setPairsAnchor(null);
     setQuery("");
     setReveal(false);
+    // Deep link for demos: ?tab=foryou opens a new shopper on their For you tab.
+    setTab(new URLSearchParams(window.location.search).get("tab") === "foryou" ? "foryou" : "store");
+    setLivePattern(null);
+    setPeek(null);
   }, [shopper?.id]);
 
   const checkoutAndRecord = async () => {
@@ -118,14 +148,25 @@ export default function App() {
   if (!shopper) return <ShopperPicker onPick={setShopper} />;
 
   const error = cartError ?? feedError;
+  // The newest view of who they are: their entry's label once it has been generated.
+  const current = forYou?.shopper ?? feed?.shopper ?? shopper;
 
   return (
     <div className="store">
       <header className="topbar">
-        <span className="logo">Basket</span>
+        <span className="logo">Better Basket</span>
         <button className="who" onClick={() => setShopper(null)}>
-          <span className="who-label">{shopper.label}</span>
-          <span className="who-meta">Shopper {shopper.id} · switch</span>
+          <span className="who-label">
+            {current.label}
+            {current.is_new && (
+              <span className={`who-new${current.has_entry ? " has-entry" : ""}`}>
+                {current.has_entry ? "your entry" : "new"}
+              </span>
+            )}
+          </span>
+          <span className="who-meta">
+            {current.is_new ? "New shopper" : `Shopper ${current.id}`} · switch
+          </span>
         </button>
         <SearchBox key={`search-${shopper.id}`} value={query} suggestions={ideas} onSearch={setQuery} />
         {feed && (
@@ -137,14 +178,14 @@ export default function App() {
                 : "Offline: from past baskets"}
           </span>
         )}
-        <button
+        {!current.is_new && <button
           className={`reveal-toggle${reveal ? " is-on" : ""}`}
           aria-pressed={reveal}
           onClick={() => setReveal((r) => !r)}
           title="Demo: mark what this shopper really bought next (the model never saw it)"
         >
           {reveal ? "Hide" : "Reveal"} next order
-        </button>
+        </button>}
         <Basket
           key={`basket-${shopper.id}`}
           cart={cart}
@@ -160,9 +201,36 @@ export default function App() {
         />
       </header>
 
+      {newId != null && !query && (
+        <nav className="tabs" aria-label="Views">
+          <button className={tab === "store" ? "is-on" : ""} onClick={() => setTab("store")}>
+            Store
+          </button>
+          <button className={tab === "foryou" ? "is-on" : ""} onClick={() => setTab("foryou")}>
+            For you
+            {(forYou?.pattern ?? livePattern)?.tags.map((t) => (
+              <span key={t.key} className={`pattern-mark is-${t.key} is-${t.strength}`}>
+                {t.label}
+              </span>
+            ))}
+          </button>
+        </nav>
+      )}
+
+      <TrackingContext.Provider value={tracking}>
       <RevealContext.Provider value={revealed}>
         {reveal && !query ? <ReplayPanel replay={replay} error={replayError} /> : null}
-        {query ? (
+        {tab === "foryou" && newId != null && !query ? (
+          <ForYouView
+            forYou={forYou}
+            live={livePattern}
+            loading={forYouLoading}
+            error={forYouError}
+            quantityOf={quantityOf}
+            onSetQuantity={setQuantity}
+            onAddAll={addMany}
+          />
+        ) : query ? (
           <main className="walk">
             <SearchView
               shopperId={shopper.id}
@@ -202,6 +270,19 @@ export default function App() {
           </main>
         )}
       </RevealContext.Provider>
+      </TrackingContext.Provider>
+
+      {peek && (
+        <ProductPeek
+          item={peek}
+          quantity={quantityOf(peek.product.id)}
+          onSetQuantity={setQuantity}
+          onClose={(ms) => {
+            tracker.opened(peek.product.id, ms);
+            setPeek(null);
+          }}
+        />
+      )}
     </div>
   );
 }

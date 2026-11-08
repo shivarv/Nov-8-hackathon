@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
 
-from app import shoppers
+from app import newusers, shoppers
 from app.deps import DbSession, Recommender
 from app.models import Cart, CartItem, Order, OrderItem, Product
 from app.schemas import CartItemOut, CartOut, CheckoutOut, ProductOut, SetQuantityIn
@@ -42,8 +42,16 @@ def get_cart(cart_id: str, db: DbSession):
 
 
 @router.put("/{cart_id}/items/{product_id}", response_model=CartOut)
-def set_item_quantity(cart_id: str, product_id: int, body: SetQuantityIn, db: DbSession):
-    """Set an item's quantity (idempotent). Quantity 0 removes it."""
+def set_item_quantity(
+    cart_id: str,
+    product_id: int,
+    body: SetQuantityIn,
+    db: DbSession,
+    shopper_id: int | None = None,
+):
+    """Set an item's quantity (idempotent). Quantity 0 removes it.
+
+    For a new shopper (`shopper_id`), adding and removing are recorded as signals."""
     cart = _get_cart(db, cart_id)
     if db.get(Product, product_id) is None:
         raise HTTPException(404, "Product not found")
@@ -52,10 +60,14 @@ def set_item_quantity(cart_id: str, product_id: int, body: SetQuantityIn, db: Db
     if body.quantity == 0:
         if existing:
             cart.items.remove(existing)
+            if shopper_id is not None:
+                newusers.record(db, shopper_id, "remove", product_id)
     elif existing:
         existing.quantity = body.quantity
     else:
         cart.items.append(CartItem(product_id=product_id, quantity=body.quantity))
+        if shopper_id is not None:
+            newusers.record(db, shopper_id, "add", product_id)
     db.commit()
     db.refresh(cart)
     return _cart_out(cart)
@@ -72,11 +84,16 @@ def checkout(cart_id: str, db: DbSession, recommender: Recommender, shopper_id: 
     if not cart.items:
         raise HTTPException(400, "Cart is empty")
 
+    new = shopper_id is not None and shoppers.is_new(shopper_id)
     order = Order(
-        items=[OrderItem(product_id=ci.product_id, quantity=ci.quantity) for ci in cart.items]
+        user_id=shopper_id if new else None,  # a new shopper's orders are their history
+        items=[OrderItem(product_id=ci.product_id, quantity=ci.quantity) for ci in cart.items],
     )
     db.add(order)
     product_ids = [ci.product_id for ci in cart.items]
+    if new:
+        for pid in product_ids:
+            newusers.record(db, shopper_id, "purchase", pid)
     item_count = sum(ci.quantity for ci in cart.items)
     cart.items.clear()
     db.commit()
